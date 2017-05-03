@@ -28,7 +28,7 @@
 		{
 			$redman=M('Redman');
 			// 接收ajax传过来的cat_id
-			$cat_id=
+			// $cat_id=
 			$page_num=10;
 			$count=$redman->where('parent_id=1')->count();
 			$Page=new \Think\Page($count,$page_num);

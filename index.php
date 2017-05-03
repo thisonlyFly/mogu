@@ -18,7 +18,7 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 //自动生成目录，生成完毕后注释
-// define('BIND_MODULE', 'Admin');
+// define('BIND_MODULE', 'App');
 
 // 定义应用目录
 define('APP_PATH','./Application/');

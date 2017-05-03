@@ -5,11 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0,
           maximum-scale=1.0, minimum-scale=1.0">
-    <title>redperson</title>
+    <title>redman</title>
     <link rel="stylesheet" href="__PUBLIC__/common/bootstrap-3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="__PUBLIC__/common/Font-Awesome-master/css/font-awesome.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/home/css/RedPerson.css?1">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/redman.css?1">
 </head>
+    <script type="text/javascript">
+        var pub_path="__PUBLIC__";//这一个是ajax提交的修改地址
+        var Redman_ajax_url="{:U('Redman/ajax_get')}";//这一个是ajax提交的修改地址
+    </script>
 <body>
 <div id="body_wrap">
     <!--最上面的图片-->
@@ -24,8 +28,10 @@
         <div class="bx-wrapper" >
             <div class="bx-viewport">
                 <ul class="nav-list clearfix  nav nav-tabs" id="myTab" role="tablist">
-                    <li class="active nav-item mr10 "><a href="#1" role="tab" data-toggle="tab" >网红新品搭</a><div class="arrow-down"><!--向下的三角--></div></li>
-                    <li class=" nav-item mr10 "><a href="#2" role="tab" data-toggle="tab">小个子专属</a></li>
+                    <volist name="redman_parent" id="value">
+                        <li class="nav-item mr10 "><a href="#{$value['redman_id']}" role="tab" data-toggle="tab" >{$value['redman_name']}</a><div class="arrow-down"><!--向下的三角--></div></li>
+                    </volist>  
+                    <!-- <li class=" nav-item mr10 "><a href="#2" role="tab" data-toggle="tab">小个子专属</a></li>
                     <li class=" nav-item mr10 "><a href="#3" role="tab" data-toggle="tab" >T恤x半身裙</a></li>
                     <li class=" nav-item mr10 "><a href="#4" role="tab" data-toggle="tab" >高颜值衬衫</a></li>
                     <li class=" nav-item mr10 "><a href="#5" role="tab" data-toggle="tab" >学生党专属</a></li>
@@ -45,7 +51,7 @@
                     <li class=" nav-item mr10 "><a href="#19" role="tab" data-toggle="tab">超火吊带裙</a></li>
                     <li class=" nav-item mr10 "><a href="#20" role="tab" data-toggle="tab">遮肉外套</a></li>
                     <li class=" nav-item mr10 "><a href="#21" role="tab" data-toggle="tab">显瘦春裤</a></li>
-                    <li class=" nav-item mr10 "><a href="#22" role="tab" data-toggle="tab">出街短外套</a></li>
+                    <li class=" nav-item mr10 "><a href="#22" role="tab" data-toggle="tab">出街短外套</a></li> -->
                 </ul>
             </div>
             <div class="bx-controls bx-has-controls-direction">
@@ -63,23 +69,25 @@
     <!--下面图片-->
     <div class="pool-wrap tab-content" id="myTabContent">
         <!--第1屏-->
-        <div class="tab-pane active w-wall-segment clearfix" id="1">
-            <div class="pool-item">
-                <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
-                   class="image-wrap J_dynamic_imagebox" >
-                    <img class="J_dynamic_img fill_img" src="__PUBLIC__/home/images/1.1.jpg" alt="">
-                </a>
-                <div class="detail">
-                    <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp" >
-                        <p class="content-title">蕾丝雪纺套装</p>
+        <div class="tab-pane active w-wall-segment clearfix" id="{$value['redman_id']}">
+            <volist name="redman_list" id="val">
+                <div class="pool-item">
+                    <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
+                       class="image-wrap J_dynamic_imagebox" >
+                        <img class="J_dynamic_img fill_img" src="__PUBLIC__/{$val['redman_path']}" alt="">
                     </a>
-                    <div class="user-wrap vertical-middle">
-                        <img class="avatar" src="__PUBLIC__/home/images/1.1.1.jpg">
-                        <span class="user-name">z_子晴</span>
+                    <div class="detail">
+                        <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp" >
+                            <p class="content-title">{$val['redman_name']}</p>
+                        </a>
+                        <div class="user-wrap vertical-middle">
+                            <img class="avatar" src="__PUBLIC__/{$val['redman_thumb']}">
+                            <span class="user-name">{$val['redman_author']}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="pool-item">
+            </volist>
+            <!-- <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l54bm&type=4&acm=3.ms.1_0_.0.11186-25553.wGTRPqhTfnzXI.t_0&ptp=1.DqSff.0.0.J13XL&f=baidusem_4uv5iimn1v"
                    class="image-wrap J_dynamic_imagebox" >
                     <img class="J_dynamic_img fill_img" src="__PUBLIC__/home/images/1.2.jpg" alt="">
@@ -93,7 +101,7 @@
                         <span class="user-name">Pinky兔娘</span>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -288,10 +296,10 @@
                         <span class="user-name">z_子晴</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!--第2屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="2">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="2">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -517,9 +525,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--第3屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="3">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="3">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -745,9 +753,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--第4屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="4">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="4">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -973,9 +981,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--第5屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="5">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="5">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -1201,9 +1209,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--第6屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="6">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="6">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -1430,9 +1438,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第7屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="7">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="7">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -1659,9 +1667,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第8屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="8">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="8">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -1888,9 +1896,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第9屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="9">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="9">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -2117,9 +2125,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第10屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="10">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="10">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -2346,9 +2354,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第11屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="11">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="11">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -2575,9 +2583,9 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!--第12屏-->
-        <div class="tab-pane  w-wall-segment clearfix" id="12">
+        <!-- <div class="tab-pane  w-wall-segment clearfix" id="12">
             <div class="pool-item">
                 <a href="http://pc.mogujie.com/society/lifestyle.html?iid=11l3ghc&amp"
                    class="image-wrap J_dynamic_imagebox" >
@@ -2804,14 +2812,14 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
     </div>
 </div>
 
 
 
-<script src="__PUBLIC__/common/bootstrap3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="__PUBLIC__/common/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+<script src="__PUBLIC__/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/home/js/RedPerson.js"></script>
 </body>
 </html>

@@ -27,13 +27,13 @@ padding-left: 76px;
     color: #333333;
 }
 /*标题样式*/
-#body_wrap .nav {
-    max-width: 1200px;
-    min-width: 960px;
-    height: 100%;
-    padding-top: 21px;
-    margin: 0 auto;
-}
+/*#body_wrap .nav {*/
+    /*max-width: 1200px;*/
+    /*min-width: 960px;*/
+    /*height: 100%;*/
+    /*padding-top: 21px;*/
+    /*margin: 0 auto;*/
+/*}*/
 /*红人穿搭样式*/
 #body_wrap .bx-wrapper{
     max-width: 1200px;
@@ -51,22 +51,32 @@ padding-left: 76px;
     transition-duration: 0.5s;
     /*transition: all 1s;  //动画效果*/
     transform: translate3d(0px, 0px, 0px);
+    border: none;
 }
 /*动态添加或者移除*/
-#body_wrap .tab-active {
+/*#body_wrap .tab-active {
     position: absolute;
     top: 0;
     left: 0;
     width: 111px;
     height: 63px;
     background: #fff url(../images/beijingtubiao.png) no-repeat;
+}*/
+.arrow-down {
+    position: relative;
+    left: 45px;
+    width:0;
+    height:0;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-top:10px solid #83555e;
 }
-
 #body_wrap .bx-wrapper .bx-viewport .nav-list .nav-item{
     float: left;
     list-style: none;
     position: relative;
     width: 111px;
+    height: 54px;
     margin-right: 10px;
     line-height: 54px;
     text-align: center;
@@ -74,9 +84,22 @@ padding-left: 76px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 6px;
 }
+#body_wrap  .nav-item a{
+    color: #fff;
+    text-decoration: none;    padding: 0;
+    display: inline-block;
+}
+#body_wrap .nav-list > li.active{  background-color:#83555e ;  }
 
-#body_wrap .bx-wrapper .bx-viewport .nav-list .nav-item  .item-mask{
+#body_wrap .nav-list  :hover li {background-color: #000;opacity: .2}
+
+.nav-list > li.active > a:hover{background-color: #83555e;border: none}
+.nav-list > li.active > a,.nav-list > li > a:hover,.nav-list > li.active > a:focus
+{    background-color: transparent;
+    border: none;}
+/*#body_wrap .bx-wrapper .bx-viewport .nav-list .nav-item  .item-mask{
     position: absolute;
     top: 0;
     left: 0;
@@ -86,28 +109,28 @@ padding-left: 76px;
     background: #fff;
     opacity: 0;
     z-index: 999;
-}
+}*/
 
-#body_wrap .bx-wrapper .bx-viewport .nav-list .nav-item .item-tab{
+/*#body_wrap .bx-wrapper .bx-viewport .nav-list .nav-item .item-tab{
     width: 111px;
     height: 54px;
     border-radius: 6px;
-}
+}*/
 .mr10 {
     margin-right: 10px!important;
 }
 
 /*框框的背景颜色*/
-#body_wrap .c1{ background-color: #deb07a; }
-#body_wrap .c2{ background-color: #cbbb97; }
-#body_wrap .c3 {background-color: #e6beb0;}
-#body_wrap .c4 {background-color: #d3acac;}
-#body_wrap .c5 {background-color: #bfd5d3;}
-#body_wrap .c6 {background-color: #c5bedc;}
-#body_wrap .c7 {background-color: #e7b9a9;}
-#body_wrap .c8 {background-color: #c0ceb0;}
-#body_wrap .c9 {background-color: #dad6a4;}
-#body_wrap .c10 {background-color: #a6a7ba;}
+#body_wrap .nav-item:nth-child(10n-9){ background-color: #deb07a; }
+#body_wrap .nav-item:nth-child(10n-8){ background-color: #cbbb97; }
+#body_wrap .nav-item:nth-child(10n-7) {background-color: #e6beb0;}
+#body_wrap .nav-item:nth-child(10n-6) {background-color: #d3acac;}
+#body_wrap .nav-item:nth-child(10n-5) {background-color: #bfd5d3;}
+#body_wrap .nav-item:nth-child(10n-4) {background-color: #c5bedc;}
+#body_wrap .nav-item:nth-child(10n-3) {background-color: #e7b9a9;}
+#body_wrap .nav-item:nth-child(10n-2) {background-color: #c0ceb0;}
+#body_wrap .nav-item:nth-child(10n-1) {background-color: #dad6a4;}
+#body_wrap .nav-item:nth-child(10n) {background-color: #a6a7ba;}
 
 /*前后图标*/
 .bx-wrapper .bx-controls-direction{
@@ -145,12 +168,19 @@ padding-left: 76px;
     min-height: 600px;
     overflow: hidden;
 }
-#body_wrap .pool-list {
+#body_wrap .w-wall-segment{
     font-size: 0;
     width: 1210px;
     margin: 30px auto 0;
     overflow: hidden;
 }
+
+/*#body_wrap .pool-list {
+    font-size: 0;
+    width: 1210px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}*/
 #body_wrap .image-wrap {
     display: block;
     width: 232px;
@@ -199,6 +229,7 @@ padding-left: 76px;
     letter-spacing: 1px;
     color: #333;
 }
+#body_wrap .detail a{text-decoration: none}
 /*头像下面的呢称*/
 #body_wrap .user-name {
     display: inline-block;
