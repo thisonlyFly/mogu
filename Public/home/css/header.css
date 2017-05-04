@@ -1,0 +1,151 @@
+
+.nav-wap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /*overflow: hidden;*/
+}
+.nav{
+    margin-bottom: 0;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    height: 31px;
+    width: 100%;
+    font-size: 12px;
+}
+.nav-wap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /*overflow: hidden;*/
+}
+.nav-logo{
+    background: url(../images/logo.png) -4px -234px no-repeat;
+    padding: 0 20px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    margin-left: 20px;
+    float: left;
+}
+.nav-ul{
+    float: right;
+    margin: 0;
+}
+.nav-ul .s1{
+    display: inline;
+    position: relative;
+    z-index: 100;
+    float: left;
+    margin: 0 15px 0 0;
+    height: 31px;
+    line-height: 31px;
+    cursor: pointer;
+}
+.nav-ul .ullia a{
+    padding-left: 38px;
+    border-left: 1px solid #ddd;
+}
+.nav-ul .s1 a{
+    float: left;
+    /*overflow: hidden;*/
+    margin-top: 8px;
+    color: #666;
+    line-height: 15px;
+}
+.nav-ul .nav-dd{
+    background: url(../images/logo.png) 15px -529px no-repeat;
+}
+
+.nav-ul .nav-shopping{
+    position: relative;
+    background: url(../images/logo.png) 8px -420px no-repeat;
+}
+.nav-ul .nav-shopping:hover div{
+    display: block;
+}
+.nav-ul .nav-shopping .sp-cart{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 31px;
+    left: -75px;
+    width: 250px;
+    padding: 15px;
+    background: #eee;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: center;
+    display: none;
+}
+.nav-ul .nav-khfw{
+    padding-right: 10px;
+    position: relative;
+}
+.nav-ul .nav-khfw:hover .khfw-tcc{
+    display: block;
+}
+.nav-ul .nav-khfw .khfw-tcc{
+    position: absolute;
+    width: 90px;
+    top: 31px;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    display: none;
+}
+.nav-ul  .nav-khfw .khfw-tcc li{
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 14px 10px 14px;
+}
+.nav-ul  .khfw-tcc li:hover{
+    background-color: #e4e4e4;
+}
+.nav-ul .nav-khfw .khfw-tcc a{
+    padding: 0;
+    border: none;
+}
+.nav-ul .nav-khfw a{
+    padding-left: 15px;
+}
+.nav-ul .nav-icon{
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    top: 14px;
+    right: 0;
+    background: url(../images/logo.png) -4px -229px;
+}
+.nav-ul .nav-wdxd{
+    margin-right: 0;
+    background: url(../images/logo.png) 8px -568px no-repeat;
+    padding-right: 10px;
+}
+.nav-ul .nav-wdxd .khfw-tcc{
+    position: absolute;
+    width: 100px;
+    top: 31px;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    display: none;
+}
+.nav-ul  .nav-wdxd .khfw-tcc li{
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 14px 10px 25px;
+}
+.nav-ul .nav-wdxd .khfw-tcc a{
+    padding: 0;
+    border: none;
+}
+.nav-ul .nav-wdxd:hover .khfw-tcc{
+    display: block;
+}

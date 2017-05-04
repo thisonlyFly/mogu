@@ -1,0 +1,548 @@
+body{
+    color: #333;
+    font-family:"微软雅黑" !important;
+    font-size: 12px;
+}
+a,body,html{
+    color: #333;
+}
+div{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+a:hover,a:active{
+    text-decoration: none;
+}
+li,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+input,textarea{
+    margin: 0;
+    padding: 0;
+    outline: none;//取出点击蓝框
+}
+/*头部代码*/
+.nav{
+    margin-bottom: 0;
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    height: 31px;
+    width: 100%;
+    font-size: 12px;
+}
+.nav-wap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-logo{
+    background: url(../images/logo.png) -4px -234px no-repeat;
+    padding: 0 20px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    margin-left: 20px;
+    float: left;
+}
+.nav-ul{
+    float: right;
+    margin: 0;
+}
+.nav-ul .s1{
+    display: inline;
+    position: relative;
+    z-index: 100;
+    float: left;
+    margin: 0 15px 0 0;
+    height: 31px;
+    line-height: 31px;
+
+}
+.nav-ul .ullia a{
+    padding-left: 38px;
+    border-left: 1px solid #ddd;
+}
+.nav-ul .s1 a{
+    float: left;
+    /*overflow: hidden;*/
+    margin-top: 8px;
+    color: #666;
+    line-height: 15px;
+}
+.nav-ul .nav-dd{
+    background: url(../images/logo.png) 15px -529px no-repeat;
+}
+
+.nav-ul .nav-shopping{
+    position: relative;
+    background: url(../images/logo.png) 8px -420px no-repeat;
+}
+.nav-ul .nav-shopping:hover div{
+    display: block;
+}
+.nav-ul .nav-shopping .sp-cart{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 31px;
+    left: -120px;
+    width: 282px;
+    padding: 15px;
+    background: #eee;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: center;
+    display: none;
+}
+.nav-ul .nav-shopping .sp-cart>ul{
+    position: relative;
+    overflow: hidden;
+}
+.nav-ul .nav-shopping .sp-cart .sp_cart_ul li{
+    position: relative;
+    vertical-align: middle;
+    line-height: 22px;
+    padding: 0 50px;
+    margin-bottom: 12px;
+    height: 40px;
+}
+.nav-ul .nav-shopping .sp-cart .sp_cart_ul li .imgbox{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 0;
+    color: #666;
+    padding: 0;
+    border:0;
+}
+.nav-ul .nav-shopping .sp-cart .sp_cart_ul li a img{
+    width:100%;
+    vertical-align: middle;
+    border: 0;
+    cursor: pointer;
+}
+.nav-ul .nav-shopping .sp-cart .sp_title{
+    display: block;
+    color: #333;
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 0;
+    border:0;
+    cursor: pointer;
+}
+.nav-ul .nav-shopping .sp-cart .sp_title:hover{
+    text-decoration:underline !important;
+}
+.nav-ul .nav-shopping .sp-cart .sp_info{
+    display: block;
+    width: 150px;
+    height: 20px;
+    overflow: hidden;
+    font-weight: 400;
+    color: #999;
+    line-height: 22px;
+    text-align: left;
+}
+.nav-ul .nav-shopping .sp-cart .sp_price{
+    position: absolute;
+    top:0;
+    right:0;
+    color: #666;
+    font-weight: 400;
+}
+.nav-ul .nav-shopping .sp-cart .sp_del{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #999;
+    cursor: pointer;
+    font-weight: 400;
+}
+.nav-ul .nav-khfw{
+    padding-right: 10px;
+    position: relative;
+}
+.nav-ul .nav-shopping .sp-cart .sp_foot{
+    border-top: 1px solid #ddd;
+    color: #333;
+    padding: 15px 0 0;
+    line-height: 24px;
+    height: 24px;
+}
+.nav-ul .nav-shopping .sp-cart .sp_foot .sp__foot_info{
+    text-align: left;
+}
+.nav-ul .nav-shopping .sp-cart .sp_foot .sp_see_box{
+    float: right;
+}
+.nav-ul .nav-shopping .sp-cart .sp_foot .sp_see_box .sp_see{
+    float: left;
+    overflow: hidden;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    text-align: center;
+    color: #fff;
+    background: #f46;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.nav-ul .nav-khfw:hover .khfw-tcc{
+    display: block;
+}
+.nav-ul .nav-khfw .khfw-tcc{
+    position: absolute;
+    width: 90px;
+    top: 31px;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    display: none;
+}
+.nav-ul  .nav-khfw .khfw-tcc li{
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 14px 10px 14px;
+}
+.nav-ul  .khfw-tcc li:hover{
+    background-color: #e4e4e4;
+}
+.nav-ul .nav-khfw .khfw-tcc a{
+    padding: 0;
+    border: none;
+}
+.nav-ul .nav-khfw a{
+    padding-left: 15px;
+}
+.nav-ul .nav-icon{
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    top: 14px;
+    right: 0;
+    background: url(../images/logo.png) -4px -229px;
+}
+.nav-ul .nav-wdxd{
+    margin-right: 0;
+    background: url(../images/logo.png) 8px -568px no-repeat;
+    padding-right: 10px;
+}
+.nav-ul .nav-wdxd .khfw-tcc{
+    position: absolute;
+    width: 100px;
+    top: 31px;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    display: none;
+}
+.nav-ul  .nav-wdxd .khfw-tcc li{
+    overflow: hidden;
+    text-align: center;
+    padding: 0px 14px 10px 25px;
+}
+.nav-ul .nav-wdxd .khfw-tcc a{
+    padding: 0;
+    border: none;
+}
+.nav-ul .nav-wdxd:hover .khfw-tcc{
+    display: block;
+}
+/*----------------头二-----------------*/
+.header{
+background-color: white;
+    border-bottom: 2px solid #f46;
+    height: 115px;
+}
+.header .logo{
+    float: left;
+    width: 240px;
+    height: 90px;
+    overflow: hidden;
+    background-image: url(../images/logo1.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+}
+.header-ssk{
+    width: 482px;
+    height: 90px;
+    float: left;
+    margin-left: 120px;
+    margin-top: 24px;
+}
+.header-srk{
+    border: 1px solid #f07;
+    width: 480px;
+    height: 34px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 10px;
+}
+.header .selected{
+    display: block;
+    height: 32px;
+    line-height: 34px;
+    color: #f07;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(../images/xl.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.header-ssp{
+    position: relative;
+    float: left;
+    width: 60px;
+    z-index: 10;
+    text-align: center;
+}
+.header-ssp ol{
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: -1px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid transparent;
+}
+.header-ssp ol li{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    color: #f07;
+    text-align: center;
+}
+.header-ssp ol li a{
+    color: #f07;
+}
+.header .header-ssp:hover .ssp-ol{
+    display: block;
+}
+.header .ssp-ol li:hover {
+    background-color: #ffeef4;
+    color: #f07;
+}
+.header-text{
+    height: 34px;
+    position: relative;
+}
+.header-text .header-lsjl{
+    min-height: 247px;
+    width: 319px;
+    left: 59px;
+    top: 33px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    border: 1px solid #f07;
+}
+.header .input-text{
+    display: block;
+    overflow: hidden;
+    width: 318px;
+    height: 31px;
+    line-height: 22px;
+    padding: 6px 0 6px 10px;
+    border: none;
+    color: #999;
+    font-size: 12px;
+    background-color: #fff;
+    float: left;
+}
+.header .input-btn{
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    width: 100px;
+    background-color: #f07;
+    background-image: linear-gradient(to right,#f25,#ff1581);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+.header .header-tj a{
+    color: black;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0px 17px 0 0;
+    font-size: 12px;
+}
+.header .header-tj a.header_cur{
+    color: #f07;
+}
+.header .header-tj a:hover{
+    color: #f07!important;
+    text-decoration: underline;
+}
+.header-ewm{
+    float: right;
+    height: 90px;
+    width: 220px;
+    overflow: hidden;
+    background-size: 100%;
+    margin-top: 5px;
+}
+.header-ewm img{
+    height: 100%;
+    float: right;
+}
+.header-two{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px 0 #ccc;
+    z-index: 9999;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    display: none;
+}
+.header-img{
+    float: left;
+    width: 240px;
+    height: 36px;
+    overflow: hidden;
+    margin-top: 7px;
+}
+.header-img img{
+    height: 100%;
+    float: left;
+}
+.header-two-ssk{
+    width: 482px;
+    height: 40px;
+    float: left;
+    margin-left: 120px;
+    margin-top: 8px;
+}
+.header-two-srk{
+    border: 1px solid #f07;
+    width: 480px;
+    height: 34px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 10px;
+}
+.header-two .selected{
+    display: block;
+    height: 32px;
+    line-height: 34px;
+    color: #f07;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(../images/xl.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.header-two-ssp{
+    position: relative;
+    float: left;
+    width: 60px;
+    z-index: 10;
+    text-align: center;
+}
+.header-two-ssp ol{
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: -1px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid transparent;
+}
+.header-two-ssp ol li{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    color: #f07;
+    text-align: center;
+}
+.header-two-ssp ol li a{
+    color: #f07;
+}
+.header-two .header-two-ssp:hover .ssp-ol{
+    display: block;
+}
+.header-two .ssp-ol li:hover {
+    background-color: #ffeef4;
+    color: #f07;
+}
+.header-two-text{
+    height: 34px;
+    position: relative;
+}
+.header-two-text .header-two-lsjl{
+    min-height: 247px;
+    width: 319px;
+    left: 59px;
+    top: 33px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    border: 1px solid #f07;
+}
+.header-two .input-two-text{
+    display: block;
+    overflow: hidden;
+    width: 318px;
+    height: 31px;
+    line-height: 22px;
+    padding: 6px 0 6px 10px;
+    border: none;
+    color: #999;
+    font-size: 12px;
+    background-color: #fff;
+    float: left;
+}
+.header-two .input-btn{
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    width: 100px;
+    background-color: #f07;
+    background-image: linear-gradient(to right,#f25,#ff1581);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+.header-two .header-two-tj a{
+    color: black;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0px 17px 0 0;
+    font-size: 12px;
+}
+.header-two .header-two-tj a:hover{
+    color: #f07!important;
+    text-decoration: underline;
+}

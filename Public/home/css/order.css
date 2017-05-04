@@ -1,0 +1,486 @@
+body,html{
+    color: #333;
+    font-family:"微软雅黑" !important;
+    font-size: 12px;
+    min-width: 1200px;
+}
+body,h1,h2,h3,h4,h5,h6,ul,p{
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style: none !important;
+}
+a{
+    text-decoration: none !important;
+    color: #333;
+}
+
+
+
+/*----------订单左边部分-------------*/
+#order_wrap .wrap{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#order_wrap .mu_wrap{
+    background-color: #fff;
+}
+#order_wrap .mu_left_wrap{
+    float: left;
+    width: 140px;
+    margin-right: 20px;
+    background: #fafafa url("../images/order_one.gif");
+}
+#order_wrap .mu_left_wrap .mu_left_nav{
+    padding: 20px 0;
+}
+#order_wrap .mu_left_wrap .mu_left_nav .mu_left_nav_list{
+    position: relative;
+    margin: 0 15px;
+    padding: 5px;
+    width: 110px;
+    height: 110px;
+}
+#order_wrap .mu_left_wrap .mu_left_nav .mu_left_nav_list .mu_left_nav_pic{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 110px;
+    height: 110px;
+    background: url("../images/order_2.png") 0 0 no-repeat;
+}
+#order_wrap .mu_left_wrap .mu_left_nav .mu_left_nav_list .mu_left_nav_pic>img{
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#order_wrap .mu_left_wrap .mu_left_list{
+    padding: 0 20px;
+}
+#order_wrap .mu_left_wrap .pb40{
+    padding-bottom: 40px !important;
+}
+#order_wrap .mu_left_wrap .mu_left_list .mu_title{
+    cursor: pointer;
+    border-top: 1px solid #e1e1e1;
+    font: normal 16px/56px Microsoft YaHei,sans-serif;
+    background:url("../images/order_3.png") no-repeat 72px -3px;
+}
+
+#order_wrap .mu_wrap .mu_left_wrap .mu_left_item{
+    margin: 0 -20px 13px;
+    font: normal 12px/26px sans-serif;
+    padding:0;
+    display: none;
+}
+#order_wrap .mu_wrap .mu_left_wrap .mu_left_item .cur>a{
+    color: #f36;
+    cursor: default;
+    font-weight: 700;
+}
+#order_wrap .mu_wrap .mu_left_wrap .mu_left_item>li>a{
+    display: block;
+    padding-left: 20px;
+    color: #666;
+    transition: all 0.3s;
+}
+#order_wrap .mu_wrap .mu_left_wrap .mu_left_item>li>a:hover{
+    color:#f36;
+}
+#order_wrap .mu_wrap .mu_left_wrap .mu_left_item>li>a>i.mu_nav_count{
+    position: relative;
+    font-weight: 800;
+    color: #ff5896;
+    font-style: normal;
+}
+
+/*--------------中间订单内容部分---------------*/
+#order_wrap .mu_content_wrap{
+    width: 1040px;
+    float: left;
+    padding-bottom: 20px;
+}
+#order_wrap .mu_content_wrap .order_title{
+    position: relative;
+    height: 40px;
+    margin-bottom: 30px;
+    line-height: 40px;
+    background: #fafafa url("../images/order_4.gif") repeat-x;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li{
+    float: left;
+    font-weight: 700;
+    text-align: center;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.goods{
+    width: 32%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.price{
+    width: 11.7%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.quantity{
+    width: 6.8%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.aftersale{
+    width: 11.7%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.total{
+    width: 12.5%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.status{
+    width: 12.5%;
+}
+#order_wrap .mu_content_wrap .order_title .order_title_column>li.other{
+    width: 12.5%;
+}
+
+#order_wrap .mu_content_wrap .orderWrap {
+    margin-bottom: 30px;
+}
+#order_wrap .mu_content_wrap .orderWrap .order_list .order_table{
+    width: 100%;
+    border: 1px solid #ffdb82;
+}
+#order_wrap .mu_content_wrap .orderWrap .order_list .order_table .order_table_header{
+    background: #fff7ea;
+    height: 40px;
+}
+#order_wrap .order_list .order_table_header > td{
+    padding-left: 12px;
+    color: #666;
+}
+#order_wrap .order_list .order_table_header > td .fl{
+    float: left;
+}
+#order_wrap .order_list .order_table_header > td .order_info > span{
+    margin-right: 30px;
+}
+#order_wrap .order_list .order_table_header > td .order_info > a{
+    transition:all 0.3s;
+}
+#order_wrap .order_list .order_table_header > td .order_info > a:hover{
+    color:#f36;
+}
+#order_wrap .order_list .order_table_header .contact_btn{
+    float: right;
+    margin-right: 12.6%;
+    padding-right: 30px;
+}
+#order_wrap .order_list .order_table_header .contact_btn >span{
+    background-position: 0 1px ;
+}
+#order_wrap .order_list .order_table_header .contact_btn:hover{
+    color:#f36;
+    transition: all 0.3s;
+}
+#order_wrap .order_list .order_table_header .contact_btn >span.icon{
+    background: url("../images/order_5.png") no-repeat;
+    padding-left: 20px;
+}
+#order_wrap .order_list .order_table_item>td{
+    padding: 20px 0 0;
+    color: #333;
+    vertical-align: top;
+}
+
+/*--order_table_item>td.goods--*/
+#order_wrap .order_list .order_table_item>td.goods{
+    padding-bottom: 10px;
+    width: 32%;
+    position: relative;
+}
+#order_wrap .order_list .order_table_item>td .pic_box{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+}
+#order_wrap .order_list .order_table_item>td .pic_box img{
+    width: 70px;
+    border: 0;
+    vertical-align: middle;
+}
+#order_wrap .order_list .order_table_item>td .title{
+    width: 216px;
+    line-height: 20px;
+    float: left;
+    margin-left: 20px;
+}
+#order_wrap .order_list .order_table_item>td .title p{
+    color: #999;
+}
+#order_wrap .order_list .order_table_item>td .title p >a:hover{
+    color:#f36;
+    transition: all 0.3s;
+}
+#order_wrap .order_list .order_table_item>td .title .order_icon{
+    margin-top: 5px;
+}
+#order_wrap .order_list .order_table_item>td .title .order_icon>span:first-child{
+    margin-right:7px;
+}
+#order_wrap .order_list .order_table_item>td .title .order_icon>span>img{
+    width: 16px;
+    height: 16px;
+}
+
+/*--这里是控制tooltip提示框的样式--*/
+.tooltip-inner{
+    color: #fff;
+    padding: 3px 7px;
+    background: #f46;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+.tooltip.top .tooltip-arrow{
+    border-top-color: #f46;
+}
+
+/*--order_table_item>td.price--*/
+#order_wrap .order_list .order_table_item>td.price{
+    width:11.7%;
+    font-weight:700;
+    text-align: center;
+}
+#order_wrap .order_list .order_table_item>td.price .price_old{
+    color: #999;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+/*--order_table_item>td.number--*/
+#order_wrap .order_list .order_table_item>td.number{
+    width:6.8%;
+    text-align: center;
+    font-weight:700;
+}
+
+/*--order_table_item>td.aftersale--*/
+#order_wrap .order_list .order_table_item>td.aftersale{
+    width:11.7%;
+    text-align: center;
+}
+#order_wrap .order_list .order_table_item>td.aftersale .refund{
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 3px;
+    color: #4598c8;
+    transition: all 0.3s;
+}
+#order_wrap .order_list .order_table_item>td.aftersale .refund:hover{
+    color:#f36;
+}
+/*--order_table_item>td.total--*/
+#order_wrap .order_list .order_table_item>td.total {
+    width:12.5%;
+    text-align: center;
+    border-left: 1px solid #ececec;
+}
+#order_wrap .order_list .order_table_item>td.total .total_price{
+    font-size: 16px;
+}
+/*--order_table_item>td.status--*/
+#order_wrap .order_list .order_table_item>td.status {
+    width:12.5%;
+    text-align: center;
+    border-left: 1px solid #ececec;
+}
+#order_wrap .order_list .order_table_item>td.status > p{
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: 700;
+}
+#order_wrap .order_list .order_table_item .status>p.icon.icon_delivery{
+    background-position: 32px -18px;
+}
+#order_wrap .order_list .order_table_item .status > p{
+    background: url("../images/order_5.png") no-repeat;
+    padding-left: 20px;
+}
+#order_wrap .order_list .order_table_item .status .order_details{
+    display: block;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 3px;
+    color: #4598c8;
+}
+#order_wrap .order_list .order_table_item .status a:hover{
+    color:#f36;
+    transition: all 0.3s;
+}
+/*--查看物流--*/
+#order_wrap .order_list .order_table_item .status .order_logistics{
+    position: relative;
+    padding-bottom: 12px;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics:before{
+    content: "";
+    position: absolute;
+    z-index:2;
+    top: 34px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -10px;
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    transform: rotate(45deg);
+    display: none;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry{
+    position: absolute;
+    z-index:1;
+    display: none;
+    left: 50%;
+    width: 226px;
+    margin: 16px 0 0 -144px;
+    padding: 11px 9px;
+    background: #fff;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    text-align: left;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner>p{
+    padding-left: 7px;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner p{
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 20px;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner ul{
+    overflow: auto;
+    max-height: 180px;
+    margin-top: 10px;
+    padding: 10px 7px 0;
+    border-top: 1px dashed #c5c5c5;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner ul li{
+    margin-bottom: 10px;
+    padding-left: 1em;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner ul li:before{
+    content: "•";
+    float: left;
+    margin-left: -1em;
+    color: #666;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner ul li.newest{
+    color:#f36;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics .order_inquiry .inner .view_details{
+    width: 80px;
+    height: 22px;
+    display: block;
+    margin: 0 auto;
+    background: #f0f0f0;
+    border-radius: 2px;
+    color: #666;
+    line-height: 22px;
+    text-align: center;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics:hover .order_inquiry{
+    display: block;
+    transition: all 0.3s;
+}
+#order_wrap .order_list .order_table_item .status .order_logistics:hover:before{
+    display: block;
+    transition: all 0.3s;
+}
+
+/*---order_table_item>td.other-*/
+#order_wrap .order_list .order_table_item .other{
+    border-left: 1px solid #ececec;
+    width:12.5%;
+    text-align: center;
+}
+#order_wrap .order_list .order_table_item .other .order_btn{
+    border: 1px solid #f36;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 22px;
+    font-weight: 700;
+    background: #f36;
+    padding: 2px 10px;
+}
+
+/*---------------确认订单后的遮盖层-----------------*/
+#zg{
+    background-color: rgba(142, 142, 142, 0.61);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    zoom: 1;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+#zg_center{
+    position: fixed;
+    _position:relative;
+    top:0;
+    left: 50%;
+    display: block;
+    width: 350px;
+    height: 250px;
+    margin-top: 125px;
+    margin-left: -175px;
+    background-color: #fff;
+    z-index:101;
+}
+#zg_center .wrong{
+    height: 40px;
+}
+#zg_center .wrong span{
+    width: 20px;
+    height: 20px;
+    display: block;
+    line-height: 40px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#zg_center .wrong span>img{
+    width: 100%;
+}
+#zg_center .zg_sh_box{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+#zg_center .zg_sh_box .zg_tips{
+    margin-top: 50px;
+}
+#zg_center .zg_sh_box .zg_action{
+    margin-top: 30px;
+}
+#zg_center .zg_sh_box .zg_action .zg_btn{
+    width: 100px;
+    height: 32px;
+    margin: 0 4px;
+    border-radius: 0;
+    line-height: 32px;
+    background: #f36;
+    color: #fff;
+    border: 1px solid #f36;
+    padding: 3px 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+#zg_center .zg_sh_box .zg_action .cancel{
+    border-color: #e5e6e8;
+    background: #fff;
+    color: #666;
+    font-weight: 700;
+}

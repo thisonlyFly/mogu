@@ -1,0 +1,134 @@
+/*尾部*/
+.tail{
+    background: rgb(245, 245, 245);
+    width: 100%;
+    overflow: hidden;
+    min-height: 180px;
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    font-size: 12px;
+}
+.tail-nav{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.tail-one{
+    border-bottom: 2px solid #FF5777;
+    height: 102px;
+}
+.tail-oblock{
+    height: 100%;
+    float: left;
+    width: 25%;
+}
+.tail-title{
+    padding-left: 20px;
+    width: 78%;
+}
+.tail-h4{
+    font-size: 14px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    color: #666;
+}
+.tail-oblock ul{
+    padding-left: 20px;
+    width: 78%;
+}
+.tail-oblock-li{
+    float: left;
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
+}
+.tail-oblock-li a{
+    font-size: 12px;
+    color: #999;
+}
+.tail-oblock-li a:hover{
+    color: #f57;
+}
+.tail-ewm{
+    color: #999;
+    cursor: pointer;
+}
+
+.tail-oblock-ewm{
+    position: relative;
+    width: 62px;
+    display: inline-block;
+}
+.tail-ewm-img{
+    position: absolute;
+    display: none;
+    height: 70px;
+    width: 70px;
+    top: 27px;
+    left: -17px;
+    overflow: hidden;
+}
+.tail-oblock-ewm:hover .tail-ewm-img{
+    display: block;
+}
+.tail-two{
+    margin-bottom: 8px;
+    line-height: 27px;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.tail-ts{
+    margin: 5px 0;
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+.tail-ts a:hover{
+    color: #f57;
+}
+.tail-ta{
+    display: inline-block;
+
+}
+.tail-tb{
+    margin: 0 5px;
+    font-weight: 400;
+}
+.tail-three{
+    min-height: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.tail-three li a{
+    color: #666;
+}
+.tail-tp{
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+}
+.tail-four{
+    margin-bottom: 8px;
+    line-height: 27px;
+    overflow: hidden;
+}
+.tail-four span{
+    float: left;
+    color: #999;
+}
+.tail-four a{
+    float: left;
+    color: #999;
+}
+.tail-four b{
+    float: left;
+    color: #999;
+}
+.tail-four a,b{
+    line-height: 31px;
+}

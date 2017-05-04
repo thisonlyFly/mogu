@@ -1,0 +1,310 @@
+body,html{
+    color: #333;
+    font-family:"微软雅黑" !important;
+    font-size: 12px;
+    min-width: 1200px;
+    background: #f7f7f7 ;
+}
+body,h1,h2,h3,h4,h5,h6,ul,p{
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style: none !important;
+}
+a{
+    text-decoration: none !important;
+    color: #333;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.item{
+    display: none;
+}
+
+
+
+/*----------------身体部分---------------------*/
+#brand_box{
+    height:100%;
+}
+/*--身体的brand_top——--*/
+#brand_box .brand_top{
+    position: relative;
+    overflow: hidden;
+}
+#brand_box .brand_img{
+    width: 960px;
+    height: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+#brand_box .brand_img img{
+    margin-left: -960px;
+    position: absolute;
+    top:0;
+    left:50%;
+}
+
+#brand_box .brand_content{
+    margin-top: 20px;
+}
+#brand_box .brand_content .brand_content_center{
+    width: 960px;
+    margin:0 auto;
+    position: relative;
+}
+#brand_box .brand_content .brand_content_center .brand_Title{
+    height: 26px;
+    margin-bottom: 20px;
+    color: #666666;
+}
+#brand_box .brand_content .brand_content_center .brand_Title .title{
+    font-size: 26px;
+    line-height: 26px;
+    display: inline-block;
+}
+#brand_box .brand_content .brand_content_center .brand_Title .enTitle{
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+    margin-left: 8px;
+}
+#brand_box .brand_content .brand_content_center .brand_content_pic_box{
+    position: relative;
+    border-top: 1px solid #eee;
+    background: #fff;
+    overflow: hidden;
+    height: 360px;
+}
+#brand_box .brand_content .brand_content_center .brand_content_pic_box .brand_a{
+    display: inline-block;
+    width: 240px;
+    height: 360px;
+    overflow: hidden;
+}
+#brand_box .brand_content .brand_content_center .brand_content_pic_box .brand_a img{
+    display:block;
+    width:100%;
+}
+.brand_content_pic1 {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.brand_content_pic1 .brand_content_a1{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: none;
+}
+.brand_content_pic1:hover .brand_content_a1{
+    display: block !important;
+}
+.brand_content_pic1 .brand_content_a1 .star{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/brand_content_xx.png")no-repeat;
+    background-size: cover;
+}
+.brand_content_pic1 .brand_content_a1 .collect{
+    position:absolute;
+    top: 46px;
+    width: 118px;
+    height: 15px;
+    text-align: center;
+}
+.brand_content_pic1 .brand_content_a1 .enter{
+    position: absolute;
+    bottom:15px;
+    left: 20px;
+    width: 75px;
+    height: 26px;
+    border-radius: 6px;
+    background: #e52424;
+    text-align: center;
+    line-height: 26px;
+}
+.brand_content_pic1 .brand_content_img{
+    display: block;
+    width: 100%;
+}
+
+.brand_show_more , .brand_beauty_show_more ,.brand_bag_show_more{
+    display: block;
+    height: 30px;
+    width: 175px;
+    margin: 0 auto;
+    background: url("../images/brand_show.png") no-repeat;
+    background-size: 100% auto;
+    color: #777;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.brand_show_up , .brand_beauty_show_up ,.brand_bag_show_up{
+    height: 30px;
+    width: 175px;
+    margin: 0 auto;
+    background: url("../images/brand_show.png") no-repeat;
+    background-size: 100% auto;
+    color: #777;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.brand_shoes,.brand_beauty ,.brand_bag ,.brand_sport{
+    margin-top: 80px;
+}
+
+/*---brand_more_goods---*/
+.brand_more_goods{
+    margin-top: 80px;
+}
+.brand_more_goods_center{
+    width: 960px;
+    margin: 0 auto;
+}
+.brand_more_goods_nav{
+    height: 44px;
+    width:100%;
+    background: #f25847;
+    max-width: 960px;
+}
+.brand_more_goods_ul{
+    width:100%;
+    height: 44px;
+}
+.brand_more_goods_nav .brand_more_goods_ul li{
+    float: left;
+    width: 96px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+}
+.brand_more_goods_nav .brand_more_goods_ul li a{
+    color: #fff;
+    font-size: 14px;
+    line-height: 44px;
+}
+.brand_more_goods_li_cur{
+    background: #d53029;
+    font-weight: bold;
+}
+
+/*---brand_more_goods_list----*/
+
+.brand_more_goods_list_box{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.brand_more_goods_list1{
+    margin: 0 25px 50px 0;
+    width: 220px;
+    height: 405px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.brand_more_goods_list_box:nth-child(4n){
+    margin-right: 0 !important;
+}
+.brand_more_goods_list1 .brand_goods_like{
+    z-index: 5;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    background: #f55;
+    color: #fff;
+    opacity: .8;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.brand_more_goods_list1 .brand_goods_like i{
+    font-size: 18px;
+    color: #fff;
+   margin-left: 8px;
+}
+.brand_more_goods_list_img1{
+    display: block;
+    width: 220px;
+    height: 330px;
+    overflow: hidden;
+}
+.brand_more_goods_list_img1>img{
+    width:100%;
+}
+.brand_more_goods_list_content{
+    display: block;
+    height: 76px;
+    overflow: hidden;
+}
+.brand_more_goods_list_content .title{
+    height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    position: relative;
+    margin-top: 6px;
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+.brand_more_goods_list_content .list_a_pic{
+    height: 18px;
+    line-height: 14px;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+.brand_more_goods_list_content .list_a_pic img{
+    height: 18px;
+    margin-right: 5px;
+}
+.brand_more_goods_list_content .brand_goods_info_box{
+    margin-top: 4px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    color: #333;
+    width: 100%;
+}
+.brand_more_goods_list_content .brand_goods_info_box .brand_goods_price_info{
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+}
+.brand_more_goods_list_content .brand_goods_info_box .brand_goods_fav_num{
+    color: #999;
+}
+.brand_more_goods_list_content .brand_goods_info_box .brand_goods_fav_num img{
+    height: 15px;
+    width: 16px;
+    vertical-align: -2px;
+    margin-left: 4px;
+}
+
+.brand_more_goods_fixed{
+    position: fixed;
+    top:0;
+    z-index: 999;
+    box-shadow: 2px 2px 9px rgba(0,0,0,.3);
+}
