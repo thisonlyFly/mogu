@@ -21,10 +21,10 @@
 			if(IS_POST){ 
 				$pic_array=pic('redman_path');
 				if(!empty($pic_array['redman_path']['savename'])){
-					$_POST['redman_path']='upload/'.$pic_array['redman_path']['savename'];
+					$_POST['redman_path']='home/upload/'.$pic_array['redman_path']['savename'];
 				}
 				if(!empty($pic_array['redman_thumb']['savename'])){
-					$_POST['redman_thumb']='upload/'.$pic_array['redman_thumb']['savename'];
+					$_POST['redman_thumb']='home/upload/'.$pic_array['redman_thumb']['savename'];
 				}
 				$_POST['create_time']=time();
 				$redman_model=D('Redman');
@@ -47,10 +47,10 @@
 			if(IS_POST){ 
 				$pic_array=pic('redman_path');
 				if(!empty($pic_array['redman_path']['savename'])){
-					$_POST['redman_path']='upload/'.$pic_array['redman_path']['savename'];
+					$_POST['redman_path']='home/upload/'.$pic_array['redman_path']['savename'];
 				}
 				if(!empty($pic_array['redman_thumb']['savename'])){
-					$_POST['redman_thumb']='upload/'.$pic_array['redman_thumb']['savename']; 
+					$_POST['redman_thumb']='home/upload/'.$pic_array['redman_thumb']['savename']; 
 				}
 				$redman_model=D('Redman');
 				if ($redman_model->create()) {

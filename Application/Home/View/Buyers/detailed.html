@@ -1,0 +1,137 @@
+<include file="Public/header" />
+
+<div class="container buyers_home" >
+
+    <include file="Buyers/left_menu" />
+    <div class="col-lg-9 right_menu"  >
+        <ol class="breadcrumb">
+            <li>用户中心</li>
+            <li>订单详情</li>
+        </ol>
+        <!-- 内容列表页面 -->
+        <div class="right_content_box">
+            <div class="">
+                <a href="{:U('Buyers/order')}" class="btn btn-default">返回列表</a>
+            </div>
+
+            <div class=" add_form_box">
+                <!--列表表单-->
+                <div class="list">
+                    <h2>
+                        订单状态： <b><php>echo getOrderStatus($order_info['order_status'])</php></b> 
+                    </h2>
+                    <if condition="$shipping_info">
+                        <h2>发货信息</h2>
+                        <div class="form-group">
+                            <label >快递名称：</label>
+                            {$shipping_info['shipping_name']}
+                        </div>
+                        <div class="form-group">
+                            <label >快递单号：</label>
+                            {$shipping_info['shipping_code']}
+                        </div>
+                    </if>
+                    <h2>收货地址</h2>
+                    <div class="form-group">
+                        <label >收货人：</label>
+                        {$order_info['consignee']}
+                    </div>
+
+                    <div class="form-group">
+                        <label >手机号码：</label>
+                        {$order_info['mobile']}
+                    </div>
+                    <div class="form-group">
+                        <label >收货地址：</label>
+                        {$order_info['address']}
+                    </div>
+                    <div class="form-group">
+                        <label >邮编：</label>
+                        {$order_info['zipcode']}
+                    </div>
+                    <h2 style="border-top: 1px solid #eee;padding-top: 20px;margin-top: 36px;">购买的商品信息</h2>
+                    <div style="background-color:#eee">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td class="center">图片</td>
+                                    <td>商品名称</td>
+                                    <td class="center">价格</td>
+                                    <td class="center">数量</td>
+                                    <td class="center">总计</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <php>$total_price=0;</php>
+
+                                <volist name="goods_list" id="cart_item">
+
+                                    <tr>
+
+                                        <td class="cart_Product">
+                                            <a href="{:U('Goods/detailed',array('id'=>
+                                                $cart_item['goods_id']))}">
+                                                <img width="100px" src="__PUBLIC__/{$cart_item['goods_thumb']}" alt=""></a>
+                                        </td>
+                                        <td class="cart_Description">
+                                            <a href="{:U('Goods/detailed',array('id'=>
+                                                $cart_item['goods_id']))}">
+                                                <p>{$cart_item['goods_name']}</p>
+                                            </a>
+
+                                        </td>
+                                        <td class="cart_Unit">
+                                            <span class="price color_red">
+                                                ￥ <em>{$cart_item['goods_price']}</em>
+                                            </span>
+                                        </td>
+                                        <td class="td_num center "> <b>{$cart_item['goods_number']}</b>
+                                        </td>
+                                        <td class="cart_Total">
+                                            <span class="price color_red">
+                                                ￥
+                                                <php>
+                                                    echo $cur_price=$cart_item['goods_price']*$cart_item['goods_number'];
+                                         $total_price+=$cur_price;
+                                                </php>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </volist>
+                            </table>
+                        </div>
+                        <div  style=" margin-right:28px">
+                            <h3>
+                                金额：￥
+                                <php>echo $total_price;</php>
+                            </h3>
+                            <h3>邮费：￥0.00</h3>
+                            <h3 style="color:red">
+                                总金额：￥
+                                <php>echo $total_price;</php>
+                            </h3>
+                        </div>
+                        <div  style="float:right; margin-right:28px;width: 118px;clear: both;margin-top: 20px;margin-bottom: 20px;">
+                            <input type="hidden" name="goods_amount" value="<php>echo $total_price;</php>
+                        ">
+                        <form method="post" action="{:U('Buyers/setOrderStatus')}">
+                            <if condition="$order_info['order_status'] eq 2" >
+                            <input type="submit" value="我已评论" class="btn  btn-success btn-large">
+                            <input type="hidden" name="order_id" value="{$order_info['order_id']}">
+                            <input type="hidden" name="order_status" value="3">
+                            <elseif condition="$shipping_info" />
+
+                            <input type="submit" value="确认收货" class="btn  btn-success btn-large">
+                            <input type="hidden" name="order_id" value="{$order_info['order_id']}">
+                            <input type="hidden" name="order_status" value="2"></if>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<include file="Public/footer" />

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0,
           maximum-scale=1.0, minimum-scale=1.0">
     <title>redman</title>
-    <link rel="stylesheet" href="__PUBLIC__/common/bootstrap-3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="__PUBLIC__/common/Font-Awesome-master/css/font-awesome.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/home/css/redman.css?1">
+    <link rel="stylesheet" href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="/mogu/Public/common/Font-Awesome-master/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/mogu/Public/home/css/redman.css?1">
 </head>
     <script type="text/javascript">
-        var pub_path="__PUBLIC__/";//这一个是ajax提交的修改地址
-        var Redman_ajax_url="{:U('Redman/ajax_get')}";
+        var pub_path="/mogu/Public/";//这一个是ajax提交的修改地址
+        var Redman_ajax_url="<?php echo U('Redman/ajax_get');?>";
         //alert(Redman_ajax_url);//    /mogu/index.php/home/Redman/ajax_get.html
         //这一个是ajax提交的修改地址
     </script>
@@ -21,7 +21,7 @@
     <!--最上面的图片-->
     <div class="banner-wrap" style="background-color:#ffcbae;">
         <a class="banner" href="javascript:;" target="_self" style="cursor: default;">
-            <img src="__PUBLIC__/home/images/meinv.jpg"> </a></div>
+            <img src="/mogu/Public/home/images/meinv.jpg"> </a></div>
     <!--中间的导航以及标题-->
     <div class="nav_warp">
         <p class="nav-title"><a href="http://www.mogujie.com">首页</a> &gt; 红人穿搭</p>
@@ -30,9 +30,7 @@
         <div class="bx-wrapper" >
             <div class="bx-viewport">
                 <ul class="nav-list clearfix  nav nav-tabs" id="myTab" role="tablist">
-                    <volist name="redman_parent" id="value">
-                        <li class=" nav-item mr10 "><a href="#{$value['redman_id']}" role="tab" data-toggle="tab" >{$value['redman_name']}</a></li>
-                    </volist>
+                    <?php if(is_array($redman_parent)): $i = 0; $__LIST__ = $redman_parent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?><li class=" nav-item mr10 "><a href="#<?php echo ($value['redman_id']); ?>" role="tab" data-toggle="tab" ><?php echo ($value['redman_name']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         <!-- 
                     <li class=" nav-item mr10 "><a href="#2" role="tab" data-toggle="tab">小个子专属</a></li>
                     <li class=" nav-item mr10 "><a href="#3" role="tab" data-toggle="tab" >T恤x半身裙</a></li>
@@ -60,10 +58,10 @@
             <div class="bx-controls bx-has-controls-direction">
                 <div class="bx-controls-direction">
                     <a class="bx-prev disabled" href="javascript:;">
-                        <img src="__PUBLIC__/home/images/left.png" class="arrow">
+                        <img src="/mogu/Public/home/images/left.png" class="arrow">
                     </a>
                     <a class="bx-next" href="javascript:;">
-                        <img src="__PUBLIC__/home/images/right.png" class="arrow">
+                        <img src="/mogu/Public/home/images/right.png" class="arrow">
                     </a>
                 </div>
             </div>
@@ -71,14 +69,12 @@
         </div>
     <!--下面图片-->
     <div class="pool-wrap tab-content" id="myTabContent">
-        <volist name="redman_parent" id="val">
-            <div class="tab-pane  w-wall-segment clearfix" id="{$val['redman_id']}">  
-            </div>
-        </volist>
+        <?php if(is_array($redman_parent)): $i = 0; $__LIST__ = $redman_parent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><div class="tab-pane  w-wall-segment clearfix" id="<?php echo ($val['redman_id']); ?>">  
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
 </div>
-<script src="__PUBLIC__/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="__PUBLIC__/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script src="__PUBLIC__/home/js/Redman.js?1"></script>
+<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/mogu/Public/home/js/Redman.js?1"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
             $upload -> maxSize = 10240000; //1000m
             $upload -> exts = array('jpg','jpeg','png');//图片的类型
             $upload -> autoSub = FALSE;
-            $upload -> rootPath = './Public/upload/';//图片的保存路径
+            $upload -> rootPath = './Public/home/upload/';//图片的保存路径
             $info = $upload -> upload();
             if(!$info) {
                echo $upload->getError();exit();

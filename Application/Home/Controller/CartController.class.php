@@ -1,12 +1,11 @@
 <?php
+namespace Home\Controller;  
+use Think\Controller;   
 
-namespace Home\Controller;
-
-use Think\Controller;
-class ShoppingCartController extends Controller
-{
-    public function ShoppingCart(){
-        $uinfo=session('auth');
+class CartController extends Controller {
+    public function index(){
+ 
+ 		$uinfo=session('auth');
         if ($uinfo['uid']) {
             // 把当前用户的购物车全部列出来
             $cart_list=M('carts')->where("user_id=".$uinfo['uid'])->select();
@@ -15,11 +14,17 @@ class ShoppingCartController extends Controller
         }
     
  		$this->display();
+       
     }
-    public function detailed()
+ 	
+ 	public function detailed()
  	{
+ 	 
+
  		$this->display();
  	}
+
+
  	public function addCart()
  	{
  		$num=I('cart_num');
@@ -54,6 +59,11 @@ class ShoppingCartController extends Controller
  		}else{
  			M('carts')->where('id='.$has_cart_info['id'])->setInc('goods_number',$num);//是给购物车的数量加上用户新加入的数量
  		}
+ 		
+
             $this->ajaxReturn(array('status'=>1,'message'=>'加入购物车成功！请继续买吧！'));
+
+
+
  	}
 }

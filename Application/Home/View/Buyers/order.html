@@ -1,0 +1,58 @@
+<include file="Public/header" />
+
+<div class="container buyers_home" >
+
+    <include file="Buyers/left_menu" />
+
+    <div class="col-lg-9 right_menu">
+        <ol class="breadcrumb">
+            <li>用户中心</li>
+            <li>订单列表</li>
+        </ol>
+        <table class="table mt-10">
+            <tr>
+
+                <th >订单ID</th>
+                <th >订单编号</th>
+                <th>订单价格</th>
+                <th>订单状态</th>
+                <th>下单时间</th>
+                <th>操作</th>
+            </tr>
+
+            <!--多一个属性condition（条件）
+                if
+                include
+                volist
+                模版引擎的标签
+            -->
+
+            <if condition="$goods_list neq ''">
+
+                <volist name="goods_list" id="value">
+                    <tr data-id="{$value['order_id']}">
+
+                        <td >{$value['order_id']}</td>
+                        <td >{$value['order_sn']}</td>
+                        <td class="price_td" >￥{$value['order_amount']}</td>
+                        <td >
+                            <php>echo getOrderStatus($value['order_status'])</php>
+
+                        </td>
+                        <td >{$value.create_time|date='Y-m-d H:i',###}</td>
+
+                        <td>
+                            <a   href="{:U('Buyers/detailed',array('id'=>$value['order_id']))}">查看订单详情</a>
+
+                        </td>
+                    </tr>
+
+                </volist>
+            </if>
+
+        </table>
+        <div class="pagination">{$page}</div>
+    </div>
+</div>
+
+<include file="Public/footer" />

@@ -28,14 +28,12 @@
 		{
 			$redman=M('Redman');
 			// 接收ajax传过来的cat_id
-			// $cat_id=
-			$page_num=10;
-			$count=$redman->where('parent_id=1')->count();
+			$cat_id=$_GET['cat_id'];
+			$page_num=5;
+			$count=$redman->where('parent_id='.$cat_id)->count();
 			$Page=new \Think\Page($count,$page_num);
-
-			$redman_list=$redman->where('parent_id=1')->limit($Page->firstRow.','.$Page->listRows)->select();
+			$redman_list=$redman->where('parent_id='.$cat_id)->limit($Page->firstRow.','.$Page->listRows)->select();
           	$this->ajaxReturn(array('stauts'=>1,'data'=>$redman_list));
-
 		}
 	}
 ?>
