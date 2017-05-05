@@ -20,13 +20,12 @@ class UserController extends Controller {
              $this->error('验证码错误',U('user/login'));
          }
          else{
-             $this->success('登录成功',U('category/index'));
+             $this->success('登录成功',U('brand/brand'));
              $login['uname']=$user_info['user_name'];
              $login['upwd']=$user_info['user_password'];
              session("auth",$login);
          }
      }
-
     }
     public function register(){
         if ($_POST){
