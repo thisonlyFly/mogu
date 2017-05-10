@@ -1,0 +1,60 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>分类管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('ShouyeRecommend/index')}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <if condition="$title_list neq '' ">
+                <form action="{:U('ShouyeRecommend/update')}" method="post">
+                    <div class="form-group">
+                        <label >分类标题</label>
+                        <input type="text" name="themeM_name" class="form-control" value="{$title_list[0]['themem_name']}">
+                    </div>
+
+                    <div class="form-group">
+                        <label >分类是否显示</label><br>
+                        <input type="radio" name="themeM_isShow" value="1" {$title_list[0]['themem_isshow']==1?"checked":""}>显示
+                        <input type="radio" name="themeM_isShow" value="0" {$title_list[0]['themem_isshow']==0?"checked":""}>不显示
+                    </div>
+                    <div class="form-group">
+                        <label >分类是否热门</label><br>
+                        <input type="radio" name="themeM_isHot" value="1" {$title_list[0]['themem_ishot']==1?"checked":""}>热门
+                        <input type="radio" name="themeM_isHot" value="0" {$title_list[0]['themem_ishot']==0?"checked":""}>不热门
+                    </div>
+                    <div class="form-group">
+                        <label >分类是否热门精选</label><br>
+                        <input type="radio" name="themeM_clickHot" value="1" {$title_list[0]['themem_clickhot']==1?"checked":""}>精选
+                        <input type="radio" name="themeM_clickHot" value="0" {$title_list[0]['themem_clickhot']==0?"checked":""}>不精选
+                    </div>
+                    <div class="form-group">
+                        <label >分类排序</label><br>
+                        <input type="text" name="themeM_order" class="form-control" placeholder="默认30" value="{$title_list[0]['themem_order']}">
+                    </div>
+                    <div class="form-group">
+                        <label >分类备注</label><br>
+                        <input type="text" name="themeM_remarks" class="form-control"  value="{$title_list[0]['themem_remarks']}">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="themeM_id" value="{$title_list[0]['themem_id']}">
+                        <input type="submit" class="btn btn-success"  value="修改">
+
+                    </div>
+                </form>
+            </if>
+        </div>
+    </div>
+</div>
+{$theme_parent}
+
+
+<include file="Public/footer" />

@@ -1,0 +1,60 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>分类管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('ShouyeRecommend/index')}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <form action="{:U('ShouyeRecommend/add')}" method="post">
+                <div class="form-group">
+                    <label >分类标题</label>
+                    <input type="text" name="themeM_name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label >分类是否显示</label><br>
+                    <input type="radio" name="themeM_isShow" value="1" checked>显示
+                    <input type="radio" name="themeM_isShow" value="0" >不显示
+                </div>
+                <div class="form-group">
+                    <label >分类是否热门</label><br>
+                    <input type="radio" name="themeM_isHot" value="1">热门
+                    <input type="radio" name="themeM_isHot" checked value="0">不热门
+                </div>
+                <div class="form-group">
+                    <label >分类是否热门精选</label><br>
+                    <input type="radio" name="themeM_clickHot" checked value="1">精选
+                    <input type="radio" name="themeM_clickHot" value="0">不精选
+                </div>
+                <div class="form-group">
+                    <label >分类排序</label><br>
+                    <input type="text" name="themeM_order" class="form-control" placeholder="默认30">
+                </div>
+                <div class="form-group">
+                    <label >分类备注</label>
+                    <input type="text" name="themeM_remarks" class="form-control">
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" class="btn btn-success"  value="添加">
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+{$theme_parent}
+
+
+<include file="Public/footer" />

@@ -1,0 +1,129 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>商品管理</li>
+        <li>详情</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('Goods/index')}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <form action="{:U('Goods/update')}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label >商品名字</label>
+                    <input type="text" name="goods_name" class="form-control" value="{$goods_list[0]['goods_name']}">
+                </div>
+                <div class="form-group">
+                    <label >分类标题</label><br>
+                    <input type="text" name="goods_title" class="form-control" value="{$goods_list[0]['goods_title']}">
+                </div>
+                <div class="form-group">
+                    <label >商品价格</label><br>
+                    <input type="text" name="goods_price" class="form-control" value="{$goods_list[0]['goods_price']}">
+                </div>
+                <div class="form-group">
+                    <label >商品折扣前的价格</label><br>
+                    <input type="text" name="goods_oldprice" class="form-control" value="{$goods_list[0]['goods_oldprice']}">
+                </div>
+                <!--<volist name="test_ar"  id="val" key="k">-->
+                <!--{$Think.lang.$key} {$val}-->
+                <!--</volist>-->
+                <div class="form-group">
+                    <label >商品分类二级</label><br>
+                    <select class="selectText" id="" style="height: 30px;line-height: 30px;width: 100px;">
+                        <option value="{$goods_parent['themem_id']}">&nbsp; &nbsp;{$goods_parent['themem_name']}</option>
+                        <volist name="parent_list"  id="val">
+                            <option value="{$Think.lang.$key}" disabled>{$Think.lang.$key}</option>
+                            <volist name="val" id="sub_item">
+                                <option value="{$Think.lang.$key}"> &nbsp; &nbsp;{$sub_item}</option>
+                            </volist>
+                        </volist>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label >商品分类三级</label><br>
+                    <select name="goods_parent_id" class="selectT" style="height: 30px;width: 100px;">
+                        <if condition="$goods neq ''">
+                            <volist name="goods" id="value">
+                                <option value="{$Think.lang.$key}">&nbsp; &nbsp;{$value}</option>
+                            </volist>
+                        </if>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label >商品已销售的数量</label><br>
+                    <input type="text" name="goods_salenum" class="form-control" value="{$goods_list[0]['goods_salenum']}">
+                </div>
+                <div class="form-group">
+                    <label >商品的库存</label><br>
+                    <input type="text" name="goods_maxnum" class="form-control" value="{$goods_list[0]['goods_maxnum']}">
+                </div>
+                <div class="form-group">
+                    <label >商品排序</label><br>
+                    <input type="text" name="goods_order" class="form-control" value="{$goods_list[0]['goods_order']}">
+                </div>
+                <div class="form-group">
+                    <label >商品颜色（多种以英文逗号隔开）</label><br>
+                    <input type="text" name="goods_color" class="form-control" placeholder="例如：红色,蓝色" value="{$goods_list[0]['goods_color']}">
+                </div>
+                <div class="form-group">
+                    <label >商品尺寸（多种以英文逗号隔开）</label><br>
+                    <input type="text" name="goods_size" class="form-control" placeholder="例如：M,L,XL" value="{$goods_list[0]['goods_size']}">
+                </div>
+                <div class="form-group">
+                    <label >商品是否热门</label><br>
+                    <input type="radio" name="goods_hot" value="1" {$goods_list[0]['goods_hot']==1? 'checked': ''}>热门
+                    <input type="radio" name="goods_hot" value="0" {$goods_list[0]['goods_hot']==0? 'checked': ''}>不热门
+                </div>
+                <div class="form-group">
+                    <label >商品默认图片</label>
+                    <input type="file" class="goods_img" name="goods_img1" class="form-control" data-height="200"                               data-default-file="__PUBLIC__./{$goods_list[0]['goods_img1']}">
+                </div>
+                <div class="form-group">
+                    <label >商品图片</label>
+                    <input type="file" class="goods_img" name="goods_img2" class="form-control" data-height="200"
+                           data-default-file="__PUBLIC__./{$goods_list[0]['goods_img2']}">
+                </div>
+                <div class="form-group">
+                    <label >商品图片</label>
+                    <input type="file" class="goods_img" name="goods_img3" class="form-control" data-height="200"
+                           data-default-file="__PUBLIC__./{$goods_list[0]['goods_img3']}">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="goods_id" value="{$goods_list[0]['goods_id']}">
+                    <input type="submit" class="btn btn-success"  value="修改">
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+<script>
+    $('.goods_img').dropify();
+
+    $(".selectText").on("change",function () {
+        if($(".selectText").select()){
+            var selectText=$(".selectText").val();
+            $.post(url+"/ajax_rtn",{selectText:selectText},function (rtn) {
+                $(".selectT").empty();
+                var html='';
+                for(var i in rtn){
+                    html+='<option value="'+i+'">&nbsp; &nbsp;'+rtn[i]+'</option>';
+                }
+                $(".selectT").append(html);
+            });
+        }
+    });
+</script>
+{$theme_parent}
+
+
+<include file="Public/footer" />

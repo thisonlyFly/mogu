@@ -1,0 +1,77 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>分类管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('ShouyeThemeMarket/index')}" class="btn btn-default">返回列表</a>
+        </div>
+        <if condition="$themeM_list neq ''">
+        <volist name="themeM_list" id="value">
+        <div class="row add_form_box">
+            <form action="{:U('ShouyeThemeMarket/update')}" method="post">
+                <div class="form-group">
+                    <label >分类标题</label>
+                    <input type="text" name="themeM_name" class="form-control"value="{$value['themem_name']}">
+                </div>
+
+                <div class="form-group">
+                    <label >分类是否显示</label><br>
+                    <input type="radio" name="themeM_isShow" value="1" {$value['themem_isshow']=1?checked:""}>显示
+                    <input type="radio" name="themeM_isShow" value="0" {$value['themem_isshow']=0?checked:""}>不显示
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<label >分类是否热门</label><br>-->
+                    <!--<input type="radio" name="themeM_isHot" value="1" {$value['themem_ishot']=1?checked:""}>热门-->
+                    <!--<input type="radio" name="themeM_isHot" value="0" {$value['themem_ishot']=0?checked:""}>不热门-->
+                <!--</div>-->
+                <div class="form-group">
+                    <label >分类排序</label><br>
+                    <input type="text" name="themeM_order" class="form-control" value="{$value['themem_order']}">
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<label >分类等级</label><br>-->
+                    <!--<input type="radio" name="themeM_children" value="0" {$value['themeM_children']=0?checked:""}>二级菜单-->
+                    <!--<input type="radio" name="themeM_children" value="1" {$value['themeM_children']=1?checked:""}>紧靠父级分类的下级-->
+                    <!--<input type="radio" name="themeM_children" value="2" {$value['themeM_children']=2?checked:""}>二级菜单的标题-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label >最热门（搜索框下面的行）</label><br>-->
+                    <!--<input type="radio" name="themeM_clickHot" value="0" {$value['themeM_clickHot']=0?checked:""}>否-->
+                    <!--<input type="radio" name="themeM_clickHot" value="1" {$value['themeM_clickHot']=1?checked:""}>是-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<label >父级分类</label>-->
+                    <!--&lt;!&ndash; 需把之前已经有的一级菜单给查询出来 &ndash;&gt;-->
+                    <!--<select name="themeM_parent_id" id="">-->
+                        <!--<option value="0">{$parent_name[0]['themem_parent']?$value['themem_parent']:"本身就是父级"}</option>-->
+
+                        <!--<volist name="themeM_parent" id="val">-->
+                        <!--<option value="{$val['themem_id']}">{$val['themem_name']}</option>-->
+                        <!--</volist>-->
+                    <!--</select>-->
+
+                <!--</div>-->
+                <div class="form-group">
+
+                    <input type="hidden" name="themem_id" value="{$value['themem_id']}">
+                    <input type="submit" class="btn btn-success"  value="修改">
+
+                </div>
+            </form>
+        </div>
+        </volist>
+        </if>
+
+    </div>
+</div>
+{$theme_parent}
+
+
+<include file="Public/footer" />

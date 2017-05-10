@@ -1,0 +1,74 @@
+<include file="Public/header" />
+
+<div class="col-lg-11 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>首页管理</li>
+        <li>主题市场二级菜单</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="{:U('ShouyeThemeMarket/indexChildren',array('themeM_parent_id'=>$themeM_parent_id))}" class="btn btn-default">返回列表</a>
+                <a href="{:U('ShouyeThemeMarket/lastAdd',array('themem_id'=>$themeM_id))}" class="btn btn-success">添加二级菜单</a>
+            </div>
+            <div class="col-lg-4 pull-right">
+                <form action="">
+                    <input type="text" class="form-control" style="width: 50%;display: inline-block;" placeholder="请输入关键词"> <input value="搜索" type="submit" class="btn btn-success">
+                </form>
+            </div>
+
+        </div>
+        <table class="table mt-10">
+            <tr>
+                <th><label > <input type="checkbox"> 全选 </label></th>
+                <th>分类ID</th>
+                <th>分类</th>
+                <th>分类上级ID</th>
+                <th>分类是否显示</th>
+                <th>分类是否热门</th>
+                <th>分类排序</th>
+                <th>分类等级</th>
+                <th>是否热门精选</th>
+                <th>分类备注</th>
+                <th>操作</th>
+            </tr>
+
+            <if condition="$themeM_list neq ''">
+            <volist name="themeM_list" id="value">
+            <tr data-id="{$value['themem_id']}">
+                <td><input type="checkbox"></td>
+                <td >{$value['themem_id']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_name">{$value['themem_name']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_parent_id">{$value['themem_parent_id']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_isShow">{$value['themem_isshow']>0?"是":"否"}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_isHot">{$value['themem_ishot']>0?"是":"否"}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_order">{$value['themem_order']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_children">{$value['themem_children']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="themeM_clickHot">{$value['themem_clickhot']>0?"是":"否"}</td>
+                <td data-toggle="ajax_edit"data-colmun="themeM_clickHot">
+                    {$value['themem_remarks']}
+                </td>
+                <td>
+                    <a href="{:U('ShouyeThemeMarket/lastUpdate',array('themem_id'=>$value['themem_id']))}">修改</a> |
+                    <a href="{:U('ShouyeThemeMarket/lastDelete',array('themem_id'=>$value['themem_id'],'themeM_parent_id'=>$value['themem_parent_id']))}">删除</a>
+                </td>
+            </tr>
+
+            </volist>
+
+            </if>
+
+
+
+        </table>
+
+
+
+    </div>
+</div>
+
+
+<include file="Public/footer" />

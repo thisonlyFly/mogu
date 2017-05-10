@@ -1,0 +1,65 @@
+<include file="Public/header" />
+
+<div class="col-lg-11 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>首页管理</li>
+        <li>首页的广告</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <div class="col-lg-2">
+                <a href="{:U('ShouyeAd/add')}" class="btn btn-success">添加分类</a>
+            </div>
+            <div class="col-lg-4 pull-right">
+                <form action="">
+                    <input type="text" class="form-control" style="width: 50%;display: inline-block;" placeholder="请输入关键词"> <input value="搜索" type="submit" class="btn btn-success">
+                </form>
+            </div>
+
+        </div>
+        <table class="table mt-10">
+            <tr>
+                <th><label > <input type="checkbox"> 全选 </label></th>
+                <th>分类ID</th>
+                <th>分类</th>
+                <th>分类标题</th>
+                <th>分类备注</th>
+                <th>分类排序</th>
+                <th>分类图片</th>
+                <th>操作</th>
+            </tr>
+
+            <if condition="$ad_list neq ''">
+            <volist name="ad_list" id="value">
+            <tr data-id="{$value['ad_id']}">
+                <td><input type="checkbox"></td>
+                <td >{$value['ad_id']}</td>
+                <td data-toggle="ajax_edit"  data-co lmun="Ad_name">{$value['ad_name']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="Ad_title">{$value['ad_title']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="Ad_remarks">{$value['ad_remarks']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="Ad_order">{$value['ad_order']}</td>
+                <td data-toggle="ajax_edit"  data-colmun="Ad_img">{$value['ad_img']}</td>
+                <td>
+                    <a href="{:U('ShouyeAd/update',array('Ad_id'=>$value['ad_id']))}">修改</a> |
+                    <a href="{:U('ShouyeAd/delete',array('Ad_id'=>$value['ad_id']))}">删除</a>
+                </td>
+            </tr>
+
+            </volist>
+
+            </if>
+
+
+        </table>
+
+
+
+    </div>
+</div>
+<div class="pagination">{$page}</div>
+
+
+<include file="Public/footer" />

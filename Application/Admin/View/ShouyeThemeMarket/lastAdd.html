@@ -1,0 +1,79 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>分类管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('ShouyeThemeMarket/lastChildren',array('themem_id'=>$themeM_parent_id))}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <form action="{:U('ShouyeThemeMarket/lastAdd')}" method="post">
+                <div class="form-group">
+                    <label >分类标题</label>
+                    <input type="text" name="themeM_name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label >分类是否显示</label><br>
+                    <input type="radio" name="themeM_isShow" value="1" checked>显示
+                    <input type="radio" name="themeM_isShow" value="0" >不显示
+                </div>
+                <div class="form-group">
+                    <label >分类是否热门</label><br>
+                    <input type="radio" name="themeM_isHot" value="1">热门
+                    <input type="radio" name="themeM_isHot" checked value="0">不热门
+                </div>
+                <div class="form-group">
+                    <label >分类排序</label><br>
+                    <input type="text" name="themeM_order" class="form-control" placeholder="默认50">
+                </div>
+                <div class="form-group">
+                    <label >分类等级</label><br>
+                    <input type="radio" name="themeM_children" value="0" checked>二级菜单
+                    <input type="radio" name="themeM_children" value="1" >二级菜单的标题
+                    <input type="radio" name="themeM_children" value="2" >父级
+                </div>
+                <div class="form-group">
+                    <label >分类是否热门精选</label><br>
+                    <input type="radio" name="themeM_clickHot" value="0" checked>否
+                    <input type="radio" name="themeM_clickHot" value="1" >是
+                </div>
+                <div class="form-group">
+                    <label >分类备注</label><br>
+                    <input type="text" name="themeM_remarks" class="form-control">
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<label >父级分类</label>-->
+                    <!--&lt;!&ndash; 需把之前已经有的一级菜单给查询出来 &ndash;&gt;-->
+                    <!--<select name="themeM_parent_id" id="">-->
+                        <!--<option value="0">请选择</option>-->
+                        <!--<volist name="themeM_parent" id="val">-->
+
+                        <!--<option value="{$val['themem_id']}">{$val['themem_name']}</option>-->
+                        <!--</volist>-->
+                    <!--</select>-->
+
+                <!--</div>-->
+
+                <div class="form-group">
+                    <input type="hidden" name="themeM_parent_id" value="{$themeM_parent_id}">
+                    <input type="submit" class="btn btn-success"  value="添加">
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+{$theme_parent}
+
+
+<include file="Public/footer" />

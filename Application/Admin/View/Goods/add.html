@@ -1,0 +1,122 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>商品管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('Goods/index')}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <form action="{:U('Goods/add')}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label >商品名字</label>
+                    <input type="text" name="goods_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >分类标题</label><br>
+                    <input type="text" name="goods_title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >商品价格</label><br>
+                    <input type="text" name="goods_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >商品折扣前的价格</label><br>
+                    <input type="text" name="goods_oldprice" class="form-control">
+                </div>
+                <!--<volist name="test_ar"  id="val" key="k">-->
+                    <!--{$Think.lang.$key} {$val}-->
+                <!--</volist>-->
+                <div class="form-group">
+                    <label >商品分类二级</label><br>
+                    <select id="" class="selectText" style="height: 30px;line-height: 30px;width: 100px;">
+                        <option value="0">&nbsp; &nbsp;请选择</option>
+                        <volist name="goods_list"  id="val">
+                            <option value="{$Think.lang.$key}" disabled>{$Think.lang.$key}</option>
+                            <volist name="val" id="sub_item">
+                                <option value="{$Think.lang.$key}"> &nbsp; &nbsp;{$sub_item}</option>
+                            </volist>
+                        </volist>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label >商品分类三级</label><br>
+                    <select name="goods_parent_id" class="selectT" style="height: 30px;width: 100px;">
+                        <option value="0">&nbsp; &nbsp;请选择</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label >商品已销售的数量</label><br>
+                    <input type="text" name="goods_salenum" class="form-control" placeholder="默认为0">
+                </div>
+                <div class="form-group">
+                    <label >商品的库存</label><br>
+                    <input type="text" name="goods_maxnum" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >商品排序</label><br>
+                    <input type="text" name="goods_order" class="form-control" placeholder="默认500">
+                </div>
+                <div class="form-group">
+                    <label >商品颜色（多种颜色英文逗号隔开）</label><br>
+                    <input type="text" name="goods_color" class="form-control" placeholder="例如：红色,蓝色">
+                </div>
+                <div class="form-group">
+                    <label >商品尺寸（多种颜色英文逗号隔开）</label><br>
+                    <input type="text" name="goods_size" class="form-control" placeholder="例如：M,L,XL">
+                </div>
+                <div class="form-group">
+                    <label >商品是否热门</label><br>
+                    <input type="radio" name="goods_hot" checked value="1">热门
+                    <input type="radio" name="goods_hot" value="0" checked>不热门
+                </div>
+                <div class="form-group">
+                    <label >商品默认图片</label>
+                    <input type="file" class="goods_img" name="goods_img1" class="form-control" data-height="200">
+                </div>
+                <div class="form-group">
+                    <label >商品图片</label>
+                    <input type="file" class="goods_img" name="goods_img2" class="form-control" data-height="200" >
+                </div>
+                <div class="form-group">
+                    <label >商品图片</label>
+                    <input type="file" class="goods_img" name="goods_img3" class="form-control" data-height="200" >
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" class="btn btn-success"  value="添加">
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+<script>
+    $('.goods_img').dropify();
+
+        $(".selectText").on("change",function () {
+           if($(".selectText").select()){
+               var selectText=$(".selectText").val();
+               $.post(url+"/ajax_rtn",{selectText:selectText},function (rtn) {
+                    $(".selectT").empty();
+                    var html='';
+                    for(var i in rtn){
+                         html+='<option value="'+i+'">&nbsp; &nbsp;'+rtn[i]+'</option>';
+                    }
+                    $(".selectT").append(html);
+               });
+           }
+        });
+</script>
+
+
+<include file="Public/footer" />

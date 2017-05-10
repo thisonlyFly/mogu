@@ -1,0 +1,55 @@
+<include file="Public/header" />
+
+<div class="col-lg-9 ">
+
+    <ol class="breadcrumb">
+        <li>后台管理</li>
+        <li>分类管理</li>
+        <li>添加</li>
+    </ol>
+    <!-- 内容列表页面 -->
+    <div class="right_content_box">
+        <div class="row">
+            <a href="{:U('ShouyeAd/index')}" class="btn btn-default">返回列表</a>
+        </div>
+
+        <div class="row add_form_box">
+            <form action="{:U('ShouyeAd/add')}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label >分类</label>
+                    <input type="text" name="ad_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >分类标题</label><br>
+                    <input type="text" name="ad_title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >分类备注</label><br>
+                    <input type="text" name="ad_remarks" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label >分类排序</label><br>
+                    <input type="text" name="ad_order" class="form-control" placeholder="默认100">
+                </div>
+                <div class="form-group">
+                    <label >分类图片</label>
+                    <input type="file" id="ad_img" name="ad_img" class="form-control" data-height="400" >
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" class="btn btn-success"  value="添加">
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+<script>
+    $('#ad_img').dropify();
+</script>
+{$theme_parent}
+
+
+<include file="Public/footer" />
