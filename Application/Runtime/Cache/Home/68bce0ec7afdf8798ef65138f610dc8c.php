@@ -1,88 +1,94 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Page</title>
-    <link href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/mogu/Public/home/css/public.css">
-    <link rel="stylesheet" href="/mogu/Public/home/css/header.css">
-    <link rel="stylesheet" href="/mogu/Public/home/css/shares.css">
-    <link rel="stylesheet" href="/mogu/Public/home/css/twzt.css">
-    <link rel="stylesheet" href="/mogu/Public/home/css/tail.css">
+	<meta charset="UTF-8">
+	<title>mogu</title>
+	<link rel="stylesheet" href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/mogu/Public/common/Font-Awesome-master/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/mogu/Public/home/css/header.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/twzt.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/tail.css">
+
 </head>
 <body>
 <!--头部1-->
 <div class="nav">
-    <div class="nav-wap ">
-        <a href="" class="nav-logo">蘑菇街首页</a>
-        <ul class="nav-ul">
-            <li class="s1"><a href="">登录</a></li>
-            <li class="s1"><a href="">注册</a></li>
-            <li class="s1 ullia nav-dd"><a href="">我的订单</a></li>
-            <li class="s1 ullia nav-shopping">
-                <a href=""><span>购物车</span></a>
-                <div class="sp-cart">
-                    购物车里没有商品！
-                </div>
-            </li>
-            <li class="s1 ullia nav-khfw">
-                <a href="">客户服务</a>
-                <i class="nav-icon"></i>
-                <ol class="khfw-tcc">
-                    <li><a href="">消费者服务</a></li>
-                    <li><a href="">商家服务</a></li>
-                    <li><a href="">规则中心</a></li>
-                </ol>
-            </li>
-            <li class="s1 ullia nav-wdxd">
-                <a href="">我的小店</a>
-                <i class="nav-icon"></i>
-                <ol class="khfw-tcc">
-                    <li><a href="">管理后台</a></li>
-                    <li><a href="">商家社区</a></li>
-                    <li><a href="">商家培训</a></li>
-                    <li><a href="">市场入驻</a></li>
-                </ol>
-            </li>
-        </ul>
-    </div>
+	<div class="nav-wap ">
+		<a href="http://localhost/mogu/Home/page/index.html" class="nav-logo">蘑菇头首页</a>
+		<ul class="nav-ul">
+			<li class="s1"><a href="http://localhost/mogu/Home/User/login.html" target="_blank">登录</a></li>
+			<li class="s1"><a href="http://localhost/mogu/Home/User/register.html" target="_blank">注册</a></li>
+			<li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/Order.html" target="_blank">我的订单</a></li>
+			<li class="s1 ullia nav-shopping">
+				<a href="http://localhost/mogu/Home/ShoppingCart/Shopping_Cart.html" target="_blank"><span>购物车</span></a>
+				<div class="sp-cart">
+					购物车里没有商品！
+				</div>
+			</li>
+			<li class="s1 ullia nav-khfw">
+				<a href="">客户服务</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">消费者服务</a></li>
+					<li><a href="">商家服务</a></li>
+					<li><a href="">规则中心</a></li>
+				</ol>
+			</li>
+			<li class="s1 ullia nav-wdxd">
+				<a href="">我的小店</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">管理后台</a></li>
+					<li><a href="">商家社区</a></li>
+					<li><a href="">商家培训</a></li>
+					<li><a href="">市场入驻</a></li>
+				</ol>
+			</li>
+		</ul>
+	</div>
 </div>
 <!--头部2-->
 <div class="header header-bottom">
-    <div class="nav-wap">
-        <a href="" class="logo"></a>
-    <div class="header-ssk">
-        <div class="header-srk">
-            <div class="header-ssp">
-                <span class="selected" id="sl">搜商品</span>
-                <ol class="ssp-ol">
-                    <li class="lisp"><a href="javascript:;">商品</a></li>
-                    <li class="lidp"><a href="javascript:;">店铺</a></li>
-                </ol>
-            </div>
-            <div class="header-text">
-                <input type="text" placeholder="套装新版韩装" class="input-text">
-                <div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
-                <input type="submit" value="搜索" class="input-btn">
-            </div>
-        </div>
-        <div class="header-tj">
-            <a href="">春季套装</a>
-            <a href="">卫衣</a>
-            <a href="">牛仔裤</a>
-            <a href="">打底衫</a>
-            <a href="">单鞋</a>
-            <a href="">斜挎包</a>
-            <a href="">男士外套</a>
-            <a href="">棒球服</a>
-            <a href="">连衣裙</a>
-        </div>
-    </div>
-    <div class="header-ewm">
-        <img src="/mogu/Public/home/images/ewm1.png" alt="">
-    </div>
-    </div>
+	<div class="nav-wap">
+		<a href="http://localhost/mogu/Home/page/index.html" class="logo"></a>
+		<div class="header-ssk">
+			<div class="header-srk">
+				<div class="header-ssp">
+					<span class="selected" id="sl">搜商品</span>
+					<ol class="ssp-ol">
+						<li class="lisp"><a href="javascript:;">商品</a></li>
+						<li class="lidp"><a href="javascript:;">店铺</a></li>
+					</ol>
+				</div>
+				<div class="header-text">
+					<input type="text" placeholder="套装新版韩装" class="input-text">
+					<div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
+					<input type="submit" value="搜索" class="input-btn">
+				</div>
+			</div>
+			<div class="header-tj">
+				<a href="">春季套装</a>
+				<a href="">卫衣</a>
+				<a href="">牛仔裤</a>
+				<a href="">打底衫</a>
+				<a href="">单鞋</a>
+				<a href="">斜挎包</a>
+				<a href="">男士外套</a>
+				<a href="">棒球服</a>
+				<a href="">连衣裙</a>
+			</div>
+		</div>
+		<div class="header-ewm">
+			<img src="/mogu/Public/home/images/ewm1.png" alt="">
+		</div>
+	</div>
 </div>
+
+    <link rel="stylesheet" href="/mogu/Public./home/css/shares.css">
+    <link rel="stylesheet" href="/mogu/Public/home/css/public.css">
+
 
 <!--头部四-->
 <div class="page_activity ">
@@ -105,7 +111,7 @@
                 <!--分类列表-->
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">上衣</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -118,7 +124,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">裙子</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -131,7 +137,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">裤子</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -144,7 +150,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">内衣</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -157,7 +163,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">鞋子</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -170,7 +176,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">包子</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -183,7 +189,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">配饰</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -196,7 +202,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">男友</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -209,7 +215,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">美妆</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -222,7 +228,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">母婴</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -235,7 +241,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">家居</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -248,7 +254,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">百货</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -261,7 +267,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">食品</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -274,7 +280,7 @@
                 </li>
                 <li class="page1-fl">
                     <dl class="page1-fl-dl">
-                        <dt class="page1-fl-dt"><a href="">上衣</a></dt>
+                        <dt class="page1-fl-dt"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">家电</a></dt>
                         <dd class="page1-fl-dd">
                             <span class="page1-dh-span"><a class="page1-dh-a" href="">春夏上新</a></span>
                             <span class="page1-dh-span">
@@ -288,7 +294,7 @@
                 <!--弹出层-->
                 <div class="page1-dh-tcc">
                     <div class="page1-dh-tcc-left">
-                        <h2 class="page1-dh-tcc-h2"><a href="">上衣</a></h2>
+                        <h2 class="page1-dh-tcc-h2"><a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">运动</a></h2>
                         <dl class="page1-dh-tcc-dl">
                             <dt class="page1-dh-tcc-dt">
                                 <a href="" class="fl">当季热卖</a>
@@ -2318,7 +2324,7 @@
     <div class="nav-wap">
         <div class="pg2-left-painc">
             <!--左边-->
-            <a href="" class="pg2-painc-left">
+            <a href="http://localhost/mogu/Home/Timefast/timefast.html" target="_blank" class="pg2-painc-left">
                 <div class="first-panic">
                     <div class="pg2-title">限时抢购</div>
                     <div class="pg2-count">
@@ -2424,45 +2430,110 @@
         </div>
         <div class="pg3-hrcd-xzimg">
             <div class="pg3-hrcd-xzimg-left">
-                <div class="pg3-img-lb">
-                    <a href="" >
-                        <img src="/mogu/Public/home/images/pg31.jpg" alt="">
-                        <div class="pg3-hrcd-title">
-                            <span>裙子套装</span>
-                        </div>
-                    </a>
+                <div class="pg3-img-lb flip-container" >
+                    <div class="flipper">
+                        <a href="">
+                            <div class="front">
+                                <img src="/mogu/Public/home/images/pg31.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>高颜值衬衫</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="back">
+                                <img src="/mogu/Public/home/images/pg32.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>裙子套装</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="pg3-img-lb">
-                    <a href="" >
-                        <img src="/mogu/Public/home/images/pg32.jpg" alt="">
-                        <div class="pg3-hrcd-title">
-                            <span>裙子套装</span>
-                        </div>
-                    </a>
+                <div class="pg3-img-lb flip-container" >
+                    <div class="flipper">
+                        <a href="">
+                            <div class="front">
+                                <img src="/mogu/Public/home/images/pg33.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>学生党裙装</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="back">
+                                <img src="/mogu/Public/home/images/pg34.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>出游省心套装</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="pg3-img-lb">
-                    <a href="" >
-                        <img src="/mogu/Public/home/images/pg33.jpg" alt="">
-                        <div class="pg3-hrcd-title">
-                            <span>裙子套装</span>
-                        </div>
-                    </a>
+                <div class="pg3-img-lb flip-container" >
+                    <div class="flipper">
+                        <a href="">
+                            <div class="front">
+                                <img src="/mogu/Public/home/images/pg37.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>学生党专属</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="back">
+                                <img src="/mogu/Public/home/images/pg38.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>T恤怎么穿</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="pg3-img-lb">
-                    <a href="" >
-                        <img src="/mogu/Public/home/images/pg34.jpg" alt="">
-                        <div class="pg3-hrcd-title">
-                            <span>裙子套装</span>
-                        </div>
-                    </a>
+                <div class="pg3-img-lb flip-container" >
+                    <div class="flipper">
+                        <a href="">
+                            <div class="front">
+                                <img src="/mogu/Public/home/images/pg39.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>初夏女神装</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="back">
+                                <img src="/mogu/Public/home/images/pg40.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>腿长一米八</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="pg3-img-lb">
-                    <a href="" >
-                        <img src="/mogu/Public/home/images/pg35.jpg" alt="">
-                        <div class="pg3-hrcd-title">
-                            <span>裙子套装</span>
-                        </div>
-                    </a>
+                <div class="pg3-img-lb flip-container" >
+                    <div class="flipper">
+                        <a href="">
+                            <div class="front">
+                                <img src="/mogu/Public/home/images/pg41.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>微胖巧搭</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="back">
+                                <img src="/mogu/Public/home/images/pg42.jpg" alt="">
+                                <div class="pg3-hrcd-title">
+                                    <span>气质抢镜装</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
             </div>
             <div class="pg3-hrcd-xzimg-right">
@@ -2516,13 +2587,14 @@
             <div class="selected-bottom-lb">
             <ul class="selected-carousel">
                 <li>
-                    <div class="selected-carousel-content-top">
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank"><div class="selected-carousel-content-top">
                         <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
                         <div class="selected-carousel-content-lower">
                             <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
                             <span>BoBa奶绿</span>
                         </div>
-                    </div>
+                        </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2550,13 +2622,15 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2584,13 +2658,15 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2620,13 +2696,15 @@
             </ul>
             <ul class="selected-carousel">
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb3.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/tx1.jpg" alt="">
-                            <span>你是我的女神</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb3.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/tx1.jpg" alt="">
+                                <span>你是我的女神</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2654,13 +2732,15 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2688,117 +2768,15 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="selected-carousel-content-bottom">
-                        <ul>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul class="selected-carousel">
-                <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb2.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/tx2.png" alt="">
-                            <span>浅浅家琪琪</span>
-                        </div>
-                    </div>
-                    <div class="selected-carousel-content-bottom">
-                        <ul>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
-                        </div>
-                    </div>
-                    <div class="selected-carousel-content-bottom">
-                        <ul>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-                            <li>
-                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
-                                <span>$29.00</span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
-                        </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2828,13 +2806,15 @@
             </ul>
             <ul class="selected-carousel">
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb4.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb2.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/tx2.png" alt="">
+                                <span>浅浅家琪琪</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2862,13 +2842,15 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2896,13 +2878,125 @@
                     </div>
                 </li>
                 <li>
-                    <div class="selected-carousel-content-top">
-                        <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                        <div class="selected-carousel-content-lower">
-                            <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                            <span>BoBa奶绿</span>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
                         </div>
+                    </a>
+                    <div class="selected-carousel-content-bottom">
+                        <ul>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+
+                        </ul>
                     </div>
+                </li>
+            </ul>
+            <ul class="selected-carousel">
+                <li>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb4.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="selected-carousel-content-bottom">
+                        <ul>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="selected-carousel-content-bottom">
+                        <ul>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+                            <li>
+                                <img src="/mogu/Public/home/images/pg4-lbsp1.jpg" alt="">
+                                <span>$29.00</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                        <div class="selected-carousel-content-top">
+                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                            <div class="selected-carousel-content-lower">
+                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                <span>BoBa奶绿</span>
+                            </div>
+                        </div>
+                    </a>
                     <div class="selected-carousel-content-bottom">
                         <ul>
                             <li>
@@ -2932,13 +3026,15 @@
             </ul>
             <ul class="selected-carousel">
                     <li>
-                        <div class="selected-carousel-content-top">
-                            <img src="/mogu/Public/home/images/p4-lbtx2.jpg" alt="" style="width: 100%">
-                            <div class="selected-carousel-content-lower">
-                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                                <span>BoBa奶绿</span>
+                        <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                            <div class="selected-carousel-content-top">
+                                <img src="/mogu/Public/home/images/p4-lbtx2.jpg" alt="" style="width: 100%">
+                                <div class="selected-carousel-content-lower">
+                                    <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                    <span>BoBa奶绿</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="selected-carousel-content-bottom">
                             <ul>
                                 <li>
@@ -2966,13 +3062,15 @@
                         </div>
                     </li>
                     <li>
-                        <div class="selected-carousel-content-top">
-                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                            <div class="selected-carousel-content-lower">
-                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                                <span>BoBa奶绿</span>
+                        <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                            <div class="selected-carousel-content-top">
+                                <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                                <div class="selected-carousel-content-lower">
+                                    <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                    <span>BoBa奶绿</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="selected-carousel-content-bottom">
                             <ul>
                                 <li>
@@ -3000,13 +3098,15 @@
                         </div>
                     </li>
                     <li>
-                        <div class="selected-carousel-content-top">
-                            <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
-                            <div class="selected-carousel-content-lower">
-                                <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
-                                <span>BoBa奶绿</span>
+                        <a href="http://localhost/mogu/Home/Jingxuan/jingxuanzhuanti.html" target="_blank">
+                            <div class="selected-carousel-content-top">
+                                <img src="/mogu/Public/home/images/p4-lb1.jpg" alt="" style="width: 100%">
+                                <div class="selected-carousel-content-lower">
+                                    <img src="/mogu/Public/home/images/p4-lbtx1.jpg" alt="">
+                                    <span>BoBa奶绿</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="selected-carousel-content-bottom">
                             <ul>
                                 <li>
@@ -3157,7 +3257,7 @@
                  <span class="pa-rtir-xz"></span>
                  换一批
              </div>
-             <a href="" class="plate-right-gg">
+             <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
              <div class="plate-right-img">
                  <img src="/mogu/Public/home/images/mgjx8.jpg" alt="">
              </div>
@@ -3192,19 +3292,21 @@
         <div class="plate-currency-bottom">
             <!--左边-->
             <div class="plate-bl" style="background: #ecdaf5; ">
-                <div class="plate-bl-wz" >
-                    <a href="" class="plate-bl-wzfk">衬衫</a>
-                    <a href="" class="plate-bl-wzfk">小白鞋</a>
-                    <a href="" class="plate-bl-wzfk">双肩包</a>
-                    <a href="" class="plate-bl-wzfk">运动鞋</a>
-                    <a href="" class="plate-bl-wzfk">牛仔裤</a>
-                    <a href="" class="plate-bl-wzfk">补水保湿</a>
-                </div>
-                <div class="plate-bl-ti"> 品牌精选 </div>
-                <div class="plate-bl-tl">潮牌尖货 春夏焕新 </div>
-                <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/ppjx1.jpg" alt="">
-                </div>
+                    <div class="plate-bl-wz" >
+                        <a href="" class="plate-bl-wzfk">衬衫</a>
+                        <a href="" class="plate-bl-wzfk">小白鞋</a>
+                        <a href="" class="plate-bl-wzfk">双肩包</a>
+                        <a href="" class="plate-bl-wzfk">运动鞋</a>
+                        <a href="" class="plate-bl-wzfk">牛仔裤</a>
+                        <a href="" class="plate-bl-wzfk">补水保湿</a>
+                    </div>
+                    <div class="plate-bl-ti"> 品牌精选 </div>
+                    <div class="plate-bl-tl">潮牌尖货 春夏焕新 </div>
+                    <div class="plate-bl-img">
+                        <a href="http://localhost/mogu/Home/Brand/Brand.html" target="_blank" >
+                            <img src="/mogu/Public/home/images/ppjx1.jpg" alt="">
+                        </a>
+                    </div>
             </div>
             <!--中间-->
             <div class="plate-middle">
@@ -3300,6 +3402,7 @@
 <!--女装-->
 <div class="plate-currency synz">
     <div class="nav-wap">
+        <a>
         <div class="plate-currency-top">
             <div class="sideIcon" style="background-color: #FFA1B8;"></div>
             <div class="cateTitleName">女装</div>
@@ -3326,7 +3429,9 @@
                 <div class="plate-bl-ti">  潮流女装  </div>
                 <div class="plate-bl-tl">春季美衣 每日上新 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/nz1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/nz1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3418,6 +3523,7 @@
                 </a>
             </div>
         </div>
+        </a>
     </div>
 </div>
 <!--女鞋-->
@@ -3448,7 +3554,9 @@
                 <div class="plate-bl-ti"> 红人鞋搭 </div>
                 <div class="plate-bl-tl">89元2双 戳此马上变美 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/nx1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/nx1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3503,7 +3611,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/nx8.jpg" alt="">
                     </div>
@@ -3548,7 +3656,9 @@
                 <div class="plate-bl-ti"> 绝配男友 </div>
                 <div class="plate-bl-tl">3折起 全宇宙时髦单品 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/ny1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/ny1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3603,7 +3713,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/ny8.jpg" alt="">
                     </div>
@@ -3648,7 +3758,9 @@
                 <div class="plate-bl-ti"> 点睛美包 </div>
                 <div class="plate-bl-tl">新品3折起 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/bb1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/bb1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3703,7 +3815,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/bb8.jpg" alt="">
                     </div>
@@ -3752,7 +3864,9 @@
                 <div class="plate-bl-ti"> 性感内衣 </div>
                 <div class="plate-bl-tl">夏季焕新  美出新高 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/nk1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/nk1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3808,7 +3922,7 @@
                     换一批
                 </div>
                 <div class="synkr">
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/nk8.jpg" alt="">
                         </div>
@@ -3817,7 +3931,7 @@
                             <div class="synk-btmtl">¥ 39.90</div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/nk9.jpg" alt="">
                         </div>
@@ -3826,7 +3940,7 @@
                             <div class="synk-btmtl">¥ 29.90 </div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/nk10.jpg" alt="">
                         </div>
@@ -3835,7 +3949,7 @@
                             <div class="synk-btmtl">¥ 68.60</div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/nk11.jpg" alt="">
                         </div>
@@ -3878,7 +3992,9 @@
                 <div class="plate-bl-ti">  防晒丝巾  </div>
                 <div class="plate-bl-tl">出游搭配的一点小心机 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/ps1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/ps1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -3934,7 +4050,7 @@
                     换一批
                 </div>
                 <div class="synkr">
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/ps8.jpg" alt="">
                         </div>
@@ -3943,7 +4059,7 @@
                             <div class="synk-btmtl">¥ 38.50</div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/ps9.jpg" alt="">
                         </div>
@@ -3952,7 +4068,7 @@
                             <div class="synk-btmtl">¥ 129.50</div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/ps10.jpg" alt="">
                         </div>
@@ -3961,7 +4077,7 @@
                             <div class="synk-btmtl">¥ 96.60</div>
                         </div>
                     </a>
-                    <a href="" class="synka">
+                    <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="synka">
                         <div class="synk-top">
                             <img src="/mogu/Public/home/images/ps11.jpg" alt="">
                         </div>
@@ -4007,7 +4123,9 @@
                 <div class="plate-bl-ti"> 品牌精选 </div>
                 <div class="plate-bl-tl">运动大牌不止5折 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/yd1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/yd1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -4131,7 +4249,9 @@
                 <div class="plate-bl-ti"> 护肤彩妆 </div>
                 <div class="plate-bl-tl">防晒护肤 2折起购 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/cz1.jpg" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/cz1.jpg" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -4186,7 +4306,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/cz8.jpg" alt="">
                     </div>
@@ -4231,7 +4351,9 @@
                 <div class="plate-bl-ti"> 清凉一夏 </div>
                 <div class="plate-bl-tl">夏日必备单品 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/jj1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/jj1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -4286,7 +4408,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/jj8.jpg" alt="">
                     </div>
@@ -4332,7 +4454,9 @@
                 <div class="plate-bl-ti"> 夏季萌娃出游 </div>
                 <div class="plate-bl-tl">夏季新品3折起 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/my1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/my1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -4387,7 +4511,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/my8.jpg" alt="">
                     </div>
@@ -4433,7 +4557,9 @@
                 <div class="plate-bl-ti"> 食品 </div>
                 <div class="plate-bl-tl">1折起囤春游零食 </div>
                 <div class="plate-bl-img">
-                    <img src="/mogu/Public/home/images/sp1.png" alt="">
+                    <a href="http://localhost/mogu/Home/Thememarket/thememarket.html" target="_blank">
+                        <img src="/mogu/Public/home/images/sp1.png" alt="">
+                    </a>
                 </div>
             </div>
             <!--中间-->
@@ -4488,7 +4614,7 @@
                     <span class="pa-rtir-xz"></span>
                     换一批
                 </div>
-                <a href="" class="plate-right-gg">
+                <a href="http://localhost/mogu/Home/Details/Commodity_details.html" target="_blank" class="plate-right-gg">
                     <div class="plate-right-img">
                         <img src="/mogu/Public/home/images/sp8.jpg" alt="">
                     </div>
@@ -4586,69 +4712,71 @@
         </div>
     </div>
 </div>
-<!--尾部-->
+
+<!-----------------底部---------------->
+  
 <div class="tail">
-     <div class="tail-nav">
-         <div class="tail-one">
-                <div class="tail-oblock">
-            <div class="tail-title">
-                <h4 class="tail-h4">- 新手帮助 -</h4>
-            </div>
-            <ul>
-                <li class="tail-oblock-li"><a href="">常见问题</a></li>
-                <li class="tail-oblock-li"><a href="">自助服务</a></li>
-                <li class="tail-oblock-li"><a href="">联系客服</a></li>
-                <li class="tail-oblock-li"><a href="">意见反馈</a></li>
-            </ul>
-        </div>
-                <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 权益保障 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">全国包邮</a></li>
-                    <li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
-                    <li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
-                    <li class="tail-oblock-li"><a href="">限时发货</a></li>
-                </ul>
-            </div>
-                <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 支付方式 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">-微信支付</a></li>
-                    <li class="tail-oblock-li"><a href="">支付宝</a></li>
-                    <li class="tail-oblock-li"><a href="">白付美支付</a></li>
-                </ul>
-            </div>
-                <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 移动客户端下载 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            蘑菇街
-                        </div>
-                        <img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            美丽说
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            uni引力
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
-                    </li>
-                </ul>
-            </div>
-            </div>
-         <div class="tail-two">
+	<div class="tail-nav">
+		<div class="tail-one">
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 新手帮助 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">常见问题</a></li>
+					<li class="tail-oblock-li"><a href="">自助服务</a></li>
+					<li class="tail-oblock-li"><a href="">联系客服</a></li>
+					<li class="tail-oblock-li"><a href="">意见反馈</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 权益保障 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">全国包邮</a></li>
+					<li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
+					<li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
+					<li class="tail-oblock-li"><a href="">限时发货</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 支付方式 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">-微信支付</a></li>
+					<li class="tail-oblock-li"><a href="">支付宝</a></li>
+					<li class="tail-oblock-li"><a href="">白付美支付</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 移动客户端下载 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							蘑菇街
+						</div>
+						<img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							美丽说
+						</div>
+						<img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							uni引力
+						</div>
+						<img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tail-two">
              <span class="tail-ts">
                  <a href="" class="tail-ta">美丽说</a>
                  <b class="tail-tb">|</b>
@@ -4695,38 +4823,41 @@
                  <a href="" class="tail-ta">爱蘑菇街</a>
                  <b class="tail-tb">|</b>
              </span>
-         </div>
-         <div class="tail-three">
-             <ul>
-                 <li class="tail-oblock-li"><a href="">关于我们</a></li>
-                 <li class="tail-oblock-li"><a href="">招聘信息</a></li>
-                 <li class="tail-oblock-li"><a href="">联系我们</a></li>
-                 <li class="tail-oblock-li"><a href="">商家后台</a></li>
-                 <li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
-                 <li class="tail-oblock-li"><a href="">商家社区</a></li>
-             </ul>
-             <p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
-         </div>
-         <div class="tail-four">
-             <p class="tail-tp">
-                 <span class="tail-ts">营业执照注册号：</span>
-                 <a href="">330106000129004</a>
-                 <b class="tail-tb">|</b>
-                 <span  class="tail-ts">网络文化经营许可证：</span>
-                 <a href="">浙网文（2016）0349-219号</a>
-                 <b class="tail-tb">|</b>
-                 <span  class="tail-ts">增值电信业务经营许可证：</span>
-                 <a href="">浙B2-20110349</a>
-                 <b class="tail-tb">|</b>
-                 <a href="">安全责任书</a>
-                 <b class="tail-tb">|</b>
-                 <a href="">浙公网安备 33010602002329号</a>
-                 <b class="tail-tb">|</b>
-             </p>
-         </div>
-     </div>
+		</div>
+		<div class="tail-three">
+			<ul>
+				<li class="tail-oblock-li"><a href="">关于我们</a></li>
+				<li class="tail-oblock-li"><a href="">招聘信息</a></li>
+				<li class="tail-oblock-li"><a href="">联系我们</a></li>
+				<li class="tail-oblock-li"><a href="">商家后台</a></li>
+				<li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
+				<li class="tail-oblock-li"><a href="">商家社区</a></li>
+			</ul>
+			<p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+		</div>
+		<div class="tail-four">
+			<p class="tail-tp">
+				<span class="tail-ts">营业执照注册号：</span>
+				<a href="">330106000129004</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">网络文化经营许可证：</span>
+				<a href="">浙网文（2016）0349-219号</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">增值电信业务经营许可证：</span>
+				<a href="">浙B2-20110349</a>
+				<b class="tail-tb">|</b>
+				<a href="">安全责任书</a>
+				<b class="tail-tb">|</b>
+				<a href="">浙公网安备 33010602002329号</a>
+				<b class="tail-tb">|</b>
+			</p>
+		</div>
+	</div>
 </div>
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="/mogu/Public/home/js/headerandpage.js"></script>
+
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+  <script src="/mogu/Public/home/js/headerandpage.js"></script>
+  <script src="/mogu/Public/home/js/header.js"></script>

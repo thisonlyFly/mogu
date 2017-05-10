@@ -1,176 +1,93 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Commodity_details</title>
-    <link href="/mogu/Public./common/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/mogu/Public./common/Font-Awesome-master/css/font-awesome.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>mogu</title>
+	<link rel="stylesheet" href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/mogu/Public/common/Font-Awesome-master/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/mogu/Public/home/css/header.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/twzt.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/tail.css">
+
+</head>
+<body>
+<!--头部1-->
+<div class="nav">
+	<div class="nav-wap ">
+		<a href="http://localhost/mogu/Home/page/index.html" class="nav-logo">蘑菇头首页</a>
+		<ul class="nav-ul">
+			<li class="s1"><a href="http://localhost/mogu/Home/User/login.html" target="_blank">登录</a></li>
+			<li class="s1"><a href="http://localhost/mogu/Home/User/register.html" target="_blank">注册</a></li>
+			<li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/Order.html" target="_blank">我的订单</a></li>
+			<li class="s1 ullia nav-shopping">
+				<a href="http://localhost/mogu/Home/ShoppingCart/Shopping_Cart.html" target="_blank"><span>购物车</span></a>
+				<div class="sp-cart">
+					购物车里没有商品！
+				</div>
+			</li>
+			<li class="s1 ullia nav-khfw">
+				<a href="">客户服务</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">消费者服务</a></li>
+					<li><a href="">商家服务</a></li>
+					<li><a href="">规则中心</a></li>
+				</ol>
+			</li>
+			<li class="s1 ullia nav-wdxd">
+				<a href="">我的小店</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">管理后台</a></li>
+					<li><a href="">商家社区</a></li>
+					<li><a href="">商家培训</a></li>
+					<li><a href="">市场入驻</a></li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--头部2-->
+<div class="header header-bottom">
+	<div class="nav-wap">
+		<a href="http://localhost/mogu/Home/page/index.html" class="logo"></a>
+		<div class="header-ssk">
+			<div class="header-srk">
+				<div class="header-ssp">
+					<span class="selected" id="sl">搜商品</span>
+					<ol class="ssp-ol">
+						<li class="lisp"><a href="javascript:;">商品</a></li>
+						<li class="lidp"><a href="javascript:;">店铺</a></li>
+					</ol>
+				</div>
+				<div class="header-text">
+					<input type="text" placeholder="套装新版韩装" class="input-text">
+					<div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
+					<input type="submit" value="搜索" class="input-btn">
+				</div>
+			</div>
+			<div class="header-tj">
+				<a href="">春季套装</a>
+				<a href="">卫衣</a>
+				<a href="">牛仔裤</a>
+				<a href="">打底衫</a>
+				<a href="">单鞋</a>
+				<a href="">斜挎包</a>
+				<a href="">男士外套</a>
+				<a href="">棒球服</a>
+				<a href="">连衣裙</a>
+			</div>
+		</div>
+		<div class="header-ewm">
+			<img src="/mogu/Public/home/images/ewm1.png" alt="">
+		</div>
+	</div>
+</div>
 
     <link href="/mogu/Public./home/css/Commodity_details.css" rel="stylesheet">
     <link href="/mogu/Public./home/css/share.css" rel="stylesheet">
-    <link href="/mogu/Public./home/css/tail.css" rel="stylesheet">
-</head>
-<body>
-<!---------------------头部内容------------------------>
-
-<div class="nav">
-    <div class="nav-wap ">
-        <a href="" class="nav-logo">蘑菇街首页</a>
-        <ul class="nav-ul">
-            <li class="s1 nav-khfw">
-                <a href=""> 去那个地方看看 </a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">个人设置</a></li>
-                    <li><a href="">账号绑定</a></li>
-                    <li><a href="">退出</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia"><a href="" style="padding-left: 15px">消息</a></li>
-
-            <li class="s1 ullia nav-khfw">
-                <a href=""> 我的收藏 </a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">收藏的商品</a></li>
-                    <li><a href="">收藏的小店</a></li>
-                    <li><a href="">浏览足迹</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia nav-dd"><a href="">我的订单</a></li>
-
-            <li class="s1 ullia nav-shopping">
-                <a href=""><span>购物车</span></a>
-
-                <!--二级菜单-->
-                <div class="sp-cart">
-                    <ul class="sp_cart_ul">
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp1.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">冬季2016新款呢子大衣女长款韩版茧型毛呢外套加厚宽松潮学生</a>
-                            <span class="sp_info">颜色: 黑色  尺码: M  </span>
-                            <span class="sp_price">¥137.99</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp2.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">新款春夏季韩版t恤女学生宽松套头字母上衣连帽白色短袖外穿薄潮</a>
-                            <span class="sp_info">颜色: 白色  尺码: M  </span>
-                            <span class="sp_price">¥29.9</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp3.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">半高领弹力修身打底针织衫</a>
-                            <span class="sp_info">颜色: 黑色  尺码: 均码  </span>
-                            <span class="sp_price">¥32.6</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                    </ul>
-                    <div class="sp_foot">
-                        <p class="sp__foot_info">购物车里还有<b class="sp_num">12</b>件商品</p>
-                        <div class="sp_see_box"> <a href="javascript:;" target="_blank" class="sp_see">查看购物车</a> </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="s1 ullia nav-khfw">
-                <a href="">客户服务</a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">消费者服务</a></li>
-                    <li><a href="">商家服务</a></li>
-                    <li><a href="">规则中心</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia nav-wdxd">
-                <a href="">我的小店</a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">管理后台</a></li>
-                    <li><a href="">商家社区</a></li>
-                    <li><a href="">商家培训</a></li>
-                    <li><a href="">市场入驻</a></li>
-                </ol>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="header">
-    <div class="nav-wap">
-        <a href="" class="logo"></a>
-        <div class="header-ssk">
-            <div class="header-srk">
-                <div class="header-ssp">
-                    <span class="selected" id="sl">搜商品</span>
-                    <ol class="ssp-ol">
-                        <li class="lisp"><a href="javascript:;">商品</a></li>
-                        <li class="lidp"><a href="javascript:;">店铺</a></li>
-                    </ol>
-                </div>
-                <div class="header-text">
-                    <input type="text" placeholder="套装新版韩装" class="input-text">
-                    <div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
-                    <input type="submit" value="搜索" class="input-btn">
-                </div>
-            </div>
-            <div class="header-tj">
-                <a href="" class="header_cur">春季套装</a>
-                <a href="">卫衣</a>
-                <a href="">牛仔裤</a>
-                <a href="">打底衫</a>
-                <a href="">单鞋</a>
-                <a href="" class="header_cur">斜挎包</a>
-                <a href="">男士外套</a>
-                <a href="">棒球服</a>
-                <a href="">连衣裙</a>
-            </div>
-        </div>
-        <div class="header-ewm">
-            <img src="/mogu/Public/home/images/ewm1.png" alt="">
-        </div>
-    </div>
-</div>
-
-<div class="header-two">
-    <div class="nav-wap">
-        <div class="header-img"><img src="/mogu/Public/home/images/logo2.png" alt=""></div>
-        <div class="header-two-ssk">
-            <div class="header-two-srk">
-                <div class="header-two-ssp">
-                    <span class="selected" >搜商品</span>
-                    <ol class="ssp-ol">
-                        <li class="lisp"><a href="javascript:;">商品</a></li>
-                        <li class="lidp"><a href="javascript:;">店铺</a></li>
-                    </ol>
-                </div>
-                <div class="header-two-text">
-                    <input type="text" placeholder="套装新版韩装" class="input-two-text">
-                    <div class="header-two-lsjl"><span style="padding: 10px">历史记录</span></div>
-                    <input type="submit" value="搜索" class="input-btn">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!----------------------身体部分--------------------->
 <!--身体部分头部-->
@@ -307,7 +224,7 @@
                                 </dl>
                             </div>
                             <div class="commodity_details_goods_buy">
-                                <a href="javascript:;" class="fl mr10 buy_btn_now">立刻购买</a>
+                                <a href="http://localhost/mogu/Home/ConfirmOrder/Confirm_Order.html" target="_blank" class="fl mr10 buy_btn_now">立刻购买</a>
                                 <a href="javascript:;" class="fl mr10 buy_cart buy_btn_now">加入购物车</a>
                             </div>
                         </div>
@@ -646,12 +563,12 @@
                             </div>
                             <div class="shop_btns">
                                 <a class="shop_follow_btn_fav " href="javascript:;">
-                                    收藏店铺                         </a>
+                                    收藏店铺 </a>
                                 <a class="btn_goto" href="javascript:;">进入店铺</a>
                             </div>
                             <div class="shop_search">
                                 <i class="line"></i>
-                                <form action="" method="get" >
+                                <form action="" method="get">
                                     <input class="inptxt" type="text" name="q">
                                     <input class="inpbtn" type="submit" value="店内搜索">
                                 </form>
@@ -660,7 +577,8 @@
                                 <i class="line"></i>
                                 <i class="arrow"></i>
                                 <a class="pic" href="javascript:;">
-                                    <img class="img_lazyload" width="150" height="26" src="/mogu/Public/home/images/xiaodian_150x26.png">
+                                    <img class="img_lazyload" width="150" height="26"
+                                         src="/mogu/Public/home/images/xiaodian_150x26.png">
                                 </a>
                             </div>
                         </div>
@@ -757,7 +675,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- 模块标签页 -->
+                <!-- 模块标签页 --></div>
+            <div class="col_main">
                 <div class="col_main_center">
                     <!-- 选项栏 -->
                     <div class="tabbar_box">
@@ -765,7 +684,8 @@
                             <li class="ul_li tab_graphic_ul_li selected">
                                 <a href="#module_panel" role="tab" data-toggle="tab">商品详情</a>
                             </li>
-                            <li class="ul_li"><a href="#cumulative_evaluation" role="tab" data-toggle="tab">累计评价<em>252</em></a></li>
+                            <li class="ul_li"><a href="#cumulative_evaluation" role="tab"
+                                                 data-toggle="tab">累计评价<em>252</em></a></li>
                             <li class="ul_li"><a href="#module_recommend" role="tab" data-toggle="tab">本店同类商品</a></li>
 
                         </ul>
@@ -784,42 +704,42 @@
                             </div>
                             <!-- 产品参数 -->
                             <div class="module_panel_Product_parameters">
-                                <div class="panel_title" id="panel_title2"> <h1>产品参数</h1> </div>
+                                <div class="panel_title" id="panel_title2"><h1>产品参数</h1></div>
                                 <div class="graphic_block">
                                     <!-- 表格 -->
                                     <table class="parameters_table">
                                         <tbody>
-                                            <tr class="">
-                                                <td>袖型: 其他袖型</td>
-                                                <td>风格: 街头潮人,百搭</td>
-                                                <td>尺码: S,L,M,XL</td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>上衣厚度: 适中</td>
-                                                <td>版型: 宽松</td>
-                                                <td>材质: 棉</td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>颜色: 红色,白色,黑色</td>
-                                                <td>元素: 3D印花,镂空</td>
-                                                <td>下摆: 敞口</td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>衣长: 常规款（51-65cm）</td>
-                                                <td>领型: 圆领</td>
-                                                <td>图案: 字母/文字/数字</td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>季节: 春夏</td>
-                                                <td>袖长: 七分袖</td>
-                                            </tr>
+                                        <tr class="">
+                                            <td>袖型: 其他袖型</td>
+                                            <td>风格: 街头潮人,百搭</td>
+                                            <td>尺码: S,L,M,XL</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>上衣厚度: 适中</td>
+                                            <td>版型: 宽松</td>
+                                            <td>材质: 棉</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>颜色: 红色,白色,黑色</td>
+                                            <td>元素: 3D印花,镂空</td>
+                                            <td>下摆: 敞口</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>衣长: 常规款（51-65cm）</td>
+                                            <td>领型: 圆领</td>
+                                            <td>图案: 字母/文字/数字</td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>季节: 春夏</td>
+                                            <td>袖长: 七分袖</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <!-- 穿着效果 -->
                             <div class="wearing_effect">
-                                <div class="panel_title" id="panel_title3"> <h1>穿着效果</h1> </div>
+                                <div class="panel_title" id="panel_title3"><h1>穿着效果</h1></div>
                                 <!-- 描述 -->
                                 <div class="wearing_effect_pic">
                                     <div class="pic_say_box">
@@ -844,31 +764,52 @@
                             </div>
                             <!--细节做工-->
                             <div class="">
-                                <div class="panel_title" id="panel_title4"> <h1>细节做工</h1> </div>
+                                <div class="panel_title" id="panel_title4"><h1>细节做工</h1></div>
                                 <div class="wearing_effect_pic">
-                                    <div class="pic_say_box" style="width:100%;" >
-                                        <img style="width:100%;"  src="/mogu/Public/home/images/xiaoguotu4_790x1318.jpg_750x999.jpg">
+                                    <div class="pic_say_box" style="width:100%;">
+                                        <img style="width:100%;"
+                                             src="/mogu/Public/home/images/xiaoguotu4_790x1318.jpg_750x999.jpg">
                                     </div>
                                 </div>
                             </div>
                             <!-- 尺码说明 -->
                             <div class="size_specification">
-                                <div class="panel_title" id="panel_title5"> <h1>尺码说明</h1> </div>
+                                <div class="panel_title" id="panel_title5"><h1>尺码说明</h1></div>
                                 <div class="graphic_block">
                                     <table class="size_table">
                                         <thead>
-                                            <tr>
-                                                <td>尺码</td>
-                                                <td>肩宽</td>
-                                                <td>衣长</td>
-                                                <td>胸围</td>
-                                            </tr>
+                                        <tr>
+                                            <td>尺码</td>
+                                            <td>肩宽</td>
+                                            <td>衣长</td>
+                                            <td>胸围</td>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>  <td>M</td>  <td>51</td>  <td>60</td>  <td>101</td>  </tr>
-                                        <tr>  <td>S</td>  <td>50</td>  <td>59</td>  <td>97</td>  </tr>
-                                        <tr>  <td>L</td>  <td>52</td>  <td>61</td>  <td>105</td>  </tr>
-                                        <tr>  <td>XL</td>  <td>53</td>  <td>62</td>  <td>109</td>  </tr>
+                                        <tr>
+                                            <td>M</td>
+                                            <td>51</td>
+                                            <td>60</td>
+                                            <td>101</td>
+                                        </tr>
+                                        <tr>
+                                            <td>S</td>
+                                            <td>50</td>
+                                            <td>59</td>
+                                            <td>97</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L</td>
+                                            <td>52</td>
+                                            <td>61</td>
+                                            <td>105</td>
+                                        </tr>
+                                        <tr>
+                                            <td>XL</td>
+                                            <td>53</td>
+                                            <td>62</td>
+                                            <td>109</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                     <!--提醒-->
@@ -878,7 +819,7 @@
                             <!-- 本店同类商品 -->
                             <div class="module_recommend" style="padding-left: 0;padding-right: 0">
                                 <div>
-                                    <div class="panel_title recommend-title" id="panel_title6"> <h1>本店同类商品</h1> </div>
+                                    <div class="panel_title recommend-title" id="panel_title6"><h1>本店同类商品</h1></div>
                                 </div>
                                 <div class="recommend_list">
                                     <ul>
@@ -1002,7 +943,7 @@
                                     <div class="comment_content">
                                         <div class="tags">
                                             <div class="list ">
-                                                <a href="javascript:;" class="best" >质量很好 (66)</a>
+                                                <a href="javascript:;" class="best">质量很好 (66)</a>
                                                 <b>|</b>
                                                 <a href="javascript:;" class="best">款式好 (46)</a>
                                                 <b>|</b>
@@ -1037,10 +978,10 @@
                                     </div>
                                     <!--评价导航-->
                                     <div class="navs">
-                                        <a href="javascript:;"  class="c">全部评价（354）</a>
+                                        <a href="javascript:;" class="c">全部评价（354）</a>
                                         <a href="javascript:;" class="img">晒图（113）</a>
                                         <div class="comment_sort">
-                                            <input type="radio"checked="">
+                                            <input type="radio" checked="">
                                             <label> 默认排序</label>
                                             <input type="radio" style="margin-left: 15px">
                                             <label> 时间排序</label>
@@ -1058,8 +999,8 @@
                                                 <div class="info_m">手感不错，很舒服</div>
                                                 <div class="info_b">
                                                     <p>
-                                                        <span class="chose_size">尺码:L</span>
-                                                        <span class="chose_color">颜色:红色</span>
+                                                    <span class="chose_size">尺码:L</span>
+                                                    <span class="chose_color">颜色:红色</span>
                                                     <p/>
                                                     <p>
                                                         <span class="chose_tz">体重:55 kg</span>
@@ -1070,7 +1011,9 @@
                                                 <!-- 商家回复 -->
                                                 <div class="info_reply">
                                                     <span class="fl">商家回复：</span>
-                                                    <div class="content">在这里，我们要感谢菇娘们一路的支持，感谢你们选择了韩范里儿，选择韩范家要说明你们眼光好，我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。</div>
+                                                    <div class="content">
+                                                        在这里，我们要感谢菇娘们一路的支持，感谢你们选择了韩范里儿，选择韩范家要说明你们眼光好，我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。
+                                                    </div>
                                                     <span class="date fr">2017年04月27日</span>
                                                 </div>
                                             </div>
@@ -1090,8 +1033,8 @@
                                                 <div class="info_m">手感不错，很舒服</div>
                                                 <div class="info_b">
                                                     <p>
-                                                        <span class="chose_size">尺码:M</span>
-                                                        <span class="chose_color">颜色:红色</span>
+                                                    <span class="chose_size">尺码:M</span>
+                                                    <span class="chose_color">颜色:红色</span>
                                                     <p/>
                                                     <p>
                                                         <span class="chose_tz">体重:48 kg</span>
@@ -1102,7 +1045,9 @@
                                                 <!-- 商家回复 -->
                                                 <div class="info_reply">
                                                     <span class="fl">商家回复：</span>
-                                                    <div class="content">感谢你们选择了韩范里儿,我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。</div>
+                                                    <div class="content">
+                                                        感谢你们选择了韩范里儿,我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。
+                                                    </div>
                                                     <span class="date fr">2017年04月27日</span>
                                                 </div>
                                             </div>
@@ -1122,8 +1067,8 @@
                                                 <div class="info_m">手感不错，很舒服</div>
                                                 <div class="info_b">
                                                     <p>
-                                                        <span class="chose_size">尺码:L</span>
-                                                        <span class="chose_color">颜色:红色</span>
+                                                    <span class="chose_size">尺码:L</span>
+                                                    <span class="chose_color">颜色:红色</span>
                                                     <p/>
                                                     <p>
                                                         <span class="chose_tz">体重:55 kg</span>
@@ -1134,7 +1079,9 @@
                                                 <!-- 商家回复 -->
                                                 <div class="info_reply">
                                                     <span class="fl">商家回复：</span>
-                                                    <div class="content">我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。</div>
+                                                    <div class="content">
+                                                        我们店铺一直坚持卖性比价高的衣服，同样的衣服，我们质量比别人好，价格比别人优惠，所以亲们可以放心购物。同时，授人玫瑰手有余香，您的好评是对我们最大的支持与鼓励，也将是我们不断前进的动力！期待菇娘们的每一次购物哦。
+                                                    </div>
                                                     <span class="date fr">2017年04月29日</span>
                                                 </div>
                                             </div>
@@ -1150,75 +1097,75 @@
                         <!-- 本店同类商品 -->
                         <div class="module_recommend  tab-pane item" id="module_recommend">
                             <div>
-                                <div class="panel_title recommend-title"> <h1>本店同类商品</h1> </div>
+                                <div class="panel_title recommend-title"><h1>本店同类商品</h1></div>
                             </div>
                             <div class="recommend_list">
                                 <ul>
-                                <li>
-                                    <a href="javascript:;" class="pic">
-                                        <img src="/mogu/Public/home/images/tongleishangpin1_220x330.jpg">
-                                    </a>
-                                    <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
-                                    <div class="info">
-                                        <div class="price">
-                                            <em class="price_u">¥</em>
-                                            <span class="price_n">39.90</span>
+                                    <li>
+                                        <a href="javascript:;" class="pic">
+                                            <img src="/mogu/Public/home/images/tongleishangpin1_220x330.jpg">
+                                        </a>
+                                        <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
+                                        <div class="info">
+                                            <div class="price">
+                                                <em class="price_u">¥</em>
+                                                <span class="price_n">39.90</span>
+                                            </div>
+                                            <div class="fav">
+                                                <em class="fav_i"></em>
+                                                <span class="fav_n">1727</span>
+                                            </div>
                                         </div>
-                                        <div class="fav">
-                                            <em class="fav_i"></em>
-                                            <span class="fav_n">1727</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pic">
+                                            <img src="/mogu/Public/home/images/tongleishangpin2_220x330.jpg">
+                                        </a>
+                                        <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
+                                        <div class="info">
+                                            <div class="price">
+                                                <em class="price_u">¥</em>
+                                                <span class="price_n">32.90</span>
+                                            </div>
+                                            <div class="fav">
+                                                <em class="fav_i"></em>
+                                                <span class="fav_n">56</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="pic">
-                                        <img src="/mogu/Public/home/images/tongleishangpin2_220x330.jpg">
-                                    </a>
-                                    <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
-                                    <div class="info">
-                                        <div class="price">
-                                            <em class="price_u">¥</em>
-                                            <span class="price_n">32.90</span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="pic">
+                                            <img src="/mogu/Public/home/images/tongleishangpin3_220x330.jpg">
+                                        </a>
+                                        <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
+                                        <div class="info">
+                                            <div class="price">
+                                                <em class="price_u">¥</em>
+                                                <span class="price_n">33.10</span>
+                                            </div>
+                                            <div class="fav">
+                                                <em class="fav_i"></em>
+                                                <span class="fav_n">678</span>
+                                            </div>
                                         </div>
-                                        <div class="fav">
-                                            <em class="fav_i"></em>
-                                            <span class="fav_n">56</span>
+                                    </li>
+                                    <li style="margin-right: 0;">
+                                        <a href="javascript:;" class="pic">
+                                            <img src="/mogu/Public/home/images/tongleishangpin4_220x330.jpg">
+                                        </a>
+                                        <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
+                                        <div class="info">
+                                            <div class="price">
+                                                <em class="price_u">¥</em>
+                                                <span class="price_n">40.00</span>
+                                            </div>
+                                            <div class="fav">
+                                                <em class="fav_i"></em>
+                                                <span class="fav_n">286</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" class="pic">
-                                        <img src="/mogu/Public/home/images/tongleishangpin3_220x330.jpg">
-                                    </a>
-                                    <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
-                                    <div class="info">
-                                        <div class="price">
-                                            <em class="price_u">¥</em>
-                                            <span class="price_n">33.10</span>
-                                        </div>
-                                        <div class="fav">
-                                            <em class="fav_i"></em>
-                                            <span class="fav_n">678</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li style="margin-right: 0;">
-                                    <a href="javascript:;" class="pic">
-                                        <img src="/mogu/Public/home/images/tongleishangpin4_220x330.jpg">
-                                    </a>
-                                    <a class="title" href="javascript:;">2017夏季情侣装韩版宽松简约字母背后钻石印花情侣短袖T恤</a>
-                                    <div class="info">
-                                        <div class="price">
-                                            <em class="price_u">¥</em>
-                                            <span class="price_n">40.00</span>
-                                        </div>
-                                        <div class="fav">
-                                            <em class="fav_i"></em>
-                                            <span class="fav_n">286</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
                                 <ul>
                                     <li>
                                         <a href="javascript:;" class="pic">
@@ -1305,11 +1252,11 @@
                         <div class="extranav_bd">
                             <ul class="extranav_list">
                                 <li class="extranav_list_li cur"><a href="#panel_title1" class="aa li_a">商品描述</a></li>
-                                <li class="extranav_list_li"><a href="#panel_title2"  class="aa">产品参数</a></li>
+                                <li class="extranav_list_li"><a href="#panel_title2" class="aa">产品参数</a></li>
                                 <li class="extranav_list_li"><a href="#panel_title3" class="aa">穿着效果</a></li>
-                                <li class="extranav_list_li"><a href="#panel_title4"  class="aa">细节做工</a></li>
-                                <li class="extranav_list_li"><a href="#panel_title5"  class="aa">尺码说明</a></li>
-                                <li class="extranav_list_li"><a href="#panel_title6"  class="aa">本店同类商品</a></li>
+                                <li class="extranav_list_li"><a href="#panel_title4" class="aa">细节做工</a></li>
+                                <li class="extranav_list_li"><a href="#panel_title5" class="aa">尺码说明</a></li>
+                                <li class="extranav_list_li"><a href="#panel_title6" class="aa">本店同类商品</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1321,68 +1268,69 @@
 </div>
 
 <!----------------------底部------------------------->
-<div class="tail" style="background: #fff;">
-    <div class="tail-nav">
-        <div class="tail-one">
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 新手帮助 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="javascript:;">常见问题</a></li>
-                    <li class="tail-oblock-li"><a href="javascript:;">自助服务</a></li>
-                    <li class="tail-oblock-li"><a href="javascript:;">联系客服</a></li>
-                    <li class="tail-oblock-li"><a href="javascript:;">意见反馈</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 权益保障 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">全国包邮</a></li>
-                    <li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
-                    <li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
-                    <li class="tail-oblock-li"><a href="">限时发货</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 支付方式 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">-微信支付</a></li>
-                    <li class="tail-oblock-li"><a href="">支付宝</a></li>
-                    <li class="tail-oblock-li"><a href="">白付美支付</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 移动客户端下载 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            蘑菇街
-                        </div>
-                        <img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            美丽说
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            uni引力
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="tail-two">
+
+<div class="tail">
+	<div class="tail-nav">
+		<div class="tail-one">
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 新手帮助 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">常见问题</a></li>
+					<li class="tail-oblock-li"><a href="">自助服务</a></li>
+					<li class="tail-oblock-li"><a href="">联系客服</a></li>
+					<li class="tail-oblock-li"><a href="">意见反馈</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 权益保障 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">全国包邮</a></li>
+					<li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
+					<li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
+					<li class="tail-oblock-li"><a href="">限时发货</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 支付方式 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">-微信支付</a></li>
+					<li class="tail-oblock-li"><a href="">支付宝</a></li>
+					<li class="tail-oblock-li"><a href="">白付美支付</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 移动客户端下载 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							蘑菇街
+						</div>
+						<img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							美丽说
+						</div>
+						<img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							uni引力
+						</div>
+						<img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tail-two">
              <span class="tail-ts">
                  <a href="" class="tail-ta">美丽说</a>
                  <b class="tail-tb">|</b>
@@ -1429,41 +1377,42 @@
                  <a href="" class="tail-ta">爱蘑菇街</a>
                  <b class="tail-tb">|</b>
              </span>
-        </div>
-        <div class="tail-three">
-            <ul>
-                <li class="tail-oblock-li"><a href="">关于我们</a></li>
-                <li class="tail-oblock-li"><a href="">招聘信息</a></li>
-                <li class="tail-oblock-li"><a href="">联系我们</a></li>
-                <li class="tail-oblock-li"><a href="">商家后台</a></li>
-                <li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
-                <li class="tail-oblock-li"><a href="">商家社区</a></li>
-            </ul>
-            <p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
-        </div>
-        <div class="tail-four">
-            <p class="tail-tp">
-                <span class="tail-ts">营业执照注册号：</span>
-                <a href="">330106000129004</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">网络文化经营许可证：</span>
-                <a href="">浙网文（2016）0349-219号</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">增值电信业务经营许可证：</span>
-                <a href="">浙B2-20110349</a>
-                <b class="tail-tb">|</b>
-                <a href="">安全责任书</a>
-                <b class="tail-tb">|</b>
-                <a href="">浙公网安备 33010602002329号</a>
-                <b class="tail-tb">|</b>
-            </p>
-        </div>
-    </div>
+		</div>
+		<div class="tail-three">
+			<ul>
+				<li class="tail-oblock-li"><a href="">关于我们</a></li>
+				<li class="tail-oblock-li"><a href="">招聘信息</a></li>
+				<li class="tail-oblock-li"><a href="">联系我们</a></li>
+				<li class="tail-oblock-li"><a href="">商家后台</a></li>
+				<li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
+				<li class="tail-oblock-li"><a href="">商家社区</a></li>
+			</ul>
+			<p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+		</div>
+		<div class="tail-four">
+			<p class="tail-tp">
+				<span class="tail-ts">营业执照注册号：</span>
+				<a href="">330106000129004</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">网络文化经营许可证：</span>
+				<a href="">浙网文（2016）0349-219号</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">增值电信业务经营许可证：</span>
+				<a href="">浙B2-20110349</a>
+				<b class="tail-tb">|</b>
+				<a href="">安全责任书</a>
+				<b class="tail-tb">|</b>
+				<a href="">浙公网安备 33010602002329号</a>
+				<b class="tail-tb">|</b>
+			</p>
+		</div>
+	</div>
 </div>
 
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script src="/mogu/Public/home/js/header.js"></script>
-<script src="/mogu/Public/home/js/Commodity_detalis.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<script src="/mogu/Public/home/js/header.js"></script>
+<script src="/mogu/Public/home/js/Commodity_detalis.js"></script>

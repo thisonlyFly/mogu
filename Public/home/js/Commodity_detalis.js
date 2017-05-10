@@ -28,22 +28,16 @@ $(function () {
             $(this).addClass("subMenu")
         });
     }
-
     /*------------------------图片切换------------------------------*/
     var oBig = document.getElementById("big_images");
     function fn1(obj,url) {
         var oBtn = document.getElementById(obj);
         oBtn.onmouseover = function () {
             oBig.src=url;
-        }
+        }    
     }
-    fn1("btn1","../public/images/commodity_datelis_big_img1_640x960.jpg_468x468.jpg");
-    fn1("btn2","../public/images/commodity_datelis_big_img4_640x960.jpg_468x468.jpg");
-    fn1("btn3","../public/images/commodity_datelis_big_img5_640x960.jpg_468x468.jpg");
-
-
     /*-------------------点击添加件数和减少件数----------------------------*/
-    var num=0;
+    var num=1;
     $(".goods_sku_num_add ").on("click",function () {
         num++;
         if(num>10){
@@ -68,31 +62,35 @@ $(function () {
 
 
     /*----------------选中图片后有小勾勾出现------------------*/
-    for(var i=0;i<$(".span").length;i++){
-        $(".span").eq(i).on("click",function () {
-            for(var i=0;i<$(".span").length;i++){
-                $(".span").eq(i).removeClass("b_cur");
-            }
-            $(this).addClass("b_cur");
-        })
-    }
+    function colcur(){
+        for(var i=0;i<$(".span").length;i++){
+            $(".span").eq(i).on("click",function () {
+                for(var i=0;i<$(".span").length;i++){
+                    $(".span").eq(i).removeClass("b_cur");
+                }
+                $(this).addClass("b_cur");
+                cart_col=$(".b_cur").text();
+            })
+        }
 
-    for(var i=0;i<$(".goods_sku_xz_small_pic").length;i++){
-        $(".goods_sku_xz_small_pic").eq(i).on("click",function () {
-            for(var i=0;i<$(".goods_sku_xz_small_pic").length;i++){
-                $(".goods_sku_xz_small_pic").next("b").eq(i).removeClass("b_cur");
-            }
-            $(this).next("b").addClass("b_cur");
-        })
-    };
+        for(var i=0;i<$(".goods_sku_xz_small_pic").length;i++){
+            $(".goods_sku_xz_small_pic").eq(i).on("click",function () {
+                for(var i=0;i<$(".goods_sku_xz_small_pic").length;i++){
+                    $(".goods_sku_xz_small_pic").next("b").eq(i).removeClass("b_cur");
+                }
+                $(this).next("b").addClass("b_cur");
+            })
+        };
 
-    for(var i=0;i<$(".goods_sku_mashu").length;i++){
-        $(".goods_sku_mashu").eq(i).on("click",function () {
-            for(var i=0;i<$(".goods_sku_mashu").length;i++){
-                $(".goods_sku_mashu").eq(i).removeClass("c")
-            }
-            $(this).addClass("c");
-        })
+        for(var i=0;i<$(".goods_sku_mashu").length;i++){
+            $(".goods_sku_mashu").eq(i).on("click",function () {
+                for(var i=0;i<$(".goods_sku_mashu").length;i++){
+                    $(".goods_sku_mashu").eq(i).removeClass("c")
+                }
+                $(this).addClass("c");
+                cart_size=$(".goods_sku_mashu.c").text();
+            })
+        }
     }
 
 
@@ -159,13 +157,78 @@ for(var i=0;i<$(".ul_li").length;i++ ){
             }
         })
     });
-
-
-
-
-
+    var lock=true;
+    function getData(){
+        var sizehtml='',colhtml='';
+        $.post(Details_ajax_url+"/ajax_get",{},function(rtn_data){
+            img1=rtn_data.data['goods_img1'];
+            img2=rtn_data.data['goods_img2'];
+            img3=rtn_data.data['goods_img3'];
+            col=rtn_data.data['goods_color'];
+            size=rtn_data.data['goods_size'];
+            if(size){
+                var sizeArr=size.split(',');
+                sizehtmlt='<dl class="goods_sku_xz_size">'+
+                                    '<dt>尺码：</dt>'+
+                                    '<dd>'+
+                                        '<ol id="size" class="goods_sku_xz_sizeList goods_sku_xz_style_list">'+
+                                        '</ol>'+
+                                    '</dd>'+
+                                '</dl>';
+                $(".goods_sku_xz_content").prepend(sizehtmlt);
+                for (var i = 0; i < sizeArr.length; i++) {
+                    sizehtml+='<li class="goods_sku_mashu">'+sizeArr[i]+'</li>';
+                }
+            }
+            if(col){
+                var colArr=col.split(',');
+                colhtmlt='<dl class="goods_sku_xz_content_ys">'+
+                                    '<dt>颜色：</dt>'+
+                                    '<dd>'+
+                                        '<ol class="goods_sku_xz_style_list" id="col">'+
+                                        '</ol>'+
+                                    '</dd>'+
+                                '</dl>';
+                $(".goods_sku_xz_content").prepend(colhtmlt);
+                for (var i = 0; i < colArr.length; i++) {
+                    colhtml+='<li class="goods_sku_xz_style_list_img">'+
+                                '<span class="span">'+colArr[i]+'</span>'+
+                             '</li>';
+                }
+            }
+            if(!rtn_data.data){
+                lock=false;
+            }
+            else{
+                lock=true;
+                $("#col").prepend(colhtml);
+                $("#size").prepend(sizehtml);
+            }
+            if(img2){
+                fn1("btn1","../Public/"+img1);
+                fn1("btn2","../Public/"+img2);
+            }
+            else if(img3){
+                fn1("btn3","../Public/"+img3);
+            }  
+            colcur();     
+        })
+    }; 
+    getData();
 });
-
-
-
-
+var cart_col="";
+var cart_size="";
+function addCart(){
+    var cart_num=$(".goods_sku_num_input").val();
+    var goods_id=$("#goods_id").val();
+    $.post(shopping_Addcart,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
+        alert(rtn_data.message);
+    })
+}
+function buy(){
+    var cart_num=$(".goods_sku_num_input").val();
+    var goods_id=$("#goods_id").val();   
+    $.post(order,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
+        
+    })
+}

@@ -146,6 +146,9 @@ a{
     overflow: hidden;
     position: relative;
 }
+.commodity_details_body_wrap .goods_topimg .big_img>img{
+    width: 100%;
+}
 .commodity_details_body_wrap .goods_topimg .four_small_img{
     position: relative;
 }
@@ -188,7 +191,6 @@ a{
 }
 .four_s_i_center_ul li img{
     width: 60px;
-    height: 59px;
 }
 
 .commodity_details_body_wrap_goods_info .info_box{
@@ -336,6 +338,7 @@ a{
     text-align: center;
     display: block;
 }
+
 .goods_sku_xz_style_list_img:hover{
     border: 2px solid #666;
 }
@@ -822,7 +825,9 @@ a{
 .fixed{
     position: fixed;
     top:0;
-    border: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
 }
 .commodity_details_Package .col_main .col_main_center .tabbar_box .tabbar_list_ul li{
     float: left;
@@ -1336,7 +1341,7 @@ a{
 /*---右侧子导航模块---*/
 .col_extra .module_extranav{
     overflow: hidden;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 .col_extra .module_extranav .extranav_bd{
     top: 59px;
@@ -1546,4 +1551,9 @@ a{
     border-radius: 50%;
     width: 40px;
     height: 40px;
+}
+
+/*------底部背景色-----*/
+.tail{
+    background-color: #fff;
 }

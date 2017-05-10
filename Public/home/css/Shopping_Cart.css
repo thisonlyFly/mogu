@@ -285,7 +285,7 @@ a{
     height: 23px;
     margin: 0 auto;
     padding: 18px 0 24px;
-    width: 494px;
+    width: 337px;
     background:url("../images/s_c_lc.png") 0 18px repeat-x;
 }
 #s_c .s_c_header .s_c_process .s_c_process_lc2{
@@ -434,12 +434,21 @@ input[type=checkbox]{
     float: left;
     position: relative;
     cursor: pointer;
-}
-.s_c_menu .s_c_cart_goods_img>img{
-    display: block;
     width: 80px;
     height: 80px;
+}
+.s_c_menu .s_c_cart_goods_img .pic-img-s{
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
     border: 1px solid #ccc;
+}
+.s_c_menu .s_c_cart_goods_img .pic-img-s>img{
+    display: block;
+    width: 100%;
 }
 /*----鼠标经过图片，显示大的图片----*/
 .s_c_big_pic{
@@ -466,10 +475,14 @@ input[type=checkbox]{
     transform: rotate(-135deg);
     left: -7px;
 }
-.s_c_big_pic>img{
+.s_c_big_pic .pic-img-b{
+    margin: 10px;
+    width: 250px;
+    height: 280px;
+    overflow: hidden;
+}
+.s_c_big_pic .pic-img-b>img{
     width: 100%;
-    height: 300px;
-    padding: 10px;
 }
 .s_c_menu .s_c_cart_goods_img:hover .s_c_big_pic{
     display:block;
@@ -566,10 +579,12 @@ input[type=checkbox]{
 .s_c_cart_prices{
     color: #ff5777;
     font-size: 16px;
+    text-align: center;
 }
 .s_c_cart_detele{
     font-size: 14px;
     cursor: pointer;
+    text-align: center;
 }
 
 /*---身体底部结算部分--*/

@@ -25,7 +25,7 @@ function Category() {   //构造函数
         // oneCheckboxNum:document.getElementsByClassName("goodsNum"),
 
         //单选的复选框事件
-        oneCheckbox:document.getElementsByClassName("s_shopall"),
+        // oneCheckbox:document.getElementsByClassName("s_shopall"),
         oneCheckboxAfter:document.getElementsByClassName("s_c_cart_thcheck"),
         //上面的全选按钮
         topAllCheck:document.getElementById("s_all_h"),
@@ -56,8 +56,8 @@ function Category() {   //构造函数
 //方法：
 Category.prototype={
     oneCheck:function () {
-        for(var i=0;i<this.doms.oneCheckbox.length;i++){
-            this.doms.oneCheckbox[i].index=i;
+        for(var i=0;i<this.doms.oneCheckboxAfter.length;i++){
+            // this.doms.oneCheckbox[i].index=i;
             this.doms.oneCheckboxAfter[i].index=i;
             var that=this;
             //全选的复选框的状态
@@ -70,7 +70,7 @@ Category.prototype={
                 that.doms.topAllCheck.checked=false;
             }
             //奇数复选框
-            this.doms.oneCheckbox[i].onclick=function () {
+          /*  this.doms.oneCheckbox[i].onclick=function () {
                 var thatIndex=this.index;
                 if(this.checked){
                     that.num++;
@@ -87,21 +87,21 @@ Category.prototype={
                     that.goBuyNow();
                     checkFalse();
                 }
-            };
+            };*/
             //偶数的复选框
             this.doms.oneCheckboxAfter[i].onclick=function () {
                 var thatIndex=this.index;
                 if(this.checked){
                     that.num++;
-                    that.doms.oneCheckbox[thatIndex].checked=true;
+                    // that.doms.oneCheckbox[thatIndex].checked=true;
                     that.allMoney();
                     that.goBuyNow();
-                    if(that.num==that.doms.oneCheckbox.length){
+                    if(that.num==that.doms.oneCheckboxAfter.length){
                         checkTrue();
                     }
                 }else{
                     that.num--;
-                    that.doms.oneCheckbox[thatIndex].checked=false;
+                    // that.doms.oneCheckbox[thatIndex].checked=false;
                     that.allMoney();
                     that.goBuyNow();
                     checkFalse();
@@ -110,12 +110,12 @@ Category.prototype={
         }
     },
     allCheckChlid:function (that) {
-        for(var i=0;i<this.doms.oneCheckbox.length;i++) {
+        for(var i=0;i<this.doms.oneCheckboxAfter.length;i++) {
             if (that.checked) {
-                this.doms.oneCheckbox[i].checked = true;
+                // this.doms.oneCheckbox[i].checked = true;
                 this.doms.oneCheckboxAfter[i].checked = true;
             } else {
-                this.doms.oneCheckbox[i].checked = false;
+                // this.doms.oneCheckbox[i].checked = false;
                 this.doms.oneCheckboxAfter[i].checked = false;
             }
         }
@@ -127,14 +127,14 @@ Category.prototype={
             that.allMoney();
             if(this.checked){
                 that.doms.bottomAllCheck.checked=true;
-                that.num=that.doms.oneCheckbox.length;
+                that.num=that.doms.oneCheckboxAfter.length;
                 that.goBuyNow();
-                $(".s_c_cart_mitem ").css("background","#fff8f3");
+                // $(".s_c_cart_mitem ").css("background","#fff8f3");
             }else{
                 that.doms.bottomAllCheck.checked=false;
                 that.num=0;
                 that.goBuyNow();
-                $(".s_c_cart_mitem ").css("background","");
+                // $(".s_c_cart_mitem ").css("background","");
             }
         };
         this.doms.bottomAllCheck.onclick=function () {
@@ -143,21 +143,21 @@ Category.prototype={
 
             if(this.checked){
                 that.doms.topAllCheck.checked=true;
-                that.num=that.doms.oneCheckbox.length;
+                that.num=that.doms.oneCheckboxAfter.length;
                 that.goBuyNow();
-                $(".s_c_cart_mitem ").css("background","#fff8f3");
+                // $(".s_c_cart_mitem ").css("background","#fff8f3");
 
             }else{
                 that.doms.topAllCheck.checked=false;
                 that.num=0;
                 that.goBuyNow();
-                $(".s_c_cart_mitem ").css("background","");
+                // $(".s_c_cart_mitem ").css("background","");
             }
         };
     },
     numChange:function () {
         var that=this;
-        for(var i=0;i<this.doms.oneCheckbox.length;i++){
+        for(var i=0;i<this.doms.oneCheckboxAfter.length;i++){
             this.doms.addCategoryNum[i].index=i;
             this.doms.reduceCategoryNum[i].index=i;
             //计算单项商品的小计
@@ -190,10 +190,10 @@ Category.prototype={
     },
     deleteCategory:function () {
         var that=this;
-        for(var i=0;i<this.doms.oneCheckbox.length;i++){
+        for(var i=0;i<this.doms.oneCheckboxAfter.length;i++){
             this.doms.deleteCate[i].index=i;
             this.doms.deleteCate[i].onclick=function () {
-                if(that.doms.oneCheckbox[this.index].checked){
+                if(that.doms.oneCheckboxAfter[this.index].checked){
                     //删除功能(还没实现)
                   var off = confirm("你确定要删除"+(this.index+1)+"号商品吗？");
                   if(!off)return;
@@ -204,8 +204,8 @@ Category.prototype={
         }
     },
     allMoney:function () {
-        for(var i=0;i<this.doms.oneCheckbox.length;i++){
-            if(this.doms.oneCheckbox[i].checked){
+        for(var i=0;i<this.doms.oneCheckboxAfter.length;i++){
+            if(this.doms.oneCheckboxAfter[i].checked){
                 //获取数量
                 this.allNum+=parseFloat(this.doms.showCategoryInput[i].value);
                 //获取总金额
@@ -236,29 +236,30 @@ cate.deleteCategory();
 
 
 /*------------结束---------------------*/
-
+function buy(){
+    
+}
 
 /*---------------------底部固定----------------------*/
 $(function () {
-    var num=$(".s_c_cart_mitem ").length;
-     //获取s_c_cart_paybar距离顶部的距离
-    $(window).scroll(function () {
-        //获取s_c_cart_mitem的高度 + 它本身的高度 的总和
-        var nav =$(".s_c_cart_mitem ").eq(num-1).offset().top+$(".s_c_cart_mitem").height();
-        var windowheigh=$(window).height();      //获取window的高度
-        var H=$(window).scrollTop();     //获取滚动条滚动的高度
-        if(H>20){    //如果滚动条的高度大于20就添加一个固定样式
-            $(".s_c_cart_paybar").addClass("s_c_cart_paybar_fiexd");
-            if((nav-H+60)<windowheigh){
+    if(!$(".s_c_cart_mitem")){
+        var num=$(".s_c_cart_mitem ").length;
+         //获取s_c_cart_paybar距离顶部的距离
+        $(window).scroll(function () {
+            //获取s_c_cart_mitem的高度 + 它本身的高度 的总和
+            var nav =$(".s_c_cart_mitem ").eq(num-1).offset().top+$(".s_c_cart_mitem").height();
+            var windowheigh=$(window).height();      //获取window的高度
+            var H=$(window).scrollTop();     //获取滚动条滚动的高度
+            if(H>20){    //如果滚动条的高度大于20就添加一个固定样式
+                $(".s_c_cart_paybar").addClass("s_c_cart_paybar_fiexd");
+                if((nav-H+60)<windowheigh){
+                    $(".s_c_cart_paybar").removeClass("s_c_cart_paybar_fiexd");
+                }
+            }
+            else {
                 $(".s_c_cart_paybar").removeClass("s_c_cart_paybar_fiexd");
             }
-        }
-        else {
-            $(".s_c_cart_paybar").removeClass("s_c_cart_paybar_fiexd");
-        }
-    })
+        })
+    }
+    
 });
-
-
-
-

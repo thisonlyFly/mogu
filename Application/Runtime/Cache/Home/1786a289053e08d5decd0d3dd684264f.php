@@ -14,7 +14,7 @@
 <!---------------------头部--------------------->
 <div class="nav">
     <div class="nav-wap ">
-        <a href="" class="nav-logo">蘑菇街首页</a>
+        <a href="http://localhost/mogu/Home/page/index.html" class="nav-logo">蘑菇头首页</a>
         <ul class="nav-ul">
             <li class="s1 nav-khfw">
                 <a href=""> 去那个地方看看 </a>
@@ -42,10 +42,10 @@
                 </ol>
             </li>
 
-            <li class="s1 ullia nav-dd"><a href="">我的订单</a></li>
+            <li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/Order.html" target="_blank">我的订单</a></li>
 
             <li class="s1 ullia nav-shopping">
-                <a href=""><span>购物车</span></a>
+                <a href=" "><span>购物车</span></a>
 
                 <!--二级菜单-->
                 <div class="sp-cart">
@@ -117,14 +117,13 @@
 <div id="s_c">
     <div class="s_c_header">
         <div class="s_c_wrap">
-            <div class="s_c_logo"></div>
+            <a href="http://localhost/mogu/Home/page/index.html"><div class="s_c_logo"></div></a>
             <div class="s_c_process">
                 <div class="s_c_process_step">
                     <div class="s_c_process_lc2"></div>
                     <i class="s_c_process_i i1">1<span class="s_c_process_tip1">购物车</span></i>
                     <i class="s_c_process_i i2">2<span class="s_c_process_tip">确认订单</span></i>
-                    <i class="s_c_process_i i3">3<span class="s_c_process_tip">支付</span></i>
-                    <i class="s_c_process_i i4">4<span class="s_c_process_tip">完成</span></i>
+                    <i class="s_c_process_i i3">3<span class="s_c_process_tip">完成</span></i>
                 </div>
             </div>
         </div>
@@ -162,13 +161,13 @@
                 </thead>
 
                 <tbody>
-                    <tr class="s_c_shop_header">
+                   <!-- <tr class="s_c_shop_header">
                         <td colspan="7" class="s_c_cart_group_head">
                             <input type="checkbox" class="s_shopall tr_checkmr qx">
                             <a href="javascript:;" target="_blank" class="s_c_cart_bold">糯糯美衣</a>
                             <a href="javascript:;" class="s_c_cart_im_btn mr5"></a>
                         </td>
-                    </tr>
+                    </tr>-->
                     <tr class="s_c_cart_mitem ">
                         <td class="s_c_vm "> <input type="checkbox" class="s_c_cart_thcheck qx">  </td>
                         <td class="s_c_table_goods">
@@ -184,32 +183,32 @@
                         <a class="s_c_cart_goods_text"> 冬季2016新款呢子大衣女长款韩版茧型毛呢外套加厚宽松潮学生 </a>
                     </td>
                         <td class="s_c_cart_alcenter">
-                        <p class="s_c_cart_lh20">颜色：黑色</p>
-                        <p class="s_c_cart_lh20">尺码：M</p>
-                    </td>
-                     <td class="s_c_cart_alcenter">
+                            <p class="s_c_cart_lh20">颜色：黑色</p>
+                            <p class="s_c_cart_lh20">尺码：M</p>
+                        </td>
+                        <td class="s_c_cart_alcenter">
                         <p class="s_c_cart_lh20 cart_throughline ">197.14</p>
                         <p class="s_c_cart_lh20 cart_bold " data-price="137.99"> 137.99 </p>
                         <p> <span class="s_c_cart_tip_red ">7折</span> </p>
-                    </td>
+                     </td>
                         <td id="tab">
-                        <div class="s_c_cart_num">
-                            <input type="text" class="s_c_cart_num_input " value="1">
-                            <a><span class="s_c_cart_num_add">+</span></a>
-                            <a><span class="s_c_cart_num_reduce disable">-</span></a>
-                        </div>
-                    </td>
+                            <div class="s_c_cart_num">
+                                <input type="text" class="s_c_cart_num_input " value="1">
+                                <a><span class="s_c_cart_num_add">+</span></a>
+                                <a><span class="s_c_cart_num_reduce disable">-</span></a>
+                            </div>
+                        </td>
                         <td class="s_c_cart_prices"><p class="total">137.99</p></td>
                         <td class="s_c_cart_detele"><a>删除</a></td>
                 </tr>
 
-                    <tr class="s_c_shop_header">
+                   <!-- <tr class="s_c_shop_header">
                         <td colspan="7" class="s_c_cart_group_head">
                             <input type="checkbox" class="s_shopall tr_checkmr qx">
                             <a href="javascript:;" target="_blank" class="s_c_cart_bold">HEmerald实拍原创女装</a>
                             <a href="javascript:;" class="s_c_cart_im_btn mr5"></a>
                         </td>
-                    </tr>
+                    </tr>-->
                     <tr class="s_c_cart_mitem ">
                         <td class="s_c_vm "> <input type="checkbox" class="s_c_cart_thcheck qx">  </td>
                         <td class="s_c_table_goods">
@@ -242,13 +241,13 @@
                         <td class="s_c_cart_detele"><a>删除</a></td>
                     </tr>
 
-                    <tr class="s_c_shop_header">
+                   <!-- <tr class="s_c_shop_header">
                         <td colspan="7" class="s_c_cart_group_head">
                             <input type="checkbox" class="s_shopall tr_checkmr qx">
                             <a href="javascript:;" target="_blank" class="s_c_cart_bold">橘子美衣</a>
                             <a href="javascript:;" class="s_c_cart_im_btn mr5"></a>
                         </td>
-                    </tr>
+                    </tr>-->
                     <tr class="s_c_cart_mitem ">
                         <td class="s_c_vm "> <input type="checkbox" class="s_c_cart_thcheck qx">  </td>
                         <td class="s_c_table_goods">
@@ -283,6 +282,7 @@
                         <td class="s_c_cart_detele"><a>删除</a></td>
                     </tr>
 
+
                 </tbody>
 
             </table>
@@ -312,68 +312,69 @@
 </div>
 
 <!----------------------底部-------------------->
+
 <div class="tail">
-    <div class="tail-nav">
-        <div class="tail-one">
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 新手帮助 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">常见问题</a></li>
-                    <li class="tail-oblock-li"><a href="">自助服务</a></li>
-                    <li class="tail-oblock-li"><a href="">联系客服</a></li>
-                    <li class="tail-oblock-li"><a href="">意见反馈</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 权益保障 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">全国包邮</a></li>
-                    <li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
-                    <li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
-                    <li class="tail-oblock-li"><a href="">限时发货</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 支付方式 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">-微信支付</a></li>
-                    <li class="tail-oblock-li"><a href="">支付宝</a></li>
-                    <li class="tail-oblock-li"><a href="">白付美支付</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 移动客户端下载 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            蘑菇街
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm1.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            美丽说
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            uni引力
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="tail-two">
+	<div class="tail-nav">
+		<div class="tail-one">
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 新手帮助 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">常见问题</a></li>
+					<li class="tail-oblock-li"><a href="">自助服务</a></li>
+					<li class="tail-oblock-li"><a href="">联系客服</a></li>
+					<li class="tail-oblock-li"><a href="">意见反馈</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 权益保障 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">全国包邮</a></li>
+					<li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
+					<li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
+					<li class="tail-oblock-li"><a href="">限时发货</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 支付方式 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">-微信支付</a></li>
+					<li class="tail-oblock-li"><a href="">支付宝</a></li>
+					<li class="tail-oblock-li"><a href="">白付美支付</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 移动客户端下载 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							蘑菇街
+						</div>
+						<img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							美丽说
+						</div>
+						<img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							uni引力
+						</div>
+						<img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tail-two">
              <span class="tail-ts">
                  <a href="" class="tail-ta">美丽说</a>
                  <b class="tail-tb">|</b>
@@ -420,41 +421,41 @@
                  <a href="" class="tail-ta">爱蘑菇街</a>
                  <b class="tail-tb">|</b>
              </span>
-        </div>
-        <div class="tail-three">
-            <ul>
-                <li class="tail-oblock-li"><a href="">关于我们</a></li>
-                <li class="tail-oblock-li"><a href="">招聘信息</a></li>
-                <li class="tail-oblock-li"><a href="">联系我们</a></li>
-                <li class="tail-oblock-li"><a href="">商家后台</a></li>
-                <li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
-                <li class="tail-oblock-li"><a href="">商家社区</a></li>
-            </ul>
-            <p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
-        </div>
-        <div class="tail-four">
-            <p class="tail-tp">
-                <span class="tail-ts">营业执照注册号：</span>
-                <a href="">330106000129004</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">网络文化经营许可证：</span>
-                <a href="">浙网文（2016）0349-219号</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">增值电信业务经营许可证：</span>
-                <a href="">浙B2-20110349</a>
-                <b class="tail-tb">|</b>
-                <a href="">安全责任书</a>
-                <b class="tail-tb">|</b>
-                <a href="">浙公网安备 33010602002329号</a>
-                <b class="tail-tb">|</b>
-            </p>
-        </div>
-    </div>
+		</div>
+		<div class="tail-three">
+			<ul>
+				<li class="tail-oblock-li"><a href="">关于我们</a></li>
+				<li class="tail-oblock-li"><a href="">招聘信息</a></li>
+				<li class="tail-oblock-li"><a href="">联系我们</a></li>
+				<li class="tail-oblock-li"><a href="">商家后台</a></li>
+				<li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
+				<li class="tail-oblock-li"><a href="">商家社区</a></li>
+			</ul>
+			<p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+		</div>
+		<div class="tail-four">
+			<p class="tail-tp">
+				<span class="tail-ts">营业执照注册号：</span>
+				<a href="">330106000129004</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">网络文化经营许可证：</span>
+				<a href="">浙网文（2016）0349-219号</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">增值电信业务经营许可证：</span>
+				<a href="">浙B2-20110349</a>
+				<b class="tail-tb">|</b>
+				<a href="">安全责任书</a>
+				<b class="tail-tb">|</b>
+				<a href="">浙公网安备 33010602002329号</a>
+				<b class="tail-tb">|</b>
+			</p>
+		</div>
+	</div>
 </div>
 
-
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script src="/mogu/Public/home/js/Shopping_Cart.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<script src="/mogu/Public/home/js/Shopping_Cart.js"></script>

@@ -1,4 +1,4 @@
-*{  padding: 0;  margin: 0}
+body{  padding: 0;  margin: 0}
 a{ text-decoration: none;}
 /*小导航的样式*/
 #body_wrap .social-layout{
@@ -42,9 +42,8 @@ width: 960px;
     position: absolute;
     left:1050px;
     padding: 20px;
-    top:60px;
-    height: 230px;
-    width: 190px;
+    top:0;
+    width: 230px;
     z-index: 2;
     background-color: #fff;
 }
@@ -54,9 +53,7 @@ width: 960px;
     margin: 0 auto;
     position: relative;
 }
-#body_wrap .user-info .topic_user{
-    margin-top: 38px;
-}
+
 #body_wrap .user-info .avatar{
     display: block;
     width: 100px;
@@ -68,6 +65,7 @@ width: 960px;
     text-align: center;
     line-height: 36px;
     font-size: 20px;
+    font-weight: bold;
     color: #2d2d2d;
 }
 #body_wrap .user-info .user_intro {
@@ -109,6 +107,9 @@ a{text-decoration: none}
     position: relative;
     cursor: pointer;
     border: 1px rgb(255,255,255) solid;
+}
+#body_wrap .clearfix .goods:nth-child(4n){
+    margin-right: 0px;
 }
 #body_wrap .clearfix .goods-image {
     /*position: relative;*/

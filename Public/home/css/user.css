@@ -67,9 +67,17 @@ a:hover{
 .user_page{
     width: 100%;
     height: 600px;
+<<<<<<< HEAD
+    margin-bottom: 80px;
 }
 .user_logo{
     padding:15px 0px;
+    margin-left: 100px;
+=======
+}
+.user_logo{
+    padding:15px 0px;
+>>>>>>> 33975841088f4ba5add48b9af9793e217ccc19ea
 }
 .user_banner{
     position: relative;

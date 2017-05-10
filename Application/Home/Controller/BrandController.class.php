@@ -1,8 +1,7 @@
 <?php
 	namespace Home\Controller;
-	use Common\Controller\AuthController;
     use Think\Controller;
-	class BrandController extends AuthController
+	class BrandController extends Controller
 	{
 		public function Brand(){
 		    $this->display();

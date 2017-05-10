@@ -1,7 +1,18 @@
-<include file="Public/header" />
-<link rel="stylesheet" href="__PUBLIC__/home/css/user.css">
-<script src="__PUBLIC__/home/js/user.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mogu</title>
+    <link rel="stylesheet" href="__PUBLIC__/common/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/common/Font-Awesome-master/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="__PUBLIC__/home/css/twzt.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/tail.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/user.css">
+
+</head>
 <body>
+
 <div class="user_page">
     <div class="user_logo" >
         <img src="__PUBLIC__/home/images/user_logo.png" alt="">
@@ -74,7 +85,7 @@
                    <div class="form_group">
                        <p class="error_tip error_username">请输入用户名</p>
                        <p class="error_tip error_pwd">请输入密码</p>
-                       <p class="error_tip error_repwd">请输入确认密码</p>
+                       <p class="error_tip error_repwd">请输入r确认密码</p>
                    </div>
                    <div class="form_group">
                        <lable class="lable_sty">用户名：</lable>
@@ -96,7 +107,7 @@
                        <span> 我已阅读并且同意《蘑菇街网络服务使用协议》</span>
                    </div>
                    <div class="rg_login form_group" >
-                       <a href="{:U('admin/User/login')}">< 已有账号登录</a>
+                       <a href="{:U('User/login')}">< 已有账号登录</a>
                    </div>
                    </form>
                </div>
@@ -105,4 +116,6 @@
     </div>
 </div>
 </body>
+
 <include file="Public/footer" />
+<script src="__PUBLIC__/home/js/user.js"></script>

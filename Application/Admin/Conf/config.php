@@ -10,7 +10,6 @@ return array(
     "DB_USER"=>"root",
     "DB_PWD"=>"",
     'DB_PREFIX'=>'timor_',
-    "DB_POST"=>"3306",
     "DB_CHARSET"=>"utf8",
     "DB_MODEL"=>2
 );

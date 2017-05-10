@@ -1,176 +1,94 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Brand</title>
-    <link href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/mogu/Public/common/Font-Awesome-master/css/font-awesome.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>mogu</title>
+	<link rel="stylesheet" href="/mogu/Public/common/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/mogu/Public/common/Font-Awesome-master/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/mogu/Public/home/css/header.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/twzt.css">
+	<link rel="stylesheet" href="/mogu/Public/home/css/tail.css">
+
+</head>
+<body>
+<!--头部1-->
+<div class="nav">
+	<div class="nav-wap ">
+		<a href="http://localhost/mogu/Home/page/index.html" class="nav-logo">蘑菇头首页</a>
+		<ul class="nav-ul">
+			<li class="s1"><a href="http://localhost/mogu/Home/User/login.html" target="_blank">登录</a></li>
+			<li class="s1"><a href="http://localhost/mogu/Home/User/register.html" target="_blank">注册</a></li>
+			<li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/Order.html" target="_blank">我的订单</a></li>
+			<li class="s1 ullia nav-shopping">
+				<a href="http://localhost/mogu/Home/ShoppingCart/Shopping_Cart.html" target="_blank"><span>购物车</span></a>
+				<div class="sp-cart">
+					购物车里没有商品！
+				</div>
+			</li>
+			<li class="s1 ullia nav-khfw">
+				<a href="">客户服务</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">消费者服务</a></li>
+					<li><a href="">商家服务</a></li>
+					<li><a href="">规则中心</a></li>
+				</ol>
+			</li>
+			<li class="s1 ullia nav-wdxd">
+				<a href="">我的小店</a>
+				<i class="nav-icon"></i>
+				<ol class="khfw-tcc">
+					<li><a href="">管理后台</a></li>
+					<li><a href="">商家社区</a></li>
+					<li><a href="">商家培训</a></li>
+					<li><a href="">市场入驻</a></li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--头部2-->
+<div class="header header-bottom">
+	<div class="nav-wap">
+		<a href="http://localhost/mogu/Home/page/index.html" class="logo"></a>
+		<div class="header-ssk">
+			<div class="header-srk">
+				<div class="header-ssp">
+					<span class="selected" id="sl">搜商品</span>
+					<ol class="ssp-ol">
+						<li class="lisp"><a href="javascript:;">商品</a></li>
+						<li class="lidp"><a href="javascript:;">店铺</a></li>
+					</ol>
+				</div>
+				<div class="header-text">
+					<input type="text" placeholder="套装新版韩装" class="input-text">
+					<div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
+					<input type="submit" value="搜索" class="input-btn">
+				</div>
+			</div>
+			<div class="header-tj">
+				<a href="">春季套装</a>
+				<a href="">卫衣</a>
+				<a href="">牛仔裤</a>
+				<a href="">打底衫</a>
+				<a href="">单鞋</a>
+				<a href="">斜挎包</a>
+				<a href="">男士外套</a>
+				<a href="">棒球服</a>
+				<a href="">连衣裙</a>
+			</div>
+		</div>
+		<div class="header-ewm">
+			<img src="/mogu/Public/home/images/ewm1.png" alt="">
+		</div>
+	</div>
+</div>
+
 
     <link href="/mogu/Public/home/css/Brand.css" rel="stylesheet">
     <link href="/mogu/Public/home/css/share.css" rel="stylesheet">
-    <link href="/mogu/Public/home/css/tail.css" rel="stylesheet">
-</head>
-<body>
 
-<!-------------------------头部内容------------------->
-<div class="nav">
-    <div class="nav-wap ">
-        <a href="" class="nav-logo">蘑菇街首页</a>
-        <ul class="nav-ul">
-            <li class="s1 nav-khfw">
-                <a href=""> 去那个地方看看 </a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">个人设置</a></li>
-                    <li><a href="">账号绑定</a></li>
-                    <li><a href="">退出</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia"><a href="" style="padding-left: 15px">消息</a></li>
-
-            <li class="s1 ullia nav-khfw">
-                <a href=""> 我的收藏 </a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">收藏的商品</a></li>
-                    <li><a href="">收藏的小店</a></li>
-                    <li><a href="">浏览足迹</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia nav-dd"><a href="">我的订单</a></li>
-
-            <li class="s1 ullia nav-shopping">
-                <a href=""><span>购物车</span></a>
-
-                <!--二级菜单-->
-                <div class="sp-cart">
-                    <ul class="sp_cart_ul">
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp1.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">冬季2016新款呢子大衣女长款韩版茧型毛呢外套加厚宽松潮学生</a>
-                            <span class="sp_info">颜色: 黑色  尺码: M  </span>
-                            <span class="sp_price">¥137.99</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp2.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">新款春夏季韩版t恤女学生宽松套头字母上衣连帽白色短袖外穿薄潮</a>
-                            <span class="sp_info">颜色: 白色  尺码: M  </span>
-                            <span class="sp_price">¥29.9</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                        <li class="sp_cart_li">
-                            <a href="javascript:;" target="_blank" class="imgbox">
-                                <img src="/mogu/Public/home/images/header_sp3.jpg">
-                            </a>
-                            <a href="javascript:;" target="_blank" class="sp_title">半高领弹力修身打底针织衫</a>
-                            <span class="sp_info">颜色: 黑色  尺码: 均码  </span>
-                            <span class="sp_price">¥32.6</span>
-                            <span class="sp_del">删除</span>
-                        </li>
-                    </ul>
-                    <div class="sp_foot">
-                        <p class="sp__foot_info">购物车里还有<b class="sp_num">12</b>件商品</p>
-                        <div class="sp_see_box"> <a href="javascript:;" target="_blank" class="sp_see">查看购物车</a> </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="s1 ullia nav-khfw">
-                <a href="">客户服务</a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">消费者服务</a></li>
-                    <li><a href="">商家服务</a></li>
-                    <li><a href="">规则中心</a></li>
-                </ol>
-            </li>
-
-            <li class="s1 ullia nav-wdxd">
-                <a href="">我的小店</a>
-                <i class="nav-icon"></i>
-
-                <!--二级菜单-->
-                <ol class="khfw-tcc">
-                    <li><a href="">管理后台</a></li>
-                    <li><a href="">商家社区</a></li>
-                    <li><a href="">商家培训</a></li>
-                    <li><a href="">市场入驻</a></li>
-                </ol>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="header">
-    <div class="nav-wap">
-        <a href="" class="logo"></a>
-        <div class="header-ssk">
-            <div class="header-srk">
-                <div class="header-ssp">
-                    <span class="selected" id="sl">搜商品</span>
-                    <ol class="ssp-ol">
-                        <li class="lisp"><a href="javascript:;">商品</a></li>
-                        <li class="lidp"><a href="javascript:;">店铺</a></li>
-                    </ol>
-                </div>
-                <div class="header-text">
-                    <input type="text" placeholder="套装新版韩装" class="input-text">
-                    <div class="header-lsjl"><span style="padding: 10px">历史记录</span></div>
-                    <input type="submit" value="搜索" class="input-btn">
-                </div>
-            </div>
-            <div class="header-tj">
-                <a href="" class="header_cur">春季套装</a>
-                <a href="">卫衣</a>
-                <a href="">牛仔裤</a>
-                <a href="">打底衫</a>
-                <a href="">单鞋</a>
-                <a href="">斜挎包</a>
-                <a href=""class="header_cur">男士外套</a>
-                <a href="">棒球服</a>
-                <a href="">连衣裙</a>
-            </div>
-        </div>
-        <div class="header-ewm">
-            <img src="/mogu/Public/home/images/ewm1.png" alt="">
-        </div>
-    </div>
-</div>
-
-<div class="header-two">
-    <div class="nav-wap">
-        <div class="header-img"><img src="/mogu/Public/home/images/logo2.png" alt=""></div>
-        <div class="header-two-ssk">
-            <div class="header-two-srk">
-                <div class="header-two-ssp">
-                    <span class="selected" >搜商品</span>
-                    <ol class="ssp-ol">
-                        <li class="lisp"><a href="javascript:;">商品</a></li>
-                        <li class="lidp"><a href="javascript:;">店铺</a></li>
-                    </ol>
-                </div>
-                <div class="header-two-text">
-                    <input type="text" placeholder="套装新版韩装" class="input-two-text">
-                    <div class="header-two-lsjl"><span style="padding: 10px">历史记录</span></div>
-                    <input type="submit" value="搜索" class="input-btn">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-------------------身体部分----------------------->
 <div id="brand_box">
@@ -3318,69 +3236,70 @@
     </div>
 </div>
 
-<!----------------------底部------------------------->
+<!-----------------底部---------------->
+
 <div class="tail">
-    <div class="tail-nav">
-        <div class="tail-one">
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 新手帮助 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">常见问题</a></li>
-                    <li class="tail-oblock-li"><a href="">自助服务</a></li>
-                    <li class="tail-oblock-li"><a href="">联系客服</a></li>
-                    <li class="tail-oblock-li"><a href="">意见反馈</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 权益保障 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">全国包邮</a></li>
-                    <li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
-                    <li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
-                    <li class="tail-oblock-li"><a href="">限时发货</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 支付方式 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li"><a href="">-微信支付</a></li>
-                    <li class="tail-oblock-li"><a href="">支付宝</a></li>
-                    <li class="tail-oblock-li"><a href="">白付美支付</a></li>
-                </ul>
-            </div>
-            <div class="tail-oblock">
-                <div class="tail-title">
-                    <h4 class="tail-h4">- 移动客户端下载 -</h4>
-                </div>
-                <ul>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            蘑菇街
-                        </div>
-                        <img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            美丽说
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
-                    </li>
-                    <li class="tail-oblock-li tail-oblock-ewm">
-                        <div class="tail-ewm">
-                            uni引力
-                        </div>
-                        <img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="tail-two">
+	<div class="tail-nav">
+		<div class="tail-one">
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 新手帮助 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">常见问题</a></li>
+					<li class="tail-oblock-li"><a href="">自助服务</a></li>
+					<li class="tail-oblock-li"><a href="">联系客服</a></li>
+					<li class="tail-oblock-li"><a href="">意见反馈</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 权益保障 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">全国包邮</a></li>
+					<li class="tail-oblock-li"><a href="">7天无理由退货</a></li>
+					<li class="tail-oblock-li"><a href="">退货运费补贴</a></li>
+					<li class="tail-oblock-li"><a href="">限时发货</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 支付方式 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li"><a href="">-微信支付</a></li>
+					<li class="tail-oblock-li"><a href="">支付宝</a></li>
+					<li class="tail-oblock-li"><a href="">白付美支付</a></li>
+				</ul>
+			</div>
+			<div class="tail-oblock">
+				<div class="tail-title">
+					<h4 class="tail-h4">- 移动客户端下载 -</h4>
+				</div>
+				<ul>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							蘑菇街
+						</div>
+						<img src="/mogu/Public/home/images/tewm1.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							美丽说
+						</div>
+						<img src="/mogu/Public/home/images/ewm2.png" alt="" class="tail-ewm-img">
+					</li>
+					<li class="tail-oblock-li tail-oblock-ewm">
+						<div class="tail-ewm">
+							uni引力
+						</div>
+						<img src="/mogu/Public/home/images/ewm3.png" alt="" class="tail-ewm-img">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tail-two">
              <span class="tail-ts">
                  <a href="" class="tail-ta">美丽说</a>
                  <b class="tail-tb">|</b>
@@ -3427,40 +3346,40 @@
                  <a href="" class="tail-ta">爱蘑菇街</a>
                  <b class="tail-tb">|</b>
              </span>
-        </div>
-        <div class="tail-three">
-            <ul>
-                <li class="tail-oblock-li"><a href="">关于我们</a></li>
-                <li class="tail-oblock-li"><a href="">招聘信息</a></li>
-                <li class="tail-oblock-li"><a href="">联系我们</a></li>
-                <li class="tail-oblock-li"><a href="">商家后台</a></li>
-                <li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
-                <li class="tail-oblock-li"><a href="">商家社区</a></li>
-            </ul>
-            <p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
-        </div>
-        <div class="tail-four">
-            <p class="tail-tp">
-                <span class="tail-ts">营业执照注册号：</span>
-                <a href="">330106000129004</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">网络文化经营许可证：</span>
-                <a href="">浙网文（2016）0349-219号</a>
-                <b class="tail-tb">|</b>
-                <span  class="tail-ts">增值电信业务经营许可证：</span>
-                <a href="">浙B2-20110349</a>
-                <b class="tail-tb">|</b>
-                <a href="">安全责任书</a>
-                <b class="tail-tb">|</b>
-                <a href="">浙公网安备 33010602002329号</a>
-                <b class="tail-tb">|</b>
-            </p>
-        </div>
-    </div>
+		</div>
+		<div class="tail-three">
+			<ul>
+				<li class="tail-oblock-li"><a href="">关于我们</a></li>
+				<li class="tail-oblock-li"><a href="">招聘信息</a></li>
+				<li class="tail-oblock-li"><a href="">联系我们</a></li>
+				<li class="tail-oblock-li"><a href="">商家后台</a></li>
+				<li class="tail-oblock-li"><a href="">蘑菇商学院</a></li>
+				<li class="tail-oblock-li"><a href="">商家社区</a></li>
+			</ul>
+			<p class="tail-tp">©2017 Mogujie.com 杭州卷瓜网络有限公司</p>
+		</div>
+		<div class="tail-four">
+			<p class="tail-tp">
+				<span class="tail-ts">营业执照注册号：</span>
+				<a href="">330106000129004</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">网络文化经营许可证：</span>
+				<a href="">浙网文（2016）0349-219号</a>
+				<b class="tail-tb">|</b>
+				<span  class="tail-ts">增值电信业务经营许可证：</span>
+				<a href="">浙B2-20110349</a>
+				<b class="tail-tb">|</b>
+				<a href="">安全责任书</a>
+				<b class="tail-tb">|</b>
+				<a href="">浙公网安备 33010602002329号</a>
+				<b class="tail-tb">|</b>
+			</p>
+		</div>
+	</div>
 </div>
 
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script src="/mogu/Public/home/js/Brand.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
+	<script src="/mogu/Public/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+<script src="/mogu/Public/home/js/Brand.js"></script>
