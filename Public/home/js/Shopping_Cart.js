@@ -237,8 +237,18 @@ cate.deleteCategory();
 
 /*------------结束---------------------*/
 function buy(){
-    
+    var cart_ids=[];
+    for (var i = 0; i <$(".s_c_cart_thcheck").length; i++) {
+        if($(".s_c_cart_thcheck").is(':checked')){
+            cart_ids[i]=$(".s_c_cart_thcheck").eq(i).val();
+        }
+    }
+    $('#submit_btn').click();
+    // $.post(ConfirmOrder, {cart_ids}, function(data) {
+    //     window.location.href ="http://localhost/mogu/Home/ConfirmOrder/index.html";
+    // });
 }
+
 
 /*---------------------底部固定----------------------*/
 $(function () {

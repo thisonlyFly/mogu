@@ -47,7 +47,9 @@ a{
 .pr20{
     padding-right: 20px !important;
 }
-
+.error{
+    color:red;
+}
 
 /*---------单个样式---------*/
 .Confirm-Order .pay_info-warp{
@@ -73,7 +75,7 @@ a{
     padding: 20px 20px 20px 0;
     line-height: 38px ;
 }
-.receiving-address .address_pop dt{
+.receiving-address .address_pop .label{
     position: absolute;
     left: 0;
     width: 90px;
@@ -180,13 +182,15 @@ a{
 .cart_goods_img{
     float: left;
     position: relative;
-}
-.cart_table .tr_checked .cart_goods_img img{
     width: 80px;
     height: 80px;
-    display: block;
     border: 1px solid #ccc;
+    overflow: hidden;
+}
+.cart_table .tr_checked .cart_goods_img img{
     vertical-align: middle;
+    display: block;
+    width: 100%;
 }
 .cart_table .tr_checked .cart_goods_t{
     display: block;
@@ -217,7 +221,7 @@ a{
     line-height: 12px;
     border: 1px solid #c7c7c7;
     border-radius: 2px;
-    color: rgb(243, 243, 243);
+    color:#333;
 }
 .cart_largepding{
     padding-top: 16px!important;
@@ -265,6 +269,9 @@ a{
     display: inline-block;
     font-weight: 700;
     font-size: 26px;
+}
+.cart_paybar .cart_paybar_info_cost .allTotal{
+    display: inline-block;
 }
 .cart_paybar  .cart_surebtn{
     display: block;

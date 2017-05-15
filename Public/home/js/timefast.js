@@ -50,62 +50,74 @@ function diaoyong(jjks_imdex) {
 
 //向左向右滑动和点击哪个按钮
 function zuoyou(jjks_imdex) {
-    var index=jjks_imdex-1;
-    for(var i=0;i<maxnum;i++){
-        $(".first").eq(i).on("click",function () {
-            index=$(this).index();
+    var index = jjks_imdex - 1;
+    for (var i = 0; i < maxnum; i++) {
+        $(".first").eq(i).on("click", function () {
+            index = $(this).index();
             $(".left_right_children").eq(index).addClass("active").siblings().removeClass("active");
+
+        });
+
+        // console.log($(".first:last"));
+        //向右滑动
+        $(".you").on("click", function () {
+            if (off) {
+                off = false;
+                var left = $(".nav-list").offset().left - 74.5;
+                if (left > -2527) {
+                    console.log(left);
+                    $(".zuo").css("display", "block");
+                    $(".you").css("display", "block");
+                    $(".nav-list").animate({"left": -133 + left + "px"}, function () {
+                        off = true;
+                    });
+                }
+                if (left < -2390) {
+                    $(".you").css("display", "none");
+                }
+                //下面的内容
+                index++;
+                if (index >= maxnum) {
+                    index = maxnum - 1;
+                }
+                $(".left_right_children")
+                $(".left_right_children").eq(index).addClass("active").siblings().removeClass("active");
+                // console.log(index);
+            }
+        });
+        //向左滑动
+        $(".zuo").on("click", function () {
+            if (off1) {
+                off1 = false;
+                var left = $(".nav-list").offset().left - 74.5;
+                if (left < 535) {
+                    console.log(left);
+                    $(".zuo").css("display", "block");
+                    $(".you").css("display", "block");
+                    $(".nav-list").animate({"left": 133 + left + "px"}, function () {
+                        off1 = true;
+                    })
+                }
+                if (left > 269) {
+                    $(".zuo").css("display", "none");
+                }
+                if (index <= 0) {
+                    index = 1;
+                }
+                index--;
+                $(".left_right_children").eq(index).addClass("active").siblings().removeClass("active");
+            }
         });
     }
-    //向右滑动
-    $(".you").on("click", function () {
-        if(off){
-            off=false;
-            var left = $(".nav-list").offset().left - 74.5;
-            if (left > -2527) {
-                console.log(left);
-                $(".zuo").css("display","block");
-                $(".you").css("display","block");
-                $(".nav-list").animate({"left": -133 + left + "px"},function () {
-                    off=true;
-                });
-            }
-            if(left < -2390){
-                $(".you").css("display","none");
-            }
-            //下面的内容
-            index++;
-            if(index>=maxnum){
-                index=maxnum-1;
-            }
-            $(".left_right_children")
-            $(".left_right_children").eq(index).addClass("active").siblings().removeClass("active");
-            // console.log(index);
-        }
-    });
-    //向左滑动
-    $(".zuo").on("click", function () {
-        if(off1){
-            off1=false;
-            var left = $(".nav-list").offset().left - 74.5;
-            if (left < 535) {
-                console.log(left);
-                $(".zuo").css("display","block");
-                $(".you").css("display","block");
-                $(".nav-list").animate({"left": 133 + left + "px"},function () {
-                    off1=true;
-                })
-            }
-            if(left > 269){
-                $(".zuo").css("display","none");
-            }
-            if(index<=0){
-                index=1;
-            }
-            index--;
-            $(".left_right_children").eq(index).addClass("active").siblings().removeClass("active");
-        }
-    });
+    //点击第一个按钮让切换向左的键的样式隐藏
+    $(".first:first").on("click",function () {
+        $(".zuo").css("display","none");
+    })
+    //点击第最后按钮让切换向右的键的样式隐藏
+    $(".first:last").on("click",function () {
+        $(".you").css("display","none");
+    })
+
 }
 //点击导航条，导航条移动到点击的目标位置
 $(function () {
@@ -194,14 +206,16 @@ $(function () {
                 var qiang="即将开抢";
                 $(".seckill-status").eq(9+i).text(qiang);
                 // 最后一个定时器显示
-                $(".frr").eq(-1).show();
+
             }
             else{
+                $(".frr").eq(-1).show();
                 //隐藏过了时间的定时器
                 $(".frr").eq(i-1).hide();
             }
         },1000);
     }
+    //导航条已经抢购后占总数的比例
 for(var i=0;i<$(".left-text").length;i++){
         var yiqiang=$(".status-bar-text").eq(i).text();
         var shengxia=$(".left-text").eq(i).text();
@@ -213,3 +227,18 @@ for(var i=0;i<$(".left-text").length;i++){
 }
 
 })
+//点击首页和即将售罄的切换
+for(var i=0;i<$(".shouye").length;i++){
+    $(".shouye").eq(i).on("click",function () {
+        for(var i=0;i<$(".shouye").length;i++){
+            $(".shouye").eq(i).removeClass("white");
+            $(".shouye").css("text-decoration","none");
+        }
+
+        $(this).addClass("white");
+        $(".moren").removeClass("moren");
+        $(".shouye").css("text-decoration","none");
+
+    })
+
+}

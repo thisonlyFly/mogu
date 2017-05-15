@@ -221,14 +221,32 @@ var cart_size="";
 function addCart(){
     var cart_num=$(".goods_sku_num_input").val();
     var goods_id=$("#goods_id").val();
-    $.post(shopping_Addcart,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
-        alert(rtn_data.message);
-    })
+    if(!cart_col){
+        alert("请先选择商品颜色！");  
+        return;
+    } 
+    else if(!cart_size){
+            alert("请先选择商品尺码！");
+        }
+    else{
+        $.post(shopping_Addcart,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
+            alert(rtn_data.message);
+        })
+    }
 }
-function buy(){
+function now_buy(){
     var cart_num=$(".goods_sku_num_input").val();
-    var goods_id=$("#goods_id").val();   
-    $.post(order,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
-        
-    })
+    var goods_id=$("#goods_id").val();
+    if(!cart_col){
+        alert("请先选择商品颜色！");  
+        return;
+    } 
+    else if(!cart_size){
+            alert("请先选择商品尺码！");
+        }
+    else{
+        $.post(ConfirmOrder_nowBuy,{cart_num,goods_id,cart_col,cart_size},function  (rtn_data) {
+            window.location.href ="http://localhost/mogu/Home/ConfirmOrder/index.html";
+        })
+    }
 }

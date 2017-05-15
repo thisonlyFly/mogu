@@ -5,7 +5,7 @@
     <script>
         var Details_ajax_url="__URL__";
         var shopping_Addcart="{:U('ShoppingCart/addCart')}";
-        var ConfirmOrder="{:U('ConfirmOrder/buy')}";
+        var ConfirmOrder_nowBuy="{:U('ConfirmOrder/now_buy')}";
     </script>
 <!----------------------身体部分--------------------->
 <!--身体部分头部-->
@@ -119,7 +119,7 @@
                                 </dl>
                             </div>
                             <div class="commodity_details_goods_buy">
-                                <a href="http://localhost/mogu/Home/ConfirmOrder/index.html" class="fl mr10 buy_btn_now" onclick="buy()">立刻购买</a>
+                                <a href="javascript:;" class="fl mr10 buy_btn_now" onclick="now_buy()">立刻购买</a>
                                 <a href="javascript:;" class="fl mr10 buy_cart buy_btn_now" onclick="addCart()">加入购物车</a>
                             </div>
                             <script>

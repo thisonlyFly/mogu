@@ -6,7 +6,7 @@
     <link href="__PUBLIC__./common/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="__PUBLIC__./common/Font-Awesome-master/css/font-awesome.min.css" rel="stylesheet">
     <script>
-        var ConfirmOrder="{:U('ConfirmOrder/buy')}";
+        var ConfirmOrder="{:U('ConfirmOrder/index')}";
     </script>
     <link href="__PUBLIC__./home/css/Shopping_Cart.css" rel="stylesheet">
     <link href="__PUBLIC__./home/css/tail.css" rel="stylesheet">
@@ -44,10 +44,10 @@
                 </ol>
             </li>
 
-            <li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/Order.html" target="_blank">我的订单</a></li>
+            <li class="s1 ullia nav-dd"><a href="http://localhost/mogu/Home/Order/orderList.html" target="_blank">我的订单</a></li>
 
             <li class="s1 ullia nav-shopping">
-                <a href=" "><span>购物车</span></a>
+                <a href="#"><span>购物车</span></a>
 
                 <!--二级菜单-->
                 <div class="sp-cart">
@@ -127,64 +127,65 @@
         </ul>
 
         <div class="s_c_menu">
-
-            <table class="s_c_table">
-                <thead>
-                    <tr>
-                        <th class="s_c_table_th ">
-                            <input type="checkbox" name="s_all" class="s_all tr_checkmr" id="s_all_h">
-                            <label for="s_all_h">全选</label>
-                        </th>
-                        <th class="s_c_table_goods"></th>
-                        <th class="s_c_table_goodsinfo">商品信息</th>
-                        <th>单价(元)</th>
-                        <th class="s_c_table_goodsnum">数量</th>
-                        <th class="s_c_table_goodssum">小计(元)</th>
-                        <th class="s_c_table_goodsctrl">操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <volist name="cart_list" id="cart_item">
-                        <tr class="s_c_cart_mitem ">
-                            <td class="s_c_vm "> <input type="checkbox" class="s_c_cart_thcheck qx">  </td>
-                            <td class="s_c_table_goods">
-                                <a class="s_c_cart_goods_img" href="{:U('Goods/details',array('goods_id'=>$cart_item['goods_id']))}">
-                                    <div class="pic-img-s"><img src="__PUBLIC__/{$cart_item['goods_img']}"></div>
-                                    <!--鼠标经过图片，显示大的图片-->
-                                    <div class="s_c_big_pic">
-                                        <div class="pic-img-b"><img src="__PUBLIC__/{$cart_item['goods_img']}"></div>
-                                    </div>
-                                    <!--end结束-->
-                                </a>
-
-                                <a class="s_c_cart_goods_text" href="{:U('Goods/details',array('goods_id'=>$cart_item['goods_id']))}">{$cart_item['goods_title']}</a>
-                            </td>
-                            <td class="s_c_cart_alcenter">
-                                <p class="s_c_cart_lh20">颜色：{$cart_item['goods_color']}</p>
-                                <p class="s_c_cart_lh20">尺码：{$cart_item['goods_size']}</p>
-                            </td>
-                            <td class="s_c_cart_alcenter">
-                                <p class="s_c_cart_lh20 cart_throughline ">{$cart_item['goods_oldprice']}</p>
-                                <p class="s_c_cart_lh20 cart_bold ">{$cart_item['goods_price']}</p>
-                            </td>
-                            <td id="tab">
-                                <div class="s_c_cart_num">
-                                    <input type="text" class="s_c_cart_num_input " value="{$cart_item['goods_number']}">
-                                    <a><span class="s_c_cart_num_add">+</span></a>
-                                    <a><span class="s_c_cart_num_reduce disable">-</span></a>
-                                </div>
-                            </td>
-                            <td class="s_c_cart_prices"><p class="total">
-                            <php> echo 
-                                $cur_price=$cart_item['goods_price']*$cart_item['goods_number'];
-                                $total_price+=$cur_price;
-                            </php></p></td>
-                            <td class="s_c_cart_detele" onclick="deleteCart()"><a>删除</a></td>
+            <form method="post" action="{:U('ConfirmOrder/index')}">
+                <table class="s_c_table">
+                    <thead>
+                        <tr>
+                            <th class="s_c_table_th ">
+                                <input type="checkbox" name="s_all" class="s_all tr_checkmr" id="s_all_h">
+                                <label for="s_all_h">全选</label>
+                            </th>
+                            <th class="s_c_table_goods"></th>
+                            <th class="s_c_table_goodsinfo">商品信息</th>
+                            <th>单价(元)</th>
+                            <th class="s_c_table_goodsnum">数量</th>
+                            <th class="s_c_table_goodssum">小计(元)</th>
+                            <th class="s_c_table_goodsctrl">操作</th>
                         </tr>
-                    </volist>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <volist name="cart_list" id="cart_item">
+                            <tr class="s_c_cart_mitem ">
+                                <td class="s_c_vm "> <input type="checkbox" name="cart_ids[]" value="{$cart_item['cart_id']}" class="s_c_cart_thcheck qx">  </td>
+                                <td class="s_c_table_goods">
+                                    <a class="s_c_cart_goods_img" href="{:U('Goods/details',array('goods_id'=>$cart_item['goods_id']))}">
+                                        <div class="pic-img-s"><img src="__PUBLIC__/{$cart_item['goods_img']}"></div>
+                                        <!--鼠标经过图片，显示大的图片-->
+                                        <div class="s_c_big_pic">
+                                            <div class="pic-img-b"><img src="__PUBLIC__/{$cart_item['goods_img']}"></div>
+                                        </div>
+                                        <!--end结束-->
+                                    </a>
 
+                                    <a class="s_c_cart_goods_text" href="{:U('Goods/details',array('goods_id'=>$cart_item['goods_id']))}">{$cart_item['goods_title']}</a>
+                                </td>
+                                <td class="s_c_cart_alcenter">
+                                    <p class="s_c_cart_lh20">颜色：{$cart_item['goods_color']}</p>
+                                    <p class="s_c_cart_lh20">尺码：{$cart_item['goods_size']}</p>
+                                </td>
+                                <td class="s_c_cart_alcenter">
+                                    <p class="s_c_cart_lh20 cart_throughline ">{$cart_item['goods_oldprice']}</p>
+                                    <p class="s_c_cart_lh20 cart_bold ">{$cart_item['goods_price']}</p>
+                                </td>
+                                <td id="tab">
+                                    <div class="s_c_cart_num">
+                                        <input type="text" class="s_c_cart_num_input " value="{$cart_item['goods_number']}">
+                                        <a><span class="s_c_cart_num_add">+</span></a>
+                                        <a><span class="s_c_cart_num_reduce disable">-</span></a>
+                                    </div>
+                                </td>
+                                <td class="s_c_cart_prices"><p class="total">
+                                <php> echo 
+                                    $cur_price=$cart_item['goods_price']*$cart_item['goods_number'];
+                                    $total_price+=$cur_price;
+                                </php></p></td>
+                                <td class="s_c_cart_detele" onclick="deleteCart()"><a>删除</a></td>
+                            </tr>
+                        </volist>
+                    </tbody>
+                </table>
+                <input type="submit" class="hide" id="submit_btn">
+            </form>
         </div>
         <!--底部结算部分-->
         <div class="s_c_cart_paybar s_c_paybar" id="cartPaybar">
@@ -202,8 +203,8 @@
                 </div>
                 <div class="s_c_cart_paybar_info_cost cart_deep_red">¥ 0.00</div>
 
-                <span class="s_c_cart_paybtn fr cart_paybtn_disable" id="payBtn" >去付款</span>
-                <span class="s_c_cart_paybtn2 fr" id="payBtn2" style="display: none" onclick="buy()">去付款</span>
+                <a class="s_c_cart_paybtn fr cart_paybtn_disable" id="payBtn" >去付款</a>
+                <a class="s_c_cart_paybtn2 fr" id="payBtn2" style="display: none" onclick="buy()">去付款</a>
             </div>
         </div>
     </div>

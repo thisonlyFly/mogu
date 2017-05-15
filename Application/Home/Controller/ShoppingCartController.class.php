@@ -6,14 +6,14 @@ use Think\Controller;
 class ShoppingCartController extends Controller
 {
     public function index(){
-        // $uinfo=session('auth');
-        // if ($uinfo['uid']) {
+        $uinfo=session('auth');
+        if ($uinfo['uid']) {
             // 把当前用户的购物车全部列出来
-            // $cart_list=M('shoppingcart')->where("user_id=".$uinfo['uid'])->select();
-        // }
+            $cart_list=M('shoppingcart')->where("user_id=".$uinfo['uid'])->select();
+        }
 
-            $cart_list=M('shoppingcart')->where("goods_id=13")->select();
-            $this->assign('cart_list',$cart_list);
+        // $cart_list=M('shoppingcart')->select();
+        $this->assign('cart_list',$cart_list);
  		$this->display();
     }
  	public function addCart()
@@ -36,9 +36,10 @@ class ShoppingCartController extends Controller
  		$uinfo=session('auth');
 
  		// 判断当前用户到底有没有加入过这一个商品
- 		// $has_cart_info=M('shoppingcart')->where("user_id=".$uinfo['uid']." and "goods_id=$goods_id" and "goods_color=$col" and "goods_size=$size")->find();
+ 		$has_cart_info=M('shoppingcart')->where("user_id=".$uinfo['uid']." and goods_id=$goods_id" and "goods_color=$col" and "goods_size=$size")->find();
+        // $has_cart_info=M('carts')->where("user_id=".$uinfo['uid']." and goods_id=$goods_id")->find();
 
- 		// if (empty($has_cart_info)) {
+ 		if (empty($has_cart_info)) {
  			 M('shoppingcart')->add(
  			 	array(
  			 		'user_id'=>$uinfo['uid'],
@@ -51,10 +52,10 @@ class ShoppingCartController extends Controller
                     'goods_color'=>$col,
                     'goods_size'=>$size)
  			 	);
- 		//  }
-   //       else{
- 			// M('shoppingcart')->where('goods_id='.$has_cart_info['id'])->setInc('goods_number',$num);//是给购物车的数量加上用户新加入的数量
- 		// }
+ 		 }
+         else{
+ 			M('shoppingcart')->where('goods_id='.$has_cart_info['id'])->setInc('goods_number',$num);//是给购物车的数量加上用户新加入的数量
+ 		}
         $this->ajaxReturn(array('status'=>1,'message'=>'加入购物车成功！请继续挑选心仪的商品'));
  	}
 }

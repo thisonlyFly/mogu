@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0,
-          maximum-scale=1.0, minimum-scale=1.0">
-    <title>redman</title>
-    <link rel="stylesheet" href="__PUBLIC__/common/bootstrap-3.3.7/css/bootstrap.css">
-    <link rel="stylesheet" href="__PUBLIC__/common/Font-Awesome-master/css/font-awesome.min.css">
+<include file="Public/header" />
+    <link href="__PUBLIC__./home/css/share.css" rel="stylesheet"> 
     <link rel="stylesheet" href="__PUBLIC__/home/css/redman.css?1">
-</head>
     <script type="text/javascript">
         var pub_path="__PUBLIC__/";//这一个是ajax提交的修改地址
         var Redman_ajax_url="{:U('Redman/ajax_get')}";
         //alert(Redman_ajax_url);//    /mogu/index.php/home/Redman/ajax_get.html
         //这一个是ajax提交的修改地址
     </script>
-<body>
 <div id="body_wrap">
     <!--最上面的图片-->
     <div class="banner-wrap" style="background-color:#ffcbae;">
@@ -33,28 +23,6 @@
                     <volist name="redman_parent" id="value">
                         <li class=" nav-item mr10 "><a href="#{$value['redman_id']}" role="tab" data-toggle="tab" >{$value['redman_name']}</a></li>
                     </volist>
-                        <!-- 
-                    <li class=" nav-item mr10 "><a href="#2" role="tab" data-toggle="tab">小个子专属</a></li>
-                    <li class=" nav-item mr10 "><a href="#3" role="tab" data-toggle="tab" >T恤x半身裙</a></li>
-                    <li class=" nav-item mr10 "><a href="#4" role="tab" data-toggle="tab" >高颜值衬衫</a></li>
-                    <li class=" nav-item mr10 "><a href="#5" role="tab" data-toggle="tab" >学生党专属</a></li>
-                    <li class=" nav-item mr10 "><a href="#6" role="tab" data-toggle="tab" >微胖巧搭</a></li>
-                    <li class=" nav-item mr10 "><a href="#7" role="tab" data-toggle="tab" >一分钟出门装</a></li>
-                    <li class=" nav-item mr10 "><a href="#8" role="tab" data-toggle="tab" >半身裙套装</a></li>
-                    <li class=" nav-item mr10 "><a href="#9" role="tab" data-toggle="tab" >气质抢镜装</a></li>
-                    <li class=" nav-item mr10 "><a href="#10" role="tab" data-toggle="tab">春夏薄外套</a></li>
-                    <li class=" nav-item mr10 "><a href="#11" role="tab" data-toggle="tab">春日甜美装</a></li>
-                    <li class=" nav-item mr10 "><a href="#12" role="tab" data-toggle="tab">周末约会装</a></li>
-                    <li class=" nav-item mr10 "><a href="#13" role="tab" data-toggle="tab">长腿穿搭法</a></li>
-                    <li class=" nav-item mr10 "><a href="#14" role="tab" data-toggle="tab">裙子套装</a></li>
-                    <li class=" nav-item mr10 "><a href="#15" role="tab" data-toggle="tab">T恤怎么穿</a></li>
-                    <li class=" nav-item mr10 "><a href="#16" role="tab" data-toggle="tab">省心套装</a></li>
-                    <li class=" nav-item mr10 "><a href="#17" role="tab" data-toggle="tab">气质加分装</a></li>
-                    <li class=" nav-item mr10 "><a href="#18" role="tab" data-toggle="tab">棒球外套</a></li>
-                    <li class=" nav-item mr10 "><a href="#19" role="tab" data-toggle="tab">超火吊带裙</a></li>
-                    <li class=" nav-item mr10 "><a href="#20" role="tab" data-toggle="tab">遮肉外套</a></li>
-                    <li class=" nav-item mr10 "><a href="#21" role="tab" data-toggle="tab">显瘦春裤</a></li>
-                    <li class=" nav-item mr10 "><a href="#22" role="tab" data-toggle="tab">出街短外套</a></li> -->
                 </ul>
             </div>
             <div class="bx-controls bx-has-controls-direction">
@@ -77,8 +45,5 @@
         </volist>
     </div>
 </div>
-<script src="__PUBLIC__/common/bootstrap-3.3.7/js/jquery-1.11.1.min.js"></script>
-<script src="__PUBLIC__/common/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<include file="Public/footer" />
 <script src="__PUBLIC__/home/js/Redman.js?1"></script>
-</body>
-</html>

@@ -318,13 +318,13 @@ a{
 /*--查看物流--*/
 #order_wrap .order_list .order_table_item .status .order_logistics{
     position: relative;
-    padding-bottom: 12px;
+    padding-bottom: 5px;
 }
 #order_wrap .order_list .order_table_item .status .order_logistics:before{
     content: "";
     position: absolute;
     z-index:2;
-    top: 34px;
+    top: 20px;
     left: 50%;
     width: 10px;
     height: 10px;
@@ -341,7 +341,7 @@ a{
     display: none;
     left: 50%;
     width: 226px;
-    margin: 16px 0 0 -144px;
+    margin: 2px 0 0 -144px;
     padding: 11px 9px;
     background: #fff;
     border: 1px solid #c5c5c5;
